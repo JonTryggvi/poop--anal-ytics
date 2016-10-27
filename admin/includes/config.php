@@ -20,7 +20,6 @@ if($_GET['logout'] == 'true') {
   session_destroy();
 }
 
-
 // Constants
 define('LOGINERROR', 'Username or Password is wrong!', false);
 define('LOGINEMPTY', 'Username or Password is empty!', false);
@@ -62,19 +61,6 @@ function createNavigation($nav) {
 		echo '<li class="nav-item nav-link"><a href="'.$value[1].'" class="'.$active.'">'. $value[0] .'</a></li>';
 	}
 	echo '</ul>';
-}
-// Create UserInformation
-function createUserInfo($userInfo) {
-
-  if($userInfo == 'userInfo'){
-
-    $userArr = $GLOBALS['userInfoItems'];
-    $classNameUser = 'mainUser';
-
-    echo '<ul class="'.$classNameUser.'-nav nav nav-pills nav-stacked m-t-2">';
-  }
-	echo '</ul>';
-
 }
 
 

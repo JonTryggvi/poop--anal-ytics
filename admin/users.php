@@ -1,21 +1,21 @@
 <?php
 	include('includes/config.php');
-
+	loginCheck();
 
 	include('includes/header.php');
 
 	//Check if parameter exists and is set to true
-	if(isset($_GET['update']) && $_GET['update'] == 'true') {
-		$userid = $_POST['update_userid'];
-		$firstName = $_POST['update_firstname'];
-		$lastName = $_POST['update_lastname'];
-		$username = $_POST['update_username'];
-		$email = $_POST['update_email'];
-		$pass = $_POST['update_password'];
-
-		$user = new User();
-		$user->updateUser($firstName, $lastName, $username, $password, $email);
-	}
+	// if(isset($_GET['update']) && $_GET['update'] == 'true') {
+	// 	$userid = $_POST['update_userid'];
+	// 	$firstName = $_POST['update_firstname'];
+	// 	$lastName = $_POST['update_lastname'];
+	// 	$username = $_POST['update_username'];
+	// 	$email = $_POST['update_email'];
+	// 	$pass = $_POST['update_password'];
+	//
+	// 	$user = new User();
+	// 	$user->updateUser($firstName, $lastName, $username, $password, $email);
+	// }
 
 	//Check if parameter exists and is set to true
 	// if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
