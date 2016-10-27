@@ -1,33 +1,33 @@
 <?php
-	include('config.php');
-  include('./classes/database.class.php');
+  include('../classes/database.class.php');
 
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-  
 
-	function loginUserCheck($username, $password, $users) {
+
+	function loginUserCheck($username, $password, $conn) {
 
     $mysqli = $conn;
     // prepare and bind
-    $stmt = $mysqli->prepare("SELECT * FROM Users");
-    $stmt->bind_param("i", $userid);
+    $stmt = $mysqli->prepare("SELECT * FROM User");
+		error_log($mysqli->error);
     $stmt->execute();
+		$stmt->bind_result($id, $email, $pass, $userName, $firstName, $lastName, $user_date, $age, $profile_img, $roles_id, $gender_id, $apps_countries_id);
 
-    $stmt->close();
 
     // Execute a query
-    $query = mysqli_query($conn, $strSQL);
-    while( $result = mysqli_fetch_array($query) ) {
-      if ($username == $result["userName"] && $password == $result["password"]){
+    while( mysqli_stmt_fetch($stmt) ) {
+      if ($username == $userName && $password == $pass){
         $_SESSION['isLoggedin'] = true;
         header('Location: ../dashboard.php');
         }
       }
+			  $stmt->close();
 	}
 
+
 	if($username != '' and $password != '') {
-		loginUserCheck($username, $password, $users);
+		loginUserCheck($username, $password, $conn);
 	} else {
 
 		$_SESSION['isLoggedin'] = false;

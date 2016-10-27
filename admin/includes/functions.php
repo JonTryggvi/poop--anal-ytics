@@ -1,5 +1,5 @@
 <?php
-	include('./classes/classes.php');
+	include('classes/classes.php');
 
 	if(isset($_POST['create_username']) && !empty($_POST['create_username']) && isset($_POST['create_password']) && !empty($_POST['create_password'])) {
 		//createUser($link, $username, $password, $email, $lastname, $firstname);

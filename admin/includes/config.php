@@ -19,32 +19,7 @@ if($_GET['logout'] == 'true') {
   // destroy the session
   session_destroy();
 }
-// 
-// $cms = "Andromedia";
-// $version = "0.1";
-// $users = array(
-//   array(
-//     'Name' => 'Árni',
-//     'Email' => 'arni@jarn.is',
-//     'Username' => 'arnijarn',
-//     'Password' => '123'
-//   ), array(
-//     'Name' => 'Kalla Bjarna',
-//     'Email' => 'kalli@bjarni.is',
-//     'Username' => 'kallibjarn',
-//     'Password' => '1234'
-//   ), array(
-//     'Name' => 'David Halldorsson',
-//     'Email' => 'david@david.is',
-//     'Username' => 'david',
-//     'Password' => '12345'
-//   ), array(
-//     'Name' => 'Mína',
-//     'Email' => 'mina@mus.is',
-//     'Username' => 'mina',
-//     'Password' => '123456'
-//   )
-// );
+
 
 // Constants
 define('LOGINERROR', 'Username or Password is wrong!', false);
@@ -60,7 +35,7 @@ $navItems = array(
 );
 $userNavItems = array(
   array('Logout', 'login.php?logout=true'),
-  array('My Profile', 'profile.php')
+  array('My Daiarya', 'profile.php')
 );
 
 // Create Navigation
