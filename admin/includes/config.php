@@ -5,7 +5,7 @@ include('functions.php');
 
 //Tjékkar hvort notandi sé skráður inn
 function loginCheck() {
-  if($_SESSION['isLoggedin'] == false) {
+  if($_SESSION['isLoggedin'] == true) {
     header('Location: login.php');
   }
 }
@@ -37,7 +37,6 @@ $userNavItems = array(
   array('Logout', 'login.php?logout=true'),
   array('My Daiarya', 'profile.php')
 );
-
 // Create Navigation
 function createNavigation($nav) {
 
@@ -63,6 +62,19 @@ function createNavigation($nav) {
 		echo '<li class="nav-item nav-link"><a href="'.$value[1].'" class="'.$active.'">'. $value[0] .'</a></li>';
 	}
 	echo '</ul>';
+}
+// Create UserInformation
+function createUserInfo($userInfo) {
+
+  if($userInfo == 'userInfo'){
+
+    $userArr = $GLOBALS['userInfoItems'];
+    $classNameUser = 'mainUser';
+
+    echo '<ul class="'.$classNameUser.'-nav nav nav-pills nav-stacked m-t-2">';
+  }
+	echo '</ul>';
+
 }
 
 

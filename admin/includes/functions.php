@@ -10,7 +10,7 @@
 		$firstname = $_POST['create_firstname'];
 
 		$user = new User();
-		$user->createUsers($firstname, $lastname, $email);
+		$user->createUsers($firstName, $lastname, $email);
 	}
 
 
