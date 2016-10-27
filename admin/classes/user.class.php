@@ -2,9 +2,7 @@
 class User {
  private $_db;
  private $_mysqli;
-
  public function __construct() {
-
  }
 
  public function createUsers($firstName, $lastName, $email, $userName, $pass, $user_date, $age, $profile_img, $roles_id, $gender_id, $apps_countries_id) {
@@ -12,13 +10,10 @@ class User {
   $db = $GLOBALS['gdb'];
   $mysqli = $db->getConnection();
 
-
  	$stmt = $mysqli->prepare("INSERT INTO User(email, password, userName, firstName, lastName, user_date, age, profile_img, roles_id, gender_id, apps_countries_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
  	$stmt->bind_param("sssssiisiii", $email, $password, $userName, $firstName, $lastName, $user_date, $age, $profile_img, $roles_id, $gender_id, $apps_countries_id);
 
  	$stmt->execute();
-
-
 
  	$stmt->close();
  	$mysqli->close();
