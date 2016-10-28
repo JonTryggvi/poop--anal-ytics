@@ -24,7 +24,7 @@
 
  		<?php endif; ?>
 
- 		<h1 >Login</h1>
+ 		<h1>Login</h1>
 
  		<form action="includes/authentication.php" method="post" >
  			<div class="form-group">
