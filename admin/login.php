@@ -23,14 +23,6 @@
 
 		<?php endif; ?>
 
-		<div class="alert alert-danger" role="alert">
-					<?php if(isset($_GET['sign']) and $_GET['login'] == 'denied' || $_GET['login'] == 'empty' ) : ?>
-		<?php echo $_SESSION['msg']; ?>
-		<?php endif; ?>
-		</div>
-
-
-
 
 
 		<ul class="nav nav-tabs" role="tablist">
@@ -59,7 +51,7 @@
 				</form>
 			</div>
 		  <div class="tab-pane" id="signup" role="tabpanel">
-				<form action="includes/functions.php" method="POST" role="tabpanel" id="signup">
+				<form action="dashboard.php" method="POST" role="tabpanel" id="signup">
 					<div class="form-group">
 						<label for="username">First Name</label>
 						<input type="text" class="form-control" name="firstName" value="">
@@ -109,8 +101,6 @@
 				</form>
 			</div>
 		</div>
-
-
 	</div>
 
 
