@@ -1,41 +1,80 @@
 <?php
+	session_start();
+	include('functions.php');
 
-session_start();
-include('functions.php');
+	//Tjékkar hvort notandi sé skráður inn
+	function loginCheck() {
+		if($_SESSION['isLoggedin'] == false) {
+			header('Location: login.php');
+		}
+	}
 
-//Tjékkar hvort notandi sé skráður inn
-function loginCheck() {
-  if($_SESSION['isLoggedin'] == true) {
-    header('Location: login.php');
-  }
-}
+	if(isset($_GET['logout']) && $_GET['logout'] == 'true') {
+		$_SESSION['isLoggedin'] = false;
 
-if($_GET['logout'] == 'true') {
-  $_SESSION['isLoggedin'] = false;
+		// remove all session variables
+		session_unset();
 
-  // remove all session variables
-  session_unset();
+		// destroy the session
+		session_destroy();
+	}
 
-  // destroy the session
-  session_destroy();
-}
+	// Constants
+	define('LOGINERROR', 'Username or Password is wrong!', false);
+	define('LOGINEMPTY', 'Username or Password is empty!', false);
 
-// Constants
-define('LOGINERROR', 'Username or Password is wrong!', false);
-define('LOGINEMPTY', 'Username or Password is empty!', false);
+	$navItems = array(
+		array('Dashboard', 'index.php'),
+		array('Advice', 'users.php'),
+		array('Static', 'pages.php'),
+		array('Posts', 'posts.php'),
+		array('Files', 'files.php')
+	);
+	$userNav2 = array(
+		array('Take test', 'landingpage.php'),
+		array('advice', 'advice.php'),
+		array('static', 'static.php'),
+		array('Sign', 'login.php')
+	);
+	$userNavItems = array(
+		array('Logout', 'login.php?logout=true'),
+		array('My Profile', 'profile.php')
+	);
 
-$navItems = array(
-  array('Dashboard', 'index.php'),
-  array('Users', 'users.php'),
-  array('Pages', 'pages.php'),
-  array('Posts', 'posts.php'),
-  array('Files', 'files.php'),
-  array('login', 'login.php')
-);
-$userNavItems = array(
-  array('Logout', 'login.php?logout=true'),
-  array('My Daiarya', 'profile.php')
-);
+// Create Navigation
+// function createNavigation($nav) {
+//
+// 	if($nav == 'mainNav') {
+//
+// 		$navArr = $GLOBALS['navItems'];
+// 		$className = 'main';
+//
+// 	} elseif($nav == 'userNav') {
+//
+// 		$navArr = $GLOBALS['userNavItems'];
+// 		$className = 'user';
+//
+// 	} elseif($nav == 'userNav2') {
+//
+// 		$navArr = $GLOBALS['userNav2'];
+// 		$className = 'user2';
+//
+// 	}
+//
+// 	echo '<ul class="'.$className.'-nav nav nav-pills nav-stacked m-t-2">';
+// 	foreach($navArr as $key => $value) {
+//
+// 		if($value[1] == 'Dashboard') {
+// 			$active = 'active';
+//
+// 		} else {
+// 			$active = '';
+// 		}
+// 		echo '<li class="nav-item nav-link"><a href="'.$value[1].'" class="'.$active.'">'. $value[0] .'</a></li>';
+// 	}
+// 	echo '</ul>';
+// }
+//
 // Create Navigation
 function createNavigation($nav) {
 
@@ -47,14 +86,15 @@ function createNavigation($nav) {
 	} elseif($nav == 'userNav') {
 
 		$navArr = $GLOBALS['userNavItems'];
-		$className = 'user';
-
+		$className2 = 'user';
 	}
 
-	echo '<ul class="'.$className.'-nav nav nav-pills nav-stacked m-t-2">';
+	echo '<ul class="'.$className.'nav navbar-nav m-t-2">';
 	foreach($navArr as $key => $value) {
-		if($value[0] == 'Dashboard') {
+
+		if($value[1] == 'Dashboard') {
 			$active = 'active';
+
 		} else {
 			$active = '';
 		}
@@ -63,6 +103,28 @@ function createNavigation($nav) {
 	echo '</ul>';
 }
 
+// Create NavigationLogIn
+function createUserNavigation($Usernav) {
 
+	if($Usernav == 'userNav') {
 
- ?>
+		$navArr = $GLOBALS['userNav2'];
+		$className = 'user';
+
+	}
+
+	echo '<ul class="'.$className.'nav navbar-nav m-t-2">';
+	foreach($navArr as $key => $value) {
+
+		if($value[1] == 'Dashboard') {
+			$active = 'active';
+
+		} else {
+			$active = '';
+		}
+		echo '<li class="nav-item nav-link"><a href="'.$value[1].'" class="'.$active.'">'. $value[0] .'</a></li>';
+	}
+	echo '</ul>';
+}
+
+?>

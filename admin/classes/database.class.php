@@ -1,23 +1,43 @@
 <?php
+/*
+* Mysql database class - only one connection alowed
+*/
+class Database {
+	private $_connection;
+	private static $_instance; //The single instance
+	private $_host = "82.148.66.32";
+	private $_username = "herdis";
+	private $_password = "vskoli";
+	private $_database = "h5";
+	/*
+	Get an instance of the Database
+	@return Instance
+	*/
+	public static function getInstance() {
+		if(!self::$_instance) { // If no instance then make one
+			self::$_instance = new self();
+		}
+		return self::$_instance;
+	}
+	// Constructor
+	private function __construct() {
+		$this->_connection = new mysqli($this->_host, $this->_username,
+			$this->_password, $this->_database);
 
-  // Database credentials
-  $servername = "82.148.66.32";
-  $username = "herdis";
-  $password = "vskoli";
-  $database = "h5";
+		// Error handling
+		if(mysqli_connect_error()) {
+			trigger_error("Failed to kjlkj to MySQL: " . mysqli_connect_error(),
+				 E_USER_ERROR);
+		}
+	}
 
-  // Create connection
-// http://php.net/manual/en/function.mysqli-connect.php
-  $conn = new mysqli($servername, $username,
-			$password, $database);
+  // Magic method clone is empty to prevent duplication of connection
+	private function __clone() { }
 
-  // Check connection
-  if (mysqli_connect_errno()) {
-      die("Connection failed: " . mysqli_connect_error());
-  }
-
-
-
-
+  // Get mysqli connection
+	public function getConnection() {
+		return $this->_connection;
+	}
+}
 
 ?>

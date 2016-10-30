@@ -1,36 +1,38 @@
 <?php
-  include('../classes/database.class.php');
+	include('config.php');
+
 
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
 
+	function loginUserCheck($username, $password) {
+		// prepare and bind
+		$db = $GLOBALS['gdb'];
+	  $mysqli = $db->getConnection();
 
-	function loginUserCheck($username, $password, $conn) {
-    $mysqli = $conn;
-    // prepare and bind
-    $stmt = $mysqli->prepare("SELECT id, email, password, userName, firstName, lastName FROM User");
-		error_log($mysqli->error);
-    $stmt->execute();
-		$stmt->bind_result($id, $email, $pass, $userName, $firstName, $lastName);
+		$stmt = $mysqli->prepare("SELECT email, password, userName, firstName, lastName FROM User");
 
-    // Execute a query
-    while( $stmt->fetch()) {
-      if ($username == $userName && $password == $pass){
-        $_SESSION['UsrNm'] = $userName;
-        $_SESSION['isLoggedin'] = true;
-        $_SESSION[''];
+		$stmt->execute();
+		$stmt->bind_result($email, $pass, $userName, $firstName, $lastName);
 
-
-        header('Location: ../dashboard.php');
-      } else {
-        $_SESSION['isLoggedin'] = false;
-    		header('Location: ../login.php?login=empty');
-      }
-    }
+		// Execute a query
+		$_SESSION['isLoggedin'] = false;
+		while( $stmt->fetch()) {
+			if ($username == $userName && $password == $pass){
+				header('Location: ../dashboard.php');
+				$_SESSION['isLoggedin'] = true;
+				$_SESSION['UsrNm'] = $userName;
+			} else {
+			}
+		}
+		if ($_SESSION['isLoggedin'] == false){
+			 header('Location: ../login.php?login=empty');
+		}
 		$stmt->close();
 	}
-  loginUserCheck($username, $password, $conn);
+	loginUserCheck($username, $password);
+
 
 
 ?>

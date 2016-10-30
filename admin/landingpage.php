@@ -1,16 +1,12 @@
 <?php
 	include('includes/config.php');
-	loginCheck();
 	include('includes/header.php');
 ?>
 <div class="container-fluid">
 	<div class="row">
 
 		<nav class="navbar navbar-light bg-faded">
-		<?php createNavigation('mainNav'); ?>
-			<?php createNavigation('userNav'); ?>
-			<?php echo $_SESSION['UsrNm']  ?>
-
+		<?php createUserNavigation('userNav'); ?>
 		</nav>
 	</div>
 	<div class="row">

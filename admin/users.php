@@ -5,46 +5,45 @@
 	include('includes/header.php');
 
 	//Check if parameter exists and is set to true
-	// if(isset($_GET['update']) && $_GET['update'] == 'true') {
-	// 	$userid = $_POST['update_userid'];
-	// 	$firstName = $_POST['update_firstname'];
-	// 	$lastName = $_POST['update_lastname'];
-	// 	$username = $_POST['update_username'];
-	// 	$email = $_POST['update_email'];
-	// 	$pass = $_POST['update_password'];
-	//
-	// 	$user = new User();
-	// 	$user->updateUser($firstName, $lastName, $username, $password, $email);
-	// }
+	if(isset($_GET['update']) && $_GET['update'] == 'true') {
+		$email = $_POST['email'];
+		$pass = $_POST['create_password'];
+		$userName = $_POST['create_username'];
+		$firstName = $_POST['firstName'];
+		$lastName = $_POST['lastName'];
+		$user_date = $_POST['user_date'];
+		$age = $_POST['age'];
+		$profile_img = 'test.jpg';
+		$roles_id = $_POST['roles_id'];
+		$gender_id = $_POST['gender_id'];
+		$apps_countries_id = $_POST['apps_countries_id'];
+
+		$user = new User();
+		$user->updateUser($userid, $firstname, $lastname, $username, $password, $email, $status);
+	}
 
 	//Check if parameter exists and is set to true
-	// if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
-	// 	$userid = $_GET['userid'];
-	//
-	// 	$user = new User();
-	// 	$user->deleteUser($userid);
-	// }
+	if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
+		$userid = $_GET['userid'];
+
+		$user = new User();
+		$user->deleteUser($userid);
+	}
 ?>
 <div class="container-fluid">
 	<div class="row">
+
+		<nav class="navbar navbar-light bg-faded">
+		<?php createNavigation('mainNav'); ?>
+			<?php createNavigation('userNav'); ?>
+			<?php echo $_SESSION['UsrNm']  ?>
+
+		</nav>
+	</div>
+	<div class="row">
 		<div class="col-md-3 p-a-3">
 
-			<h4><?php echo $cms.' - '.$version; ?></h4>
-			<div class="row">
-				<div class="input-group m-t-2">
-			      <input type="text" class="form-control" placeholder="Search for...">
-			      <span class="input-group-btn">
-			        <button class="btn btn-secondary" type="button">Go!</button>
-			      </span>
 
-			    </div>
-			</div>
-			<div class="row">
-				<?php createNavigation('mainNav'); ?>
-			</div>
-			<div class="row">
-				<?php createNavigation('userNav'); ?>
-			</div>
 		</div>
 		<div class="col-md-9 p-a-3">
 			<div class="row">

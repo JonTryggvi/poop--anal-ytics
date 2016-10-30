@@ -1,8 +1,8 @@
 <?php
 
-  include('includes/config.php');
+	include('includes/config.php');
 
-  if($isLoggedIn) {
+	if($_SESSION['isLoggedin']) {
 
 		header('Location: dashboard.php');
 
@@ -12,6 +12,4 @@
 
 	}
 
-
-
- ?>
+?>
