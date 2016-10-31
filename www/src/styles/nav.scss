@@ -1,0 +1,21 @@
+.mainNav {
+  background-color: $main-blue;
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    width: $designWidth;
+
+    padding: 0;
+    margin: 0 auto;
+    background-color: $main-blue;
+    border-radius: 0;
+
+    height: 50px;
+    &::before, &::after {
+      display: none;
+    }
+    a {
+      align-self: center;
+    }
+  }
+}
