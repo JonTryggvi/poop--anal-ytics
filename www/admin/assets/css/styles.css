@@ -2,3 +2,13 @@
   max-width: 300px;
   margin: 50px auto 0 auto;
 }
+.chosen-container{
+  width: 350px;
+
+  ul{
+    border: 1px solid red;
+    li{
+      width: 350px;
+    }
+  }
+}
