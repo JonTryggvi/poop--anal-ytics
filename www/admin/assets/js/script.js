@@ -4,6 +4,6 @@ $('document').ready(function(){
     // $(this).tab('.userNav');
     // });
 
-
+    $(".countries").chosen({disable_search_threshold: 10});
 
 });

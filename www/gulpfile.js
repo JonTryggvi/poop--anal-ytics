@@ -9,8 +9,8 @@ gulp.task('sass', function () {
         // More info at: https://github.com/dlmanning/gulp-sass/tree/v2.1.1
         .pipe(
             sass({
-                outputStyle:'expanded'//,
-              //  includePaths: ['node_modules/foundation-sites/scss'],
+                outputStyle:'expanded',
+                includePaths: ['node_modules/bootstrap-sass/assets/stylesheets/'],
               })
               .on('error', sass.logError)
           )
