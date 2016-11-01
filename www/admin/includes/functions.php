@@ -1,5 +1,5 @@
 <?php
-	include($_SERVER['DOCUMENT_ROOT'].'/classes/classes.php');
+	include($_SERVER['DOCUMENT_ROOT'].'/admin/classes/classes.php');
 
 /*isset checks if var exists */
 
