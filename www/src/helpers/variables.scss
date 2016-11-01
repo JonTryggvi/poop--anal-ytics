@@ -16,3 +16,7 @@ $stack-headings: 'Oswald-Medium', $stack-sans-serif;
 /* dimensions  */
 
 $designWidth: 1024px;
+.wrap {
+  width: $designWidth;
+  margin: 0 auto;
+}

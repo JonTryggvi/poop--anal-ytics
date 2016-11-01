@@ -10,14 +10,34 @@ class anonTest {
    $db = $GLOBALS['gdb'];
    $mysqli = $db->getConnection();
 
-   $stmt = $mysqli->prepare("SELECT id, texture FROM texture");
+   $stmt = $mysqli->prepare('SELECT id, texture, description, title FROM texture');
    $stmt->execute();
-   $stmt->bind_result();
+   $stmt->bind_result($id, $texture, $description, $title);
 
-  echo "<h1>TEST</H1>";
+  while ($row = $stmt->fetch()) {
+    echo "<input class='texture-radio ".$title."' type='radio' name='".$title."' value='".$id."'/>";
+  }
 
-   $stmt-close();
+  //  $stmt-close();
+  //  $mysqli->close();
+}
+
+public function getShades(){
+  $db = $GLOBALS['gdb'];
+  $mysqli = $db->getConnection();
+
+  $stmt = $mysqli->prepare('SELECT id, name, description FROM shade');
+  $stmt->execute();
+  $stmt->bind_result($id, $name, $description);
+
+ while ($row = $stmt->fetch()) {
+   echo "<input class='shade-radio ".$name."' type='radio' name='".$id."' value='".$id."'/>";
  }
+
+ //  $stmt-close();
+ //  $mysqli->close();
+}
+
 
  public function anonTextures($texture_id, $shade_id) {
  	// Connecting to Database
@@ -32,7 +52,7 @@ class anonTest {
  // 	echo "New records created successfully";
 
  	$stmt->close();
- 	$mysqli->close();
+ // 	$mysqli->close();
   // header('Location: ../dashboard.php');
  }
 
