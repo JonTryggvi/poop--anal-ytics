@@ -3,6 +3,6 @@
 	include('admin/classes/database.class.php');
 	$GLOBALS['gdb'] = Database::getInstance();
 
-	include('user.class.php');
+	include('anonTest.class.php');
 	// include('test.class.php');
 ?>

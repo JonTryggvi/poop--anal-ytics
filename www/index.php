@@ -1,5 +1,5 @@
 <?php
-	include('admin/includes/config.php');
+	include('includes/configFront.php');
 	include('includes/header.php');
 ?>
 
@@ -17,36 +17,32 @@
 			</div>
 	</nav>
 <div class="container-fluid row">
-	<section class="texture col-md-7">
-		<h1>How Shitty is your day?</h1>
-		<h2>Take the poop test to find out...</h2>
-		<form class="texture-form" action="" method="post">
-			<input type="button" name="hard-lumps" value="1">
-			<input type="button" name="sausage-soft" value="2">
-			<input type="button" name="watery-lyquid" value="6">
-			<input type="button" name="soft-blob" value="7">
-			<input type="button" name="sausage-cracked" value="8">
-			<input type="button" name="fluffy" value="9">
-			<input type="button" name="soft-sticks" value="10">
-			<input type="button" name="empty" value="11">
-
-		</form>
-	</section>
-	<section class="shade col-md-5">
--		<h1>Carry on...</h1>
--		<h2>Choose your color...</h2>
--		<h1>shade</h1>
--		<form class="texture-form" action="" method="post">
--			<input type="button" name="brown" value="1">
--			<input type="button" name="green" value="2">
--			<input type="button" name="yellow" value="3">
--			<input type="button" name="black" value="4">
--			<input type="button" name="white" value="5">
--			<input type="button" name="red" value="6">
--		</form>
-+
- 	</section>
-
+	<form class="texture-form" action="" method="post">
+		<section class="texture col-md-7">
+			<h1>How Shitty is your day?</h1>
+			<h2>Take the poop test to find out...</h2>
+			<input type="radio" name="hard-lumps" value="1">
+			<input type="radio" name="sausage-soft" value="2">
+			<input type="radio" name="watery-lyquid" value="6">
+			<input type="radio" name="soft-blob" value="7">
+			<input type="radio" name="sausage-cracked" value="8">
+			<input type="radio" name="fluffy" value="9">
+			<input type="radio" name="soft-sticks" value="10">
+			<input type="radio" name="empty" value="11">
+		</section>
+		<section class="shade col-md-5">
+			<h1>Carry on...</h1>
+			<h2>Choose your color...</h2>
+			<h1>shade</h1>
+			<input type="radio" name="brown" value="1">
+			<input type="radio" name="green" value="2">
+			<input type="radio" name="yellow" value="3">
+			<input type="radio" name="black" value="4">
+			<input type="radio" name="white" value="5">
+			<input type="radio" name="red" value="6">
+	 	</section>
+		<input type="submit" name="name" value="subm" placeholder="subm">
+	</form>
 </div>
-
+	<?php testTexture(); ?>
 <?php include('includes/footer.php')  ?>

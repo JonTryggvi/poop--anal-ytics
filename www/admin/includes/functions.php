@@ -1,5 +1,5 @@
 <?php
-	include($_SERVER['DOCUMENT_ROOT'].'/classes/classes.php');
+	include($_SERVER['DOCUMENT_ROOT'].'/admin/classes/classes.php');
 
 	if(isset($_POST['create_username']) && !empty($_POST['create_username']) && isset($_POST['create_password']) && !empty($_POST['create_password'])) {
 
