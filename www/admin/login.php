@@ -2,6 +2,9 @@
 	include('includes/config.php');
 	// signUpCheck();
 	include('includes/header.php');
+
+
+
 ?>
 
 <div class="container">
@@ -115,30 +118,30 @@
 					</div>
 					<div class="radio">
 						<label for="gender_id">Gender</label>
-							<select name="gender_id" value="" multiple class="countries" class="countries">
-								<?php 	$GenderSign->Gender(); ?>
+							<select name="gender_id">
+								<?php $GenderSign->Gender(); ?>
 							</select>
 					</div>
 					<div class="form-group">
 						<label for="age">Age</label>
 						<input type="number" class="form-control" name="age" value="">
 					</div>
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label for="profile_img">Profile picture</label>
 						<input type="image" class="form-control" name="profile_img" value="">
-					</div>
-					<div class="form-group">
+					</div> -->
+					<!-- <div class="form-group">
 						<label for="roles_id">Roles</label>
 						<input type="text" class="form-control" name="roles_id" value="">
-					</div>
-					<div class="form-group">
+					</div> -->
+					<!-- <div class="form-group">
 						<label for="user_date">Date</label>
 						<input type="text" class="form-control" name="user_date" value="">
-					</div>
+					</div> -->
 					<div class="form-group">
 						<label for="apps_countries_id">Countries</label>
-						<select data-placeholder="Choose a country..." name="apps_countries_id" value="" multiple class="countries" class="countries"  style="width:350px;">
-							<?php 	$countryLocation->countries(); ?>
+						<select name="apps_countries_id" value="" >
+							<?php $countryLocation->countries(); ?>
 						</select>
 					</div>
 					<input name="btn-signup ormSubmit" type="submit" class="btn btn-primary btn-lg btn-block" value="Sign Up">
