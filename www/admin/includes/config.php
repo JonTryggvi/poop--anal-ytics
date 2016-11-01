@@ -86,7 +86,7 @@ function createNavigation($nav) {
 	} elseif($nav == 'userNav') {
 
 		$navArr = $GLOBALS['userNavItems'];
-		$className2 = 'user';
+		$className = 'user';
 	}
 
 	echo '<ul class="'.$className.'nav navbar-nav m-t-2">';

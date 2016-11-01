@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+=======
+.default {
+  width: 350px !important;
+}
+
+.chosen-results {
+  list-style: none;
+}
+
+.chosen-results li {
+  list-style: none;
+}
+>>>>>>> Herdis
