@@ -5,7 +5,6 @@
 
 if(isset($_POST['create_username']) && !empty($_POST['create_username']) && isset($_POST['create_password']) && !empty($_POST['create_password']) && isset($_POST['email']) && !empty($_POST['email'])) {
 
-
 		$email = $_POST['email'];
 		$pass = $_POST['create_password'];
 		$userName = $_POST['create_username'];
@@ -44,4 +43,42 @@ if(isset($_POST['create_username']) && !empty($_POST['create_username']) && isse
 		}
 
 }
+
+if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['author']) && !empty($_POST['author']) && isset($_POST['content']) && !empty($_POST['content'])) {
+
+	$title =  $_POST['title'];
+	$content =$_POST['content'];
+	$author = $_POST['author'];
+	$date_post = $_SESSION['date_post'];
+	$User_id = $_SESSION['User_id'];
+	$User_roles_id = $_SESSION['User_roles_id'];
+	$User_gender_id =  $_SESSION['User_gender_id'];
+	$User_apps_countries_id = $_SESSION['User_apps_countries_id'];
+
+	if(true){
+	$createpost = new Post();
+	$createpost->createPost($title, $content, $author, $date_post, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
+	echo $submitStory = "Your Story has been submited!";
+	}
+
+}
+
+function getPost() {
+
+	$allpost = new Post();
+	$allpost->showAllPost($_SESSION['User_id']);
+
+}
+
+//Check if parameter exists and is set to true
+if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
+	$id = $_GET['delete'];
+
+	$DeletePost= new Post();
+	$DeletePost->deletePost($id);
+}
+
+
+
+
 ?>
