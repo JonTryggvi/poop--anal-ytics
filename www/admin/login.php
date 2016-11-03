@@ -80,11 +80,11 @@
 					<div class="tab-pane active" id="signin" role="tabpanel">
 						<form action="includes/authentication.php" method="POST" role="tabpanel">
 							<div class="form-group body-text" role="tabpanel">
-								<label for="username">Username</label>
+								<label for="username"></label>
 								<input type="text" class="form-control" name="username" placeholder="Username or Email" value="disa">
 							</div>
 							<div class="form-group">
-								<label for="password">Password</label>
+								<label for="password"></label>
 								<input type="password" class="form-control" name="password" placeholder="Password" value="kuka">
 							</div>
 							<div class="form-group">
@@ -98,49 +98,53 @@
 			?>
 					<form action="" method="POST" role="tabpanel" >
 						<div class="form-group">
-							<label for="firstName">First Name</label>
+							<label for="firstName"></label>
 							<input type="text" class="form-control"  name="firstName" placeholder="First name" value="">
 						</div>
 						<div class="form-group">
-							<label for="lastName">Last Name</label>
+							<label for="lastName"></label>
 							<input type="text" class="form-control" name="lastName" placeholder="Last name" value="">
 						</div>
 						<div class="form-group">
-							<label for="email">Email</label>
+							<label for="email"></label>
 							<input type="text" class="form-control" name="email" placeholder="Email" value="">
 						</div>
 						<div class="form-group">
-							<label for="create_username">Username</label>
+							<label for="create_username"></label>
 							<input type="text" class="form-control"  required  name="create_username" placeholder="choose username" value="">
 						</div>
 						<div class="form-group">
-							<label for="create_password">Password</label>
+							<label for="create_password"></label>
 							<input type="password" class="form-control"  required  name="create_password" placeholder="choose password" value="">
 						</div>
 						<div class="form-group">
-							<label for="verify_password">Verify Password</label>
+							<label for="verify_password"></label>
 							<input type="password" class="form-control"  required  name="verify_password" placeholder="verify password" value="">
 						</div>
+
 						<div class="radio">
-							<label for="gender_id">Gender</label>
-								<select name="gender_id">
+							<label for="gender_id"></label>
+								<select name="gender_id" value="">
+									<option>Select Gender</option>
 									<?php $GenderSign->Gender(); ?>
 								</select>
 						</div>
+
 						<div class="form-group">
-							<label for="age">Age</label>
-							<input type="number" class="form-control" name="age" value="">
+							<label for="age"></label>
+							<input type="number" class="form-control" name="age" placeholder="age" value="">
 						</div>
+
 						<div class="form-group">
-							<label for="apps_countries_id">Countries</label>
+							<label for="apps_countries_id"></label>
 							<select name="apps_countries_id" value="" >
+								<option>Select Country</option>
 								<?php $countryLocation->countries(); ?>
 							</select>
 						</div>
+						
 						<div class="checkbox">
-							<label>
-								 <input class="checkbox" type="checkbox"><a href="#">I have read and understand the terms and conditions</a></input>
-							</label>
+								<input class="" type="checkbox"><a href="#">I have read and understand the terms and conditions</a></input>
 						</div>
 						<input name="btn-signup ormSubmit" type="submit" class="btn btn-block btn-blue" value="Sign me up for this shit!">
 					</form>
