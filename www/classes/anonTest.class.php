@@ -24,20 +24,7 @@ class anonTest {
   //  $mysqli->close();
 }
 
-public function textureResult($t){
 
-  $db = $GLOBALS['gdb'];
-  $mysqli = $db->getConnection();
-
-  $stmt = $mysqli->prepare("SELECT id, texture, description, title FROM texture WHERE id=$t");
-  $stmt->execute();
-  $stmt->bind_result($id, $texture, $description, $title);
-
-  error_log("id er :".$t);
-  while ($row = $stmt->fetch()) {
-   echo "<p>.$description.</p>";
- }
-}
 
 public function getShades(){
   $db = $GLOBALS['gdb'];
@@ -56,8 +43,29 @@ public function getShades(){
 }
 
 
+public function textureResult($t, $s){
+  $db = $GLOBALS['gdb'];
+  $mysqli = $db->getConnection();
+
+  $stmt = $mysqli->prepare("SELECT id, texture, description, title FROM texture WHERE id=$t");
+  $stmt->execute();
+  $stmt->bind_result($id, $texture, $description, $title);
+  // error_log("id er :".$t);
+  while ($row = $stmt->fetch()) {
+   echo "<p><strong>$texture:</strong> $description</p>";
+  }
+
+  $stmt = $mysqli->prepare("SELECT id, name, description FROM shade WHERE id=$s");
+  $stmt->execute();
+  $stmt->bind_result($id, $name, $description);
+
+  while ($row = $stmt->fetch()) {
+  echo "<p><strong>$name:</strong> $description</p>";
+  }
+}
 
 
+//hér setjum við inn í test töfluna niðurstöður úr prófi þegar notandi er óþekktur. Það kom á daginn að taflan userAnon var óþörf eða nýtist ekki vel þannig að ég brá á það ráð að búa til notanda sem gegnir því hlutverki að vera óþekktur.
  public function anonTextures($texture_id, $shade_id) {
  	// Connecting to Database
   $db = $GLOBALS['gdb'];

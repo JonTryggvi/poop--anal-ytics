@@ -1,27 +1,26 @@
 <?php
 	include('classes/classes.php');
 
-if(isset($_POST['submit']) and !empty($_POST['submit'])){
-	if (isset($_POST['texture']) && isset($_POST['shade']) ) {
-		// textures
-		$texture =  $_POST['texture'];
-		// Shade
-		$shade =  $_POST['shade'];
+	if(isset($_POST['submit']) and !empty($_POST['submit'])){
+		if (isset($_POST['texture']) && isset($_POST['shade']) ) {
+			// textures
+			$texture =  $_POST['texture'];
+			// Shade
+			$shade =  $_POST['shade'];
 
-		$textureTest = new anonTest();
-		$textureTest->anonTextures($texture, $shade);
+			$textureTest = new anonTest();
+			$textureTest->anonTextures($texture, $shade);
 
-if(true) {
-			function congratz($texture){
+			function showTextureResult($texture, $shade){
 				$textureResult = new anonTest();
-				$textureResult->textureResult($texture);
+				$textureResult->textureResult($texture, $shade);
 			}
-
-}
-
-
+			// function showShadeResult($shade) {
+			// 	$shadeResult = new anonTest();
+			// 	$shadeResult->shadeResult($shade);
+			// }
+		}
 	}
-}
 
 
 	function textureRadios(){

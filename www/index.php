@@ -31,8 +31,10 @@
 	 	</section>
 		<input type="submit" name="submit" value="submit">
 	</form>
-	<section>
-		<?php congratz($texture); ?>
+	<section class="wrap test-results">
+
+		<?php showTextureResult($texture, $shade); ?>
+
 	</section>
 </div>
 
