@@ -14,7 +14,7 @@
 		<input type="submit" name="submit" value="submit">
 		<section class="wrap test-results">
 
-			<?php if(isset($_POST['submit']) and !empty($_POST['submit'])) {showTextureResult($texture, $shade);} ?>
+			<?php showTextureResult($texture, $shade); ?>
 
 		</section>
 	</form>

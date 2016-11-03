@@ -40,6 +40,25 @@ public function getShades(){
  //  $mysqli->close();
 }
 
+public function resultsIcons($t, $s){
+  $db = $GLOBALS['gdb'];
+  $mysqli = $db->getConnection();
+
+  $stmt = $mysqli->prepare("SELECT id, name, description, iconUrl FROM shade WHERE id=$s");
+  $stmt->execute();
+  $stmt->bind_result($id, $name, $description, $iconUrl);
+
+  while ($row = $stmt->fetch()) {
+  echo "<div><img src='"$iconUrl"'/></div>";
+  }
+
+  $stmt = $mysqli->prepare("SELECT id, texture, description, title, iconUrl FROM texture WHERE id=$t");
+  $stmt->execute();
+  $stmt->bind_result($id, $texture, $description, $title, $iconUrl);
+  while ($row = $stmt->fetch()){
+    echo "<div class='theCross'></div><div class='icon-".title."'><img src='".$iconUrl."'/></div>";
+  }
+}
 
 public function textureResult($t, $s){
   $db = $GLOBALS['gdb'];
