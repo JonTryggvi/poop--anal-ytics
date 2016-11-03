@@ -1,2 +1,41 @@
 @import "helpers/index";
 @import "styles/index";
+
+/* Body */
+body {
+  @include fonts(main-body-text);
+  background-color: $main-yellow;
+}
+
+.nav {
+  @include fonts(heading-text);
+}
+
+/* Nav Pills */
+
+
+
+/* Buttons */
+
+
+.btn {
+  @include fonts(heading-text);
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.btn-blue {
+   @include button-bg($main-blue);
+}
+
+.btn-yellow {
+   @include button-bg($main-yellow);
+}
+
+/* Checkbox */
+
+.checkbox {
+  margin-right: 10px;
+}

@@ -1,5 +1,19 @@
-<<<<<<< HEAD
-=======
+/* Colors */
+/* Font Stack */
+/* dimensions  */
+.container-fluid {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 700px;
+  margin: 80px auto;
+}
+
+/* Fonts */
+/* Buttons */
+/* Nav-pills */
 .default {
   width: 350px !important;
 }
@@ -11,4 +25,68 @@
 .chosen-results li {
   list-style: none;
 }
->>>>>>> Herdis
+
+/* Body */
+body {
+  /* body text */
+  font-family: 'OpenSans', sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  color: #4A4A4A;
+  background-color: #FFC021;
+}
+
+.nav {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+}
+
+/* Nav Pills */
+/* Buttons */
+.btn {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.btn-blue {
+  background: #24A5A5;
+}
+
+.btn-blue:hover {
+  background: #1d8484;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-blue:active {
+  background: #0d3c3c;
+}
+
+.btn-yellow {
+  background: #FFC021;
+}
+
+.btn-yellow:hover {
+  background: #f7b100;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-yellow:active {
+  background: #a17300;
+}
+
+/* Checkbox */
+.checkbox {
+  margin-right: 10px;
+}

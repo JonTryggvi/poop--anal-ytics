@@ -1,0 +1,36 @@
+/* Fonts */
+
+@mixin fonts($text) {
+
+	@if $text == main-body-text {
+	/* body text */
+  font-family: 'OpenSans', sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  color: $dark-grey;
+	}
+
+	@if $text == heading-text {
+	/* Headings */
+		font-family: $stack-headings;
+		font-size: 1.5em;
+    color: $dark-grey;
+    text-transform: uppercase;
+	}
+}
+
+/* Buttons */
+
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  }
+}
+
+/* Nav-pills */
