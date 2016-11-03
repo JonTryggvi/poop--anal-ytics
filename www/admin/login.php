@@ -3,16 +3,16 @@
 	// signUpCheck();
 	include('includes/header.php');
 
-
-
 ?>
 	<div class="container ">
 		<div class="row tab-content">
 			<div class="login-form center-block tab-pane active in" >
 			<?php if(isset($_GET['login']) and $_GET['login'] == 'denied' || $_GET['login'] == 'empty' ) : ?>
 
+
 				<div class="alert alert-danger" role="alert">
 					<?php if($_GET['login'] == 'denied') : ?>
+
 
 						<?php echo LOGINERROR; ?>
 
@@ -28,6 +28,7 @@
 		<?php
 		 $GenderSign  = new User();
 		 $countryLocation  = new User();
+
 
 
 		 if(isset($_POST['age'])) {
@@ -69,9 +70,10 @@
 							<li class="nav-item login">
 								<a class="nav-link heading" data-toggle="tab" href="#signin" role="tab">Log in</a>
 							</li>
-							<li class="nav-item sign-up">
+							<li class="nav-item sign-up two">
 								<a class="nav-link heading" data-toggle="tab" href="#signup" role="tab">Sign Up</a>
 							</li>
+    			<hr />
 				</ul>
 
 				<div class="tab-content">
@@ -129,18 +131,6 @@
 							<label for="age">Age</label>
 							<input type="number" class="form-control" name="age" value="">
 						</div>
-						<!-- <div class="form-group">
-							<label for="profile_img">Profile picture</label>
-							<input type="image" class="form-control" name="profile_img" value="">
-						</div> -->
-						<!-- <div class="form-group">
-							<label for="roles_id">Roles</label>
-							<input type="text" class="form-control" name="roles_id" value="">
-						</div> -->
-						<!-- <div class="form-group">
-							<label for="user_date">Date</label>
-							<input type="text" class="form-control" name="user_date" value="">
-						</div> -->
 						<div class="form-group">
 							<label for="apps_countries_id">Countries</label>
 							<select name="apps_countries_id" value="" >
@@ -154,20 +144,6 @@
 						</div>
 						<input name="btn-signup ormSubmit" type="submit" class="btn btn-block btn-blue" value="Sign me up for this shit!">
 					</form>
-				</div>
-					</div>
-					<div class="form-group">
-						<label for="age">Age</label>
-						<input type="number" class="form-control" name="age" value="">
-					</div>
-					<div class="form-group">
-						<label for="apps_countries_id">Countries</label>
-						<select name="apps_countries_id" value="" >
-							<?php $countryLocation->countries(); ?>
-						</select>
-					</div>
-					<input name="btn-signup ormSubmit" type="submit" class="btn btn-primary btn-lg btn-block" value="Sign Up">
-				</form>
 			</div>
 		</div>
 
