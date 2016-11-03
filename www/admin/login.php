@@ -70,9 +70,10 @@
 							<li class="nav-item login">
 								<a class="nav-link heading" data-toggle="tab" href="#signin" role="tab">Log in</a>
 							</li>
-							<li class="nav-item sign-up">
+							<li class="nav-item sign-up two">
 								<a class="nav-link heading" data-toggle="tab" href="#signup" role="tab">Sign Up</a>
 							</li>
+    			<hr />
 				</ul>
 
 				<div class="tab-content">
@@ -143,6 +144,11 @@
 						</div>
 						<input name="btn-signup ormSubmit" type="submit" class="btn btn-block btn-blue" value="Sign me up for this shit!">
 					</form>
+<<<<<<< HEAD
+=======
+				</div>
+
+>>>>>>> 7e27a5c6a639e0d6c36240e5d0583657d89a3122
 			</div>
 		</div>
 
