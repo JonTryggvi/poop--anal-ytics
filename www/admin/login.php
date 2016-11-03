@@ -155,6 +155,19 @@
 						<input name="btn-signup ormSubmit" type="submit" class="btn btn-block btn-blue" value="Sign me up for this shit!">
 					</form>
 				</div>
+					</div>
+					<div class="form-group">
+						<label for="age">Age</label>
+						<input type="number" class="form-control" name="age" value="">
+					</div>
+					<div class="form-group">
+						<label for="apps_countries_id">Countries</label>
+						<select name="apps_countries_id" value="" >
+							<?php $countryLocation->countries(); ?>
+						</select>
+					</div>
+					<input name="btn-signup ormSubmit" type="submit" class="btn btn-primary btn-lg btn-block" value="Sign Up">
+				</form>
 			</div>
 		</div>
 
