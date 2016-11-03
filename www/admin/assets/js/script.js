@@ -13,4 +13,8 @@ $('document').ready(function(){
 
     $(".countries").chosen({disable_search_threshold: 10});
 
+    $('.confirmation').on('click', function () {
+       return confirm('Are you sure you want to delete your story?');
+   });
+
 });

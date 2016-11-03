@@ -11,10 +11,10 @@
 		$db = $GLOBALS['gdb'];
 	  $mysqli = $db->getConnection();
 
-		$stmt = $mysqli->prepare("SELECT id, password, userName, roles_id, gender_id, apps_countries_id, user_date FROM User");
+		$stmt = $mysqli->prepare("SELECT id, password, userName, roles_id, gender_id, apps_countries_id FROM User");
 
 		$stmt->execute();
-		$stmt->bind_result($id, $pass, $userName, $User_roles_id, $User_gender_id, $User_apps_countries_id, $date_post);
+		$stmt->bind_result($id, $pass, $userName, $User_roles_id, $User_gender_id, $User_apps_countries_id);
 
 		// Execute a query
 		$_SESSION['isLoggedin'] = false;
@@ -27,7 +27,6 @@
 				$_SESSION['User_roles_id'] = $User_roles_id;
 				$_SESSION['User_gender_id'] = $User_gender_id;
 				$_SESSION['User_apps_countries_id'] = $User_apps_countries_id;
-				$_SESSION['date_post'] = $date_post;
 			} else {
 			}
 		}
