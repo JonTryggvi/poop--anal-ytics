@@ -5,25 +5,25 @@ class User {
 
  }
 
- public function createUsers($email, $firstName, $lastName, $userName, $pass, $age, $roles_id, $gender_id, $apps_countries_id) {
+ public function createUsers($email, $firstName, $lastName, $userName, $pass, $age, $roles_id, $gender_id, $apps_countries_id, $user_date) {
  	// Connecting to Database
   $db = $GLOBALS['gdb'];
   $mysqli = $db->getConnection();
 
  	// prepare and bind
- 	$stmt = $mysqli->prepare("INSERT INTO User(email, password, userName, firstName, lastName, age, roles_id, gender_id, apps_countries_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
- 	$stmt->bind_param("sssssiiii", $email, $pass, $userName, $firstName, $lastName, $age, $roles_id, $gender_id, $apps_countries_id);
+ 	$stmt = $mysqli->prepare("INSERT INTO User(email, password, userName, firstName, lastName, user_date, age, roles_id, gender_id, apps_countries_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+ 	$stmt->bind_param("ssssssiiii", $email, $pass, $userName, $firstName, $lastName, $user_date, $age, $roles_id, $gender_id, $apps_countries_id);
 
-  $cost = 10;
-  $salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
-  $salt = sprintf("$2a$%02d$", $cost) . $salt;
-  $hash = crypt($pass, $salt);
+  // $cost = 10;
+  // $salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
+  // $salt = sprintf("$2a$%02d$", $cost) . $salt;
+  // $hash = crypt($pass, $salt);
 
  	$stmt->execute();
 
  	$stmt->close();
- 	$mysqli->close();
-  header('Location: ../dashboard.php');
+ // 	$mysqli->close();
+  // header('Location: ../dashboard.php');
  }
 
 public function countries(){
