@@ -144,11 +144,6 @@
 						</div>
 						<input name="btn-signup ormSubmit" type="submit" class="btn btn-block btn-blue" value="Sign me up for this shit!">
 					</form>
-<<<<<<< HEAD
-=======
-				</div>
-
->>>>>>> 7e27a5c6a639e0d6c36240e5d0583657d89a3122
 			</div>
 		</div>
 
