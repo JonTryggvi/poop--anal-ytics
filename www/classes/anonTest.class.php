@@ -49,7 +49,7 @@ public function resultsIcons($t, $s){
   $stmt->bind_result($id, $name, $description, $iconUrl);
 
   while ($row = $stmt->fetch()) {
-  echo "<div><img src='"$iconUrl"'/></div>";
+  echo "<div><img src='".$iconUrl."'/></div>";
   }
 
   $stmt = $mysqli->prepare("SELECT id, texture, description, title, iconUrl FROM texture WHERE id=$t");
