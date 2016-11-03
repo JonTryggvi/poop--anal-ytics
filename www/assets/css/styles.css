@@ -7708,6 +7708,51 @@ button.close {
   margin-top: 10vh;
 }
 
+.shadeIcon, .textureIcon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+}
+
+.shadeIcon img, .textureIcon img {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.theCross {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.theCross::before {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 30px;
+  top: 25%;
+  left: 50%;
+  margin-left: -3.5px;
+  background-color: #FFC021;
+}
+
+.theCross::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 7px;
+  top: 50%;
+  left: 25%;
+  margin-top: -3.5px;
+  background-color: #FFC021;
+}
+
 .mainNav {
   background-color: #24A5A5;
 }

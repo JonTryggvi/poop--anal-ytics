@@ -11,6 +11,11 @@
 			$textureTest = new anonTest();
 			$textureTest->anonTextures($texture, $shade);
 
+			function showResultIcons($texture, $shade) {
+				$iconResult = new anonTest();
+				$iconResult->resultsIcons($texture, $shade);
+			}
+
 			function showTextureResult($texture, $shade){
 				$textureResult = new anonTest();
 				$textureResult->textureResult($texture, $shade);
