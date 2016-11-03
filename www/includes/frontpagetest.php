@@ -13,7 +13,10 @@
 	 	</section>
 		<input type="submit" name="submit" value="submit">
 		<section class="wrap test-results">
-			<?php showResultIcons($texture, $shade); ?>
+			<div class="">
+				<?php showResultIcons($texture, $shade); ?>
+			</div>
+
 			<?php showTextureResult($texture, $shade); ?>
 
 		</section>
