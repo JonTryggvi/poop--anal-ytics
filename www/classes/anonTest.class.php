@@ -18,8 +18,6 @@ class anonTest {
   while ($row = $stmt->fetch()) {
     echo "<input class='texture-radio ".$title."' type='radio' name='texture' value='".$id."'/>";
   }
-
-
   //  $stmt-close();
   //  $mysqli->close();
 }

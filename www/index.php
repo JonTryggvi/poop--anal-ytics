@@ -3,40 +3,7 @@
 	include('includes/header.php');
 ?>
 
-		<nav class="mainNav">
-			<div class="wrap">
-				<a class="" href="#">
-	        <img alt="Brand" src="img/icons/burger.svg">
-	      </a>
-				<a class="" href="#">
-					<img alt="Brand" src="img/icons/logo.svg">
-				</a>
-	      <a class="" href="#">
-	        <img alt="Brand" src="img/icons/user.svg">
-	      </a>
-			</div>
-	</nav>
-<div class="container-fluid row">
-	<form class="texture-form wrap" action="" method="post">
-		<section class="texture col-md-7">
-			<h1>How Shitty is your day?</h1>
-			<h2>Take the poop test to find out...</h2>
-			<?php textureRadios(); ?>
-		</section>
-		<section class="shade col-md-5">
-			<h1>Carry on...</h1>
-			<h2>Choose your color...</h2>
-			<h1>shade</h1>
-			<?php shadeRadios(); ?>
-	 	</section>
-		<input type="submit" name="submit" value="submit">
-		<section class="wrap test-results">
-
-			<?php if(isset($_POST['submit']) and !empty($_POST['submit'])) {showTextureResult($texture, $shade);} ?>
-
-		</section>
-	</form>
-
-</div>
+<?php include('includes/nav-frontpage.php') ?>
+<?php include('includes/frontpagetest.php') ?>
 
 <?php include('includes/footer.php')  ?>

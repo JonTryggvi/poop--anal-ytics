@@ -15,6 +15,7 @@
 				$textureResult = new anonTest();
 				$textureResult->textureResult($texture, $shade);
 			}
+
 			// function showShadeResult($shade) {
 			// 	$shadeResult = new anonTest();
 			// 	$shadeResult->shadeResult($shade);
