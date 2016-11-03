@@ -126,18 +126,6 @@
 						<label for="age">Age</label>
 						<input type="number" class="form-control" name="age" value="">
 					</div>
-					<!-- <div class="form-group">
-						<label for="profile_img">Profile picture</label>
-						<input type="image" class="form-control" name="profile_img" value="">
-					</div> -->
-					<!-- <div class="form-group">
-						<label for="roles_id">Roles</label>
-						<input type="text" class="form-control" name="roles_id" value="">
-					</div> -->
-					<!-- <div class="form-group">
-						<label for="user_date">Date</label>
-						<input type="text" class="form-control" name="user_date" value="">
-					</div> -->
 					<div class="form-group">
 						<label for="apps_countries_id">Countries</label>
 						<select name="apps_countries_id" value="" >

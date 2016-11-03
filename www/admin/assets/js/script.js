@@ -1,8 +1,15 @@
 $('document').ready(function(){
 
-    // $('.userIcon').click(function() {
-    // $(this).tab('.userNav');
-    // });
+  $("#button").click(function(){
+    $("#content").hide();
+});
+
+  // $("#hide").click(function(){
+  //     $("p").hide();
+  // });
+  // $("#show").click(function(){
+  //     $("#story").toggle();
+  // });
 
     $(".countries").chosen({disable_search_threshold: 10});
 
