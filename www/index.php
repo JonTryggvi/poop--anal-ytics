@@ -30,12 +30,13 @@
 			<?php shadeRadios(); ?>
 	 	</section>
 		<input type="submit" name="submit" value="submit">
+		<section class="wrap test-results">
+
+			<?php if(isset($_POST['submit']) and !empty($_POST['submit'])) {showTextureResult($texture, $shade);} ?>
+
+		</section>
 	</form>
-	<section class="wrap test-results">
 
-		<?php showTextureResult($texture, $shade); ?>
-
-	</section>
 </div>
 
 <?php include('includes/footer.php')  ?>
