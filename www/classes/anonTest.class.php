@@ -49,14 +49,14 @@ public function resultsIcons($t, $s){
   $stmt->bind_result($id, $name, $description, $iconUrl);
 
   while ($row = $stmt->fetch()) {
-  echo "<div><img src='"$iconUrl"'/></div>";
+  echo "<div class='shadeIcon'><img src='".$iconUrl."'/></div>";
   }
 
   $stmt = $mysqli->prepare("SELECT id, texture, description, title, iconUrl FROM texture WHERE id=$t");
   $stmt->execute();
   $stmt->bind_result($id, $texture, $description, $title, $iconUrl);
   while ($row = $stmt->fetch()){
-    echo "<div class='theCross'></div><div class='icon-".title."'><img src='".$iconUrl."'/></div>";
+    echo "<div class='theCross'></div><div class='textureIcon icon-".title."'><img src='".$iconUrl."'/></div>";
   }
 }
 

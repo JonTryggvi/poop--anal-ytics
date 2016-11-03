@@ -38,7 +38,9 @@ class Post {
       echo '</div>';
 
     }
-    var_dump($title);
+
+
+    // var_dump($title);
 
    $stmt->close();
    $mysqli->close();
