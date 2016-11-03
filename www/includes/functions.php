@@ -40,4 +40,11 @@
 	}
 
 
+	function getStories(){
+
+		$stories = new Stories();
+		$stories-> getAllStories();
+	}
+
+
 ?>
