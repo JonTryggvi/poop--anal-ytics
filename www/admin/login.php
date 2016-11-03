@@ -3,12 +3,10 @@
 	// signUpCheck();
 	include('includes/header.php');
 
-
-
 ?>
 
 <div class="container">
-	<div class="row tab-content"   >
+	<div class="row tab-content">
 		<div class="login-form center-block tab-pane active in" >
 		<?php if(isset($_GET['login']) and $_GET['login'] == 'denied' || $_GET['login'] == 'empty' ) : ?>
 
@@ -29,7 +27,6 @@
 	<?php
 	 $GenderSign  = new User();
 	 $countryLocation  = new User();
-
 
 	 if(isset($_POST['age'])) {
 
