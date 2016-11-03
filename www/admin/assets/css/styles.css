@@ -9,3 +9,36 @@
 .chosen-results li {
   list-style: none;
 }
+
+#story {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.allStories {
+  background-color: #3F51B5;
+  margin: 10px;
+  padding: 10px;
+}
+
+#content {
+  background-color: white;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+label {
+  float: left;
+  clear: left;
+}

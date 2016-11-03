@@ -72,29 +72,25 @@ public function countries(){
   }
 
   public function emailCheck($email) {
-  // Connecting to Database
-  $db = $GLOBALS['gdb'];
-  $mysqli = $db->getConnection();
+    // Connecting to Database
+    $db = $GLOBALS['gdb'];
+    $mysqli = $db->getConnection();
 
-   // prepare and bind
-   $stmt = $mysqli->prepare("SELECT email FROM User	WHERE email = ?");
-   $stmt->bind_param('s', $email);
-   $stmt->execute();
-   $stmt->bind_result($_email);
-   $stmt->store_result();
-   $numberofrows = $stmt->num_rows;
+     // prepare and bind
+     $stmt = $mysqli->prepare("SELECT email FROM User	WHERE email = ?");
+     $stmt->bind_param('s', $email);
+     $stmt->execute();
+     $stmt->bind_result($_email);
+     $stmt->store_result();
+     $numberofrows = $stmt->num_rows;
 
-   $stmt->close();
-   return $numberofrows;
+     $stmt->close();
+     return $numberofrows;
 
+    // Close connection
+    //$mysqli->close();
 
-  // Close connection
-
-  //$mysqli->close();
-
-}
-
-
+  }
 
 }
 ?>

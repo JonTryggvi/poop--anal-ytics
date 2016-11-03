@@ -4,6 +4,7 @@
 	$GLOBALS['gdb'] = Database::getInstance();
 
 	include('user.class.php');
+	include('post.class.php');
 
 	// include('test.class.php');
 ?>
