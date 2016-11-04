@@ -14,10 +14,10 @@
 		<input type="submit" name="submit" value="submit">
 		<section class="wrap test-results">
 			<div class="">
-				<?php showResultIcons($texture, $shade); ?>
+				<?php // showResultIcons($texture, $shade); ?>
 			</div>
 
-			<?php showTextureResult($texture, $shade); ?>
+			<?php // showTextureResult($texture, $shade); ?>
 
 		</section>
 	</form>

@@ -20,3 +20,7 @@
 </head>
 
 <body>
+
+  <div class="header">
+    <h1 class="logo">GoPoop</h1>
+  </div>
