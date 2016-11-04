@@ -25,10 +25,10 @@
 				$textureResult->textureResult($t, $s);
 			};
 
-			function showShadeResult($shade) {
-				$shadeResult = new anonTest();
-				$shadeResult->shadeResult($shade);
-			}
+			// function showShadeResult($shade) {
+			// 	$shadeResult = new anonTest();
+			// 	$shadeResult->shadeResult($shade);
+			// }
 		}
 	}
 
