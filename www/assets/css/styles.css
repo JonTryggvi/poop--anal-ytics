@@ -181,7 +181,14 @@ section.shade.col-md-5 {
   margin-bottom: 40px;
 }
 
-.header .wrap {
+.logo {
+  width: 44px;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 1%;
+}
+
+.logo .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,14 +199,14 @@ section.shade.col-md-5 {
   /* User and user modal */
 }
 
-.header .wrap .bergur {
+.logo .wrap .bergur {
   width: 35px;
   height: 27px;
   display: inline-block;
   position: relative;
 }
 
-.header .wrap .logo {
+.logo .wrap .logo {
   width: auto;
   text-align: center;
   color: #fff;
