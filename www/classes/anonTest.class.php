@@ -16,7 +16,7 @@ class anonTest {
 
   echo "<div class='texture-container'>";
     while ($row = $stmt->fetch()) {
-      echo "<div class='radio-container'>";
+      echo "<div class='radio-texture-container'>";
         echo "<input id='".$title."' class='texture-radio ".$title."' type='radio' name='texture' value='".$id."'/>";
         echo "<label for='".$title."'></label>";
         echo "<div class='check'><img src='".$iconUrl."'/></div>";
@@ -33,13 +33,18 @@ public function getShades(){
   $db = $GLOBALS['gdb'];
   $mysqli = $db->getConnection();
 
-  $stmt = $mysqli->prepare('SELECT id, name, description FROM shade');
+  $stmt = $mysqli->prepare('SELECT id, name, description, iconUrl FROM shade');
   $stmt->execute();
-  $stmt->bind_result($id, $name, $description);
-
+  $stmt->bind_result($id, $name, $description, $iconUrl);
+echo "<div class='shade-container'>";
  while ($row = $stmt->fetch()) {
-   echo "<input class='shade-radio ".$name."' type='radio' name='shade' value='".$id."'/>";
+   echo "<div class='radio-shade-container'>";
+    echo "<input id='".$id."' class='shade-radio ".$name."' type='radio' name='shade' value='".$id."'/>";
+    echo "<label for='".$id."'></label>";
+    echo "<div class='check'><img src='".$iconUrl."'/></div>";
+  echo "</div>";
  }
+echo "</div>";
 
  //  $stmt-close();
  //  $mysqli->close();
