@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container-fluid,
+section.texture.col-md-7,
+section.shade.col-md-5 {
+  padding: 0;
+  margin: 0;
+}
+
+>>>>>>> asa
 /* Colors */
 /* Navigation */
 /* Font Stack */
@@ -160,18 +176,41 @@
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   background-color: yellow;
+=======
+.header {
+  background: #24A5A5;
+  height: 64px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 44px;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 1%;
+>>>>>>> asa
 }
 
 .button_container {
   position: fixed;
+<<<<<<< HEAD
   top: 5%;
   right: 2%;
+=======
+  top: 3%;
+  left: 4%;
+>>>>>>> asa
   height: 27px;
   width: 35px;
   cursor: pointer;
   z-index: 100;
   -webkit-transition: opacity .25s ease;
   transition: opacity .25s ease;
+<<<<<<< HEAD
+=======
+  z-index: 10000;
+>>>>>>> asa
 }
 
 .button_container:hover {
@@ -196,7 +235,11 @@
 }
 
 .button_container span {
+<<<<<<< HEAD
   background: #FF5252;
+=======
+  background: #fff;
+>>>>>>> asa
   border: none;
   height: 5px;
   width: 100%;
@@ -218,11 +261,16 @@
 
 .overlay {
   position: fixed;
+<<<<<<< HEAD
   background: #FF5252;
+=======
+  background: #FFC021;
+>>>>>>> asa
   top: 0;
   left: 0;
   width: 100%;
   height: 0%;
+<<<<<<< HEAD
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .35s, visibility .35s, height .35s;
@@ -232,6 +280,17 @@
 
 .overlay.open {
   opacity: .9;
+=======
+  visibility: hidden;
+  background-color: rgba(255, 192, 33, 0.95);
+  -webkit-transition: background-color .35s, visibility .35s, height .35s;
+  transition: background-color .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.overlay.open {
+>>>>>>> asa
   visibility: visible;
   height: 100%;
 }
@@ -265,9 +324,18 @@
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-size: 50px;
+<<<<<<< HEAD
   font-family: 'Vollkorn', serif;
   font-weight: 400;
   text-align: center;
+=======
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  left: 4%;
+>>>>>>> asa
 }
 
 .overlay .ul-nav {
@@ -335,3 +403,8 @@
     left: 0;
   }
 }
+<<<<<<< HEAD
+=======
+
+/* User and user modal */
+>>>>>>> asa
