@@ -1,8 +1,3 @@
-<!-- <div class="nav-container">
-  <h1>Top right corner, click it!</h1>
-  <p>View type 2 <a href="http://codepen.io/PaulVanO/pen/GgGeyE" target="_blank">here</a></p>
-</div> -->
-
 <div class="button_container" id="toggle">
   <span class="top"></span>
   <span class="middle"></span>

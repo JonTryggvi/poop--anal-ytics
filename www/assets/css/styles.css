@@ -181,9 +181,27 @@ section.shade.col-md-5 {
   margin-bottom: 40px;
 }
 
-.logo {
-  width: 44px;
+.header .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 auto;
+  /* User and user modal */
+}
+
+.header .wrap .bergur {
+  width: 35px;
+  height: 27px;
+  display: inline-block;
+  position: relative;
+}
+
+.header .wrap .logo {
+  width: auto;
+  text-align: center;
   color: #fff;
   padding-top: 1%;
 }
@@ -364,11 +382,4 @@ section.shade.col-md-5 {
     opacity: 1;
     left: 0;
   }
-}
-
-/* User and user modal */
-.modal {
-  width: 35px;
-  height: auto;
-  color: white;
 }
