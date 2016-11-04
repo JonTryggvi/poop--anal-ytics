@@ -14,4 +14,12 @@
 		font-size: 1.5em;
     color: $dark-grey;
 	}
+
+	@if $text == heading-nav {
+	/* Headings */
+		font-family: $stack-headings;
+		font-size: 3em;
+		color: $white;
+		text-transform: uppercase;
+	}
 }
