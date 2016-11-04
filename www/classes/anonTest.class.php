@@ -60,6 +60,7 @@ public function resultsIcons($t, $s){
   $stmt->bind_result($id, $name, $description, $iconUrl);
 
   while ($row = $stmt->fetch()) {
+    echo "<div class='test-message col-md-8'>";
     if($id==1){
       echo "<div><h1>Congrautlations</h1></div>";
       echo "<h2>Your day is not so shitty...</H2>";
@@ -79,14 +80,15 @@ public function resultsIcons($t, $s){
       echo "<div><h1>Fuck!!!</h1></div>";
       echo "<h2>CALL AN AMBULANCE!!!</H2>";
     }
-  echo "<div class='shadeIcon'><img src='".$iconUrl."'/></div>";
+
+  echo "</div><div class='col-md-4'> <div class='shadeIcon'><img src='".$iconUrl."'/></div>";
   }
 
   $stmt = $mysqli->prepare("SELECT id, texture, description, title, iconUrl FROM texture WHERE id=$t");
   $stmt->execute();
   $stmt->bind_result($id, $texture, $description, $title, $iconUrl);
   while ($row = $stmt->fetch()){
-    echo "<div class='theCross'></div><div class='textureIcon icon-".$title."'><img src='".$iconUrl."'/></div>";
+    echo "<div class='theCross'></div><div class='textureIcon icon-".$title."'><img src='".$iconUrl."'/></div></div>";
   }
 }
 
@@ -99,7 +101,7 @@ public function textureResult($t, $s){
   $stmt->bind_result($id, $texture, $description, $title);
   // error_log("id er :".$t);
   while ($row = $stmt->fetch()) {
-   echo "<p><strong>$texture:</strong> $description</p>";
+   echo "<div class='col-md-12'><p><strong>$texture:</strong> $description</p></div>";
   }
 
   $stmt = $mysqli->prepare("SELECT id, name, description FROM shade WHERE id=$s");
@@ -107,7 +109,7 @@ public function textureResult($t, $s){
   $stmt->bind_result($id, $name, $description);
 
   while ($row = $stmt->fetch()) {
-  echo "<p><strong>$name:</strong> $description</p>";
+  echo "<div class='col-md-12'><p><strong>$name:</strong> $description</p></div>";
   }
 }
 

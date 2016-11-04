@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   $('.radio-shade-container').click(function(){
        $(this).addClass('not-checked');
-      //  $('#test-form').submit();
+      $('#formSubmit').click();
   });
 
 
