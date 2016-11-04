@@ -39,8 +39,8 @@ public function getShades(){
 echo "<div class='shade-container'>";
  while ($row = $stmt->fetch()) {
    echo "<div class='radio-shade-container'>";
-    echo "<input id='".$id."' class='shade-radio ".$name."' type='radio' name='shade' value='".$id."'/>";
-    //  echo	"<input type='submit' name='submit' value='submit'>";
+    echo "<input id='".$id."' class='shade-radio ".$name."' type='submit' name='shade' value='".$id."'/>";
+
     echo "<label for='".$id."'></label>";
     echo "<div class='check'><img src='".$iconUrl."'/></div>";
   echo "</div>";

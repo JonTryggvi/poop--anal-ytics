@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 body, html {
   margin: 0;
   padding: 0;
@@ -13,7 +11,6 @@ section.shade.col-md-5 {
   margin: 0;
 }
 
->>>>>>> asa
 /* Colors */
 /* Navigation */
 /* Font Stack */
@@ -55,6 +52,11 @@ section.shade.col-md-5 {
 }
 
 .texture-container .radio-texture-container input[type=radio], .texture-container .radio-shade-container input[type=radio], .shade-container .radio-texture-container input[type=radio], .shade-container .radio-shade-container input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.texture-container .radio-texture-container input[type=submit], .texture-container .radio-shade-container input[type=submit], .shade-container .radio-texture-container input[type=submit], .shade-container .radio-shade-container input[type=submit] {
   position: absolute;
   visibility: hidden;
 }
@@ -166,8 +168,9 @@ section.shade.col-md-5 {
   background-color: #FFC021;
 }
 
-.nav-container {
-  position: absolute;
+.header {
+  background: #24A5A5;
+  height: 64px;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -176,11 +179,6 @@ section.shade.col-md-5 {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   background-color: yellow;
-=======
-.header {
-  background: #24A5A5;
-  height: 64px;
-  width: 100%;
   margin-bottom: 40px;
 }
 
@@ -189,28 +187,19 @@ section.shade.col-md-5 {
   margin: 0 auto;
   color: #fff;
   padding-top: 1%;
->>>>>>> asa
 }
 
 .button_container {
   position: fixed;
-<<<<<<< HEAD
-  top: 5%;
-  right: 2%;
-=======
   top: 3%;
   left: 4%;
->>>>>>> asa
   height: 27px;
   width: 35px;
   cursor: pointer;
   z-index: 100;
   -webkit-transition: opacity .25s ease;
   transition: opacity .25s ease;
-<<<<<<< HEAD
-=======
   z-index: 10000;
->>>>>>> asa
 }
 
 .button_container:hover {
@@ -235,11 +224,7 @@ section.shade.col-md-5 {
 }
 
 .button_container span {
-<<<<<<< HEAD
-  background: #FF5252;
-=======
   background: #fff;
->>>>>>> asa
   border: none;
   height: 5px;
   width: 100%;
@@ -261,26 +246,11 @@ section.shade.col-md-5 {
 
 .overlay {
   position: fixed;
-<<<<<<< HEAD
-  background: #FF5252;
-=======
   background: #FFC021;
->>>>>>> asa
   top: 0;
   left: 0;
   width: 100%;
   height: 0%;
-<<<<<<< HEAD
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity .35s, visibility .35s, height .35s;
-  transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
-}
-
-.overlay.open {
-  opacity: .9;
-=======
   visibility: hidden;
   background-color: rgba(255, 192, 33, 0.95);
   -webkit-transition: background-color .35s, visibility .35s, height .35s;
@@ -290,7 +260,6 @@ section.shade.col-md-5 {
 }
 
 .overlay.open {
->>>>>>> asa
   visibility: visible;
   height: 100%;
 }
@@ -324,18 +293,12 @@ section.shade.col-md-5 {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-size: 50px;
-<<<<<<< HEAD
-  font-family: 'Vollkorn', serif;
-  font-weight: 400;
-  text-align: center;
-=======
   /* Headings */
   font-family: "Oswald-Medium", sans-serif;
   font-size: 3em;
   color: #fff;
   text-transform: uppercase;
   left: 4%;
->>>>>>> asa
 }
 
 .overlay .ul-nav {
@@ -403,8 +366,5 @@ section.shade.col-md-5 {
     left: 0;
   }
 }
-<<<<<<< HEAD
-=======
 
 /* User and user modal */
->>>>>>> asa

@@ -11,9 +11,7 @@ $(document).ready(function(){
       //  $('#test-form').submit();
   });
 
-  $('input[name=shade]').change(function(){
-       $('form').submit();
-  });
+
 
 
 });
