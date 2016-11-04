@@ -1,6 +1,13 @@
 $(document).ready(function(){
 
-  console.log('tersdfiwefasdfi');
-})
 
-console.log('asdfowefhwef');
+
+  $('.radio-container').click(function(){
+     $('.radio-container').not(this).each(function(){
+       $(this).addClass('not-checked');
+     })
+  });
+
+
+
+});
