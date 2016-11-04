@@ -368,3 +368,8 @@ section.shade.col-md-5 {
 }
 
 /* User and user modal */
+.modal {
+  width: 35px;
+  height: auto;
+  color: white;
+}
