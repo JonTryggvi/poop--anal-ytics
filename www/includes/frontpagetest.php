@@ -9,10 +9,10 @@
 		<section class="shade col-md-5">
 			<h1>Carry on...</h1>
 			<h2>Choose your color...</h2>
-			<h1>shade</h1>
+		
 			<?php shadeRadios(); ?>
 	 	</section>
-	
+		<input type="submit" name="name" value="submit">
 		<section class="wrap test-results">
 			<div>
 				<?php
