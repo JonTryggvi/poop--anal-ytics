@@ -10,14 +10,19 @@ class anonTest {
    $db = $GLOBALS['gdb'];
    $mysqli = $db->getConnection();
 
-   $stmt = $mysqli->prepare('SELECT id, texture, description, title FROM texture');
+   $stmt = $mysqli->prepare('SELECT id, texture, description, title, iconUrl FROM texture');
    $stmt->execute();
-   $stmt->bind_result($id, $texture, $description, $title);
+   $stmt->bind_result($id, $texture, $description, $title, $iconUrl);
 
-
-  while ($row = $stmt->fetch()) {
-    echo "<input class='texture-radio ".$title."' type='radio' name='texture' value='".$id."'/>";
-  }
+  echo "<div class='texture-container'>";
+    while ($row = $stmt->fetch()) {
+      echo "<div class='radio-container'>";
+        echo "<input id='".$title."' class='texture-radio ".$title."' type='radio' name='texture' value='".$id."'/>";
+        echo "<label for='".$title."'></label>";
+        echo "<div class='check'><img src='".$iconUrl."'/></div>";
+      echo "</div>";
+    }
+  echo "</div>";
   //  $stmt-close();
   //  $mysqli->close();
 }
@@ -49,6 +54,25 @@ public function resultsIcons($t, $s){
   $stmt->bind_result($id, $name, $description, $iconUrl);
 
   while ($row = $stmt->fetch()) {
+    if($id==1){
+      echo "<div><h1>Congrautlations</h1></div>";
+      echo "<h2>Your day is not so shitty...</H2>";
+    }elseif($id==2){
+      echo "<div><h1>Not to bad....</h1></div>";
+      echo "<h2>but kinda green... which is never nice...</h2>";
+    }elseif($id==3){
+      echo "<div><h1>hmmm....</h1></div>";
+      echo "<h2>You probaly stink!</H2>";
+    }elseif($id==4){
+      echo "<div><h1>Hang on there!</h1></div>";
+      echo "<h2>Internal bleeding?!?</H2>";
+    }elseif($id==5){
+      echo "<div><h1>Eawwww....</h1></div>";
+      echo "<h2>You should call a doctor</H2>";
+    }elseif($id==6){
+      echo "<div><h1>Fuck!!!</h1></div>";
+      echo "<h2>CALL AN AMBULANCE!!!</H2>";
+    }
   echo "<div class='shadeIcon'><img src='".$iconUrl."'/></div>";
   }
 
@@ -56,7 +80,7 @@ public function resultsIcons($t, $s){
   $stmt->execute();
   $stmt->bind_result($id, $texture, $description, $title, $iconUrl);
   while ($row = $stmt->fetch()){
-    echo "<div class='theCross'></div><div class='textureIcon icon-".title."'><img src='".$iconUrl."'/></div>";
+    echo "<div class='theCross'></div><div class='textureIcon icon-".$title."'><img src='".$iconUrl."'/></div>";
   }
 }
 
