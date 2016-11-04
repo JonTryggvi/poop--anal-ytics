@@ -3,13 +3,36 @@
   height: 64px;
   width: 100%;
   margin-bottom: 40px;
+
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .bergur {
+      width: 35px;
+      height: 27px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .logo {
+      width: auto;
+      text-align: center;
+      // margin: 0 auto;
+      color: $white;
+      padding-top: 1%;
+
+    }
+
+    /* User and user modal */
+    .user-icon {
+
+    }
+  }
 }
-.logo {
-  width: 44px;
-  margin: 0 auto;
-  color: $white;
-  padding-top: 1%;
-}
+
 
 // .nav-container {
 //   position: absolute;
@@ -173,12 +196,4 @@
     opacity: 1;
     left: 0;
   }
-}
-
-/* User and user modal */
-
-.modal {
-  width: 35px;
-  height: auto;
-  color: white;
 }
