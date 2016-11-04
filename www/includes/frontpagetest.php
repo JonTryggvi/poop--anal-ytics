@@ -1,3 +1,4 @@
+
 <div class="container-fluid row">
 	<form class="texture-form wrap" action="" method="post">
 		<section class="texture col-md-7">
@@ -13,11 +14,18 @@
 	 	</section>
 		<input type="submit" name="submit" value="submit">
 		<section class="wrap test-results">
-			<div class="">
-				<?php showResultIcons($texture, $shade); ?>
+			<div>
+				<?php
+					if (isset($_POST['texture']) && isset($_POST['shade']) ) {
+						showResultIcons($texture, $shade);
+					} 
+				?>
 			</div>
-
-			<?php showTextureResult($texture, $shade); ?>
+			<?php
+				if (isset($_POST['texture']) && isset($_POST['shade']) ) {
+					showTextureResult($texture, $shade);
+				}
+			?>
 
 		</section>
 	</form>

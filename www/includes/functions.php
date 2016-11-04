@@ -11,15 +11,19 @@
 			$textureTest = new anonTest();
 			$textureTest->anonTextures($texture, $shade);
 
-			function showResultIcons($texture, $shade) {
+			function showResultIcons($t, $s) {
 				$iconResult = new anonTest();
-				$iconResult->resultsIcons($texture, $shade);
-			}
+				$iconResult->resultsIcons($t, $s);
+			};
 
-			function showTextureResult($texture, $shade){
+			// function test(){
+			// 	showResultIcons($texture, $shade);
+			// };
+
+			function showTextureResult($t, $s){
 				$textureResult = new anonTest();
-				$textureResult->textureResult($texture, $shade);
-			}
+				$textureResult->textureResult($t, $s);
+			};
 
 			// function showShadeResult($shade) {
 			// 	$shadeResult = new anonTest();
