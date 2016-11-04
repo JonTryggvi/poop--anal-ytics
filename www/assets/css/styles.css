@@ -407,4 +407,12 @@ section.shade.col-md-5 {
 =======
 
 /* User and user modal */
+<<<<<<< HEAD
+>>>>>>> asa
+=======
+.modal {
+  width: 35px;
+  height: auto;
+  color: white;
+}
 >>>>>>> asa
