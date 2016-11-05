@@ -1,0 +1,57 @@
+/* Nav Pills */
+
+.nav-pills .nav-link {
+  padding: .5em 2em .5em 0;
+}
+
+.nav-pills .nav-item.open .nav-link,
+.nav-pills .nav-item.open .nav-link:focus,
+.nav-pills .nav-item.open .nav-link:hover,
+.nav-pills .nav-link.active, .nav-pills .nav-link.active:focus,
+.nav-pills .nav-link.active:hover {
+  background-color: transparent !important;
+  color: $dark-grey;
+}
+
+ul li {
+  display: inline;
+}
+
+a {
+  display: inline-block;
+  width: 100%;
+  padding: .75rem 0 0 0;
+  margin: 0;
+  text-decoration: none;
+  color: $dark-grey;
+}
+a:focus,
+a:hover {
+  color: $dark-grey;
+}
+
+.two:hover ~ hr {
+  margin-left: 16%;
+  cursor: auto;
+}
+
+
+hr {
+  display: block;
+  clear: both;
+  height: .25rem;
+  width: 12%;
+  margin: 0 0 20px 0;
+  background: $main-blue;
+  border: none;
+  transition: .3s ease-in-out;
+}
+
+
+/* Checkbox */
+
+.checkbox {
+  display: inline-block;
+  margin-right: 10px;
+  float: left;
+}

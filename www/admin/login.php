@@ -35,14 +35,15 @@
 
 		 ?>
 
-			<ul class="nav nav-pills" role="tablist">
-			  <li class="nav-item heading-text">
-			    <a class="nav-link" data-toggle="tab" href="#signin" role="tab">Log in</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link active" data-toggle="tab" href="#signup" role="tab">Sign Up</a>
-			  </li>
-			</ul>
+		 <ul class="nav nav-pills" role="tablist">
+		       <li class="nav-item login">
+		         <a class="nav-link heading" data-toggle="tab" href="#signin" role="tab">Log in</a>
+		       </li>
+		       <li class="nav-item sign-up two">
+		         <a class="nav-link heading" data-toggle="tab" href="#signup" role="tab">Sign Up</a>
+		       </li>
+		   <hr />
+		 </ul>
 
 			<div class="tab-content">
 				<div class="tab-pane" id="signin" role="tabpanel">
@@ -142,9 +143,9 @@
 								<?php $countryLocation->countries(); ?>
 							</select>
 						</div>
-						
+
 						<div class="checkbox">
-								<input class="" type="checkbox"><a href="#">I have read and understand the terms and conditions</a></input>
+								<input class="" type="checkbox"><a href="#"> I have read and understand the terms and conditions</a></input>
 						</div>
 						<input name="btn-signup ormSubmit" type="submit" class="btn btn-block btn-blue" value="Sign me up for this shit!">
 					</form>
