@@ -8,18 +8,34 @@
   color: $dark-grey;
 	}
 
-	@if $text == heading {
+	@elseif $text == heading {
 	/* Headings */
 		font-family: $stack-headings;
 		font-size: 1.5em;
     color: $dark-grey;
 	}
 
-	@if $text == heading-nav {
+	@elseif $text == h2 {
+		font-family: $stack-open-sans;
+		font-size: 1rem;
+		color: $dark-grey;
+	}
+
+	@elseif $text == heading-nav {
 	/* Headings */
 		font-family: $stack-headings;
 		font-size: 3em;
 		color: $white;
 		text-transform: uppercase;
 	}
+
+	@elseif $text == copy {
+		font-family: $stack-open-sans;
+		font-size: 0.875rem;
+		color: #FFF;
+	
+	}
+
+
+
 }

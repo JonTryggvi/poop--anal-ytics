@@ -7,7 +7,8 @@ $(document).ready(function(){
   });
 
   $('.radio-shade-container').click(function(){
-       $(this).addClass('not-checked');
+       $(this).siblings('not-checked');
+      //  $(this).siblings('.bidbutton');
       $('#formSubmit').click();
   });
 
