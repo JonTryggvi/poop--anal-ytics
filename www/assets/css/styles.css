@@ -447,29 +447,13 @@ div.modal-dialog {
 }
 
 .txt-wrap {
-  max-width: 700px;
+  max-width: 1024px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.txt-wrap .heading {
-  /* Headings */
-  font-family: "Oswald-Medium", sans-serif;
-  font-size: 1.5em;
-  color: #4A4A4A;
-  text-transform: uppercase;
-  padding: 20px 0 0 0;
 }
 
 .txt-wrap .inner-txt-wrap {
@@ -480,38 +464,30 @@ div.modal-dialog {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 2%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border-radius: 2px;
   margin-bottom: 40px;
 }
 
-.txt-wrap .inner-txt-wrap .heading {
-  display: block;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.txt-wrap .inner-txt-wrap .bullets {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.txt-wrap .inner-txt-wrap .advice {
   width: 33%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px;
+  padding: 0 20px;
+  margin: auto;
+  margin-top: 0;
 }
 
+.txt-wrap .inner-txt-wrap .advice .heading {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  padding: 20px 0 20px 0;
+}
+
+/* Facts */
 .yellow-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,20 +508,27 @@ div.modal-dialog {
 }
 
 .yellow-container .heading {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  padding: 20px 0 0 0;
   display: block;
   width: 100%;
   margin-bottom: 20px;
 }
 
 .yellow-container .heading,
-.yellow-container .main-text {
+.yellow-container .main-text,
+.yellow-container .main-text-yellow {
   color: #fff;
 }
 
-.yellow-container .main-text {
+.yellow-container .main-text-yellow {
   width: 33%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px;
+  padding: 0 20px;
 }

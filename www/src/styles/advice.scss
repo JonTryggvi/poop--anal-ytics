@@ -1,40 +1,34 @@
 .txt-wrap {
-  max-width: 700px;
+  max-width: 1024px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   flex-wrap: wrap;
 
-  .heading {
-    @include font-open-sans(heading);
-    padding: 20px 0 0 0;
-  }
   .inner-txt-wrap {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2%;
+    align-items: flex-start;
     border-radius: 2px;
     margin-bottom: 40px;
+    @include font-open-sans(main-text);
 
-    .heading {
-      display: block;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-
-    .bullets {
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: wrap;
+    .advice {
       width: 33%;
-      justify-content: space-between;
-      padding: 20px;
+      padding: 0 20px;
+      margin: auto;
+      margin-top: 0;
+
+
+      .heading {
+        @include font-open-sans(heading);
+        padding: 20px 0 20px 0;
+      }
     }
   }
 }
+
+/* Facts */
+
 .yellow-container {
   display: flex;
   flex-direction: row;
@@ -45,20 +39,23 @@
   border-radius: 2px;
   margin-bottom: 40px;
 
-  .heading {
+    .heading {
+    @include font-open-sans(heading);
+    padding: 20px 0 0 0;
     display: block;
     width: 100%;
     margin-bottom: 20px;
-  }
+    }
 
-  .heading,
-  .main-text {
-    color: $white;
-  }
+    .heading,
+    .main-text,
+    .main-text-yellow {
+      color: $white;
+    }
 
-  .main-text {
-    width: 33%;
-    justify-content: space-between;
-    padding: 20px;
-  }
+    .main-text-yellow {
+      width: 33%;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
 }
