@@ -1,15 +1,32 @@
+.texture-form{
+  width: 700px;
+  height: 800px;
+  margin: 0 auto;
+}
 .texture {
+  h1 {
+    @include font-open-sans(heading);
+  }
+  h2 {
+    @include font-open-sans(h2);
+  }
   .texture-radio {
     margin: 5px;
   }
 }
 
 .shade {
-
+  h1 {
+    @include font-open-sans(heading);
+  }
+  h2 {
+    @include font-open-sans(h2);
+  }
   .shade-radio {
     margin: 5px;
   }
 }
+
 
 .texture-container, .shade-container {
   display: flex;
@@ -68,17 +85,13 @@
         height: 100%;
       }
     }
-    // input[type=radio]:checked ~ .check {
-    //
-    //   border: 2px solid $light-grey;
-    // }
-    // input[type=radio]:checked ~ .check::before {
-    //   background-color: rgba(255,255,255,0.8);
-    //
-    // }
-
   }
 }
+
+.shade-container {
+  width: 235px;
+}
+
 
 .not-checked {
     input[type=radio]:checked ~ .check {
@@ -95,13 +108,19 @@
 }
 
 .test-message {
-  
+
 }
 
 
 .test-results {
   margin-top: 10vh;
   width: 100%;
+  h1 {
+    @include font-open-sans(heading);
+  }
+  h2 {
+    @include font-open-sans(h2);
+  }
 }
 
 

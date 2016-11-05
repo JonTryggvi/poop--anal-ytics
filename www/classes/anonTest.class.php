@@ -121,8 +121,7 @@ public function textureResult($t, $s){
   $mysqli = $db->getConnection();
  	// prepare and bind
  	$stmt = $mysqli->prepare("INSERT INTO test (User_id,diary_id, UserAnon_id, date) VALUES (210,7,1,now())");
-  // error_log("villa : ".$stmt->id);
- // 	$stmt->bind_param("ii",$shade_id, $texture_id);
+
  	$stmt->execute();
   $stmt = $mysqli->prepare("SELECT id FROM test WHERE User_id=210");
   $stmt->execute();
@@ -130,7 +129,7 @@ public function textureResult($t, $s){
   while ($stmt->fetch()){
     $test_id = $id;
   }
-  // error_log("id er :".$testId);
+
 	$stmt = $mysqli->prepare("INSERT INTO test_has_shade (shade_id,test_id) VALUES (?, ?)");
   $stmt->bind_param("ii", $shade_id, $test_id);
   $stmt->execute();
@@ -147,20 +146,5 @@ public function textureResult($t, $s){
  }
 
 
-//  public function deleteUser($userid) {
-//   // Connecting to Database
-//   $db = $GLOBALS['gdb'];
-//   $mysqli = $db->getConnection();
-//
-//   // prepare and bind
-//   $stmt = $mysqli->prepare("DELETE FROM users WHERE user_id=? LIMIT 1");
-//   $stmt->bind_param("i", $userid);
-//   $stmt->execute();
-//
-//   $stmt->close();
-//   //$mysqli->close();
-//   //header('Location: ./users.php?updated=true');
-//  }
-//
  }
 ?>

@@ -7,17 +7,17 @@
 			<h1>texture</h1>
 			<?php textureRadios(); ?>
 		</section>
-		<section class="shade col-md-5">
+		<section class="shade col-md-4 pull-right">
 			<h1>Carry on...</h1>
 			<h2>Choose your color...</h2>
 			<h1>shade</h1>
 			<?php shadeRadios(); ?>
-         
+
 
 	 	</section>
 		<input id="formSubmit" type="submit" name="submit" value="submit">
 
-		<section class="wrap test-results col-md-12">
+		<section class="wrap test-results col-md-8 col-centered">
 			<div>
 				<?php
 					if (isset($_POST['texture']) && isset($_POST['shade']) ) {
