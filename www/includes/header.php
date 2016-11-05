@@ -23,7 +23,23 @@
 
   <div class="header">
     <div class="wrap">
-      <div class="bergur"></div>
+      <div class="bergur">
+        <div class="button_container" id="toggle">
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul class="ul-nav">
+              <li class="li-nav"><a class="nav-link" href="index.php">Poop Test</a></li>
+              <li class="li-nav"><a class="nav-link" href="#">Shitty Stories</a></li>
+              <li class="li-nav"><a class="nav-link" href="advice.php">Good Advice</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       <h1 class="logo">GoPoop</h1>
       <!-- Image trigger modal -->
       <img class="user-icon" src="img/icons/user.svg" alt="" data-toggle="modal" data-target="#myModal">
