@@ -16,19 +16,12 @@
 				$iconResult->resultsIcons($t, $s);
 			};
 
-			// function test(){
-			// 	showResultIcons($texture, $shade);
-			// };
 
 			function showTextureResult($t, $s){
 				$textureResult = new anonTest();
 				$textureResult->textureResult($t, $s);
 			};
 
-			// function showShadeResult($shade) {
-			// 	$shadeResult = new anonTest();
-			// 	$shadeResult->shadeResult($shade);
-			// }
 		}
 	}
 
