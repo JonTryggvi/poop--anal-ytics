@@ -1,7 +1,7 @@
 
 <div class="container-fluid row">
-	<form id="test-form" class="texture-form row" action="" method="post">
-		<section class="texture col-md-7">
+	<form id="test-form" class="texture-form row row-no-gutter" action="" method="post">
+		<section class="texture col-md-6">
 			<h1>How Shitty is your day?</h1>
 			<h2>Take the poop test to find out...</h2>
 			<h1>texture</h1>
@@ -17,20 +17,20 @@
 	 	</section>
 		<input id="formSubmit" type="submit" name="submit" value="submit">
 
-		<section class="col-sm-offset-2 col-sm-8 test-results ">
-			<div>
+		<section class="col-md-12 row test-results ">
+			<div class="col-md-8 centerme row">
 				<?php
 					if (isset($_POST['texture']) && isset($_POST['shade']) ) {
 						showResultIcons($texture, $shade);
 					}
 				?>
-			</div>
+
 			<?php
 				if (isset($_POST['texture']) && isset($_POST['shade']) ) {
 					showTextureResult($texture, $shade);
 				}
 			?>
-
+			</div>
 		</section>
 	</form>
 

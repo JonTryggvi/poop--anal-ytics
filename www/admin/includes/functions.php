@@ -78,6 +78,4 @@ if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
 }
 
 
-
-
 ?>

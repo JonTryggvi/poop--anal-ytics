@@ -11,6 +11,20 @@ section.shade.col-md-5 {
   margin: 0;
 }
 
+.centerme {
+  margin: auto;
+}
+
+.row-no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row-no-gutter [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 /* Colors */
 /* Navigation */
 /* Font Stack */
@@ -67,9 +81,10 @@ section.shade.col-md-5 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 356px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 348px;
   height: auto;
 }
 
@@ -145,7 +160,7 @@ section.shade.col-md-5 {
 }
 
 .shade-container {
-  width: 235px;
+  width: 227px;
 }
 
 .not-checked input[type=radio]:checked ~ .check {
@@ -193,7 +208,6 @@ section.shade.col-md-5 {
       align-self: center;
   background: #FFC021;
   border-radius: 2px;
-  width: 355px;
   height: 44px;
   border: none;
   font-family: "OpenSans", sans-serif;

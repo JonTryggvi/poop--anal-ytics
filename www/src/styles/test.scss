@@ -32,8 +32,8 @@
 .texture-container, .shade-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 356px;
+  justify-content: space-between;
+  width: 348px;
   height: auto;
 
   .radio-texture-container, .radio-shade-container {
@@ -90,7 +90,7 @@
 }
 
 .shade-container {
-  width: 235px;
+  width: 227px;
 }
 
 
@@ -128,7 +128,7 @@
   align-self: center;
   background: $main-yellow;
   border-radius: 2px;
-  width: 355px;
+    // width: 355px;
   height: 44px;
   border: none;
   font-family: $stack-open-sans;
