@@ -27,6 +27,7 @@
 // if($_SESSION['User_roles_id']==2) {
 		$navItems = array(
 			array('Dashboard', 'index.php'),
+			array('Diarya', 'diarya.php'),
 			array('Advice', 'users.php'),
 			array('Static', 'pages.php'),
 			array('Posts', 'posts.php'),

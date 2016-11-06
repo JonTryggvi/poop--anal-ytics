@@ -4,23 +4,12 @@
 	include('includes/header.php');
 ?>
 <div class="container-fluid">
-	<div class="row">
-		<nav class="navbar navbar-light bg-faded">
-			<?php createNavigation('userNav'); ?>
-			<?php echo $_SESSION['UsrNm']  ?>
-		</nav>
-		<nav class="mainNavContainer">
-			<?php createNavigation('mainNav'); ?>
-		</nav>
-	</div>
+<?php include('includes/nav.php'); ?>
 
 	<div class="row"  id="story">
 		<div class="col-md-6 p-a-3">
 			<div class="row">
-				<nav class="breadcrumb">
-				  <a class="breadcrumb-item" href="#">Home</a>
-				  <span class="breadcrumb-item active" href="#">Stories</span>
-				</nav>
+
 
         <form action="posts.php" method="POST" role="tabpanel" >
           <div class="form-group" role="tabpanel">
