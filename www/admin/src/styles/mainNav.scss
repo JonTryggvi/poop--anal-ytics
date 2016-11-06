@@ -1,0 +1,27 @@
+
+.mainNavContainer {
+  position: absolute;
+  width: 208px;
+  z-index: 10;
+  .mainnav {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    background-color: $main-blue;
+    width: 208px;
+    height: 100%;
+    .mainNav-item {
+      display: flex;
+      background-color: $main-blue;
+      width: 100%;
+      transition: backround-color 3ms ease-in-out;
+      &:hover {
+        background-color: #fff;
+      }
+      a {
+        @include fonts(mainNav);
+        width: 100%;
+      }
+    }
+  }
+}

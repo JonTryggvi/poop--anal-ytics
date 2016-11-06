@@ -78,4 +78,44 @@ if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
 }
 
 
+// test functions
+if(isset($_POST['submit']) and !empty($_POST['submit'])){
+	if (isset($_POST['texture']) && isset($_POST['shade']) ) {
+		// textures
+		$texture =  $_POST['texture'];
+		// Shade
+		$shade =  $_POST['shade'];
+		$textureTest = new userTest();
+		$textureTest->anonTextures($texture, $shade);
+		function showResultIcons($t, $s) {
+			$iconResult = new userTest();
+			$iconResult->resultsIcons($t, $s);
+		};
+
+		function showTextureResult($t, $s){
+			$textureResult = new userTest();
+			$textureResult->textureResult($t, $s);
+		};
+	}
+}
+
+
+function textureRadios(){
+	$test = new userTest();
+	$test->getTextures();
+}
+
+function shadeRadios(){
+	$test = new userTest();
+	$test-> getShades();
+}
+
+
+function getStories(){
+	$stories = new userTest();
+	$stories-> getAllStories();
+}
+
+
+
 ?>

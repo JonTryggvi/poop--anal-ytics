@@ -7,28 +7,24 @@
 			$texture =  $_POST['texture'];
 			// Shade
 			$shade =  $_POST['shade'];
-
 			$textureTest = new anonTest();
 			$textureTest->anonTextures($texture, $shade);
-
 			function showResultIcons($t, $s) {
 				$iconResult = new anonTest();
 				$iconResult->resultsIcons($t, $s);
 			};
 
-
 			function showTextureResult($t, $s){
 				$textureResult = new anonTest();
 				$textureResult->textureResult($t, $s);
 			};
-
 		}
 	}
 
 
 	function textureRadios(){
-			$test = new anonTest();
-			$test->getTextures();
+		$test = new anonTest();
+		$test->getTextures();
 	}
 
 	function shadeRadios(){
@@ -38,7 +34,6 @@
 
 
 	function getStories(){
-
 		$stories = new Stories();
 		$stories-> getAllStories();
 	}

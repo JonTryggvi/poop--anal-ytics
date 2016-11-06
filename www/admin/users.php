@@ -34,10 +34,11 @@
 	<div class="row">
 
 		<nav class="navbar navbar-light bg-faded">
-		<?php createNavigation('mainNav'); ?>
 			<?php createNavigation('userNav'); ?>
 			<?php echo $_SESSION['UsrNm']  ?>
-
+		</nav>
+		<nav class="mainNavContainer">
+			<?php createNavigation('mainNav'); ?>
 		</nav>
 	</div>
 	<div class="row">

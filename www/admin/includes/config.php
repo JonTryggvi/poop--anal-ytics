@@ -23,13 +23,28 @@
 	define('LOGINERROR', 'Username or Password is wrong!', false);
 	define('LOGINEMPTY', 'Username or Password is empty!', false);
 
-	$navItems = array(
-		array('Dashboard', 'index.php'),
-		array('Advice', 'users.php'),
-		array('Static', 'pages.php'),
-		array('Posts', 'posts.php'),
-		array('Files', 'files.php')
-	);
+	// var_dump($_SESSION['User_roles_id']);
+// if($_SESSION['User_roles_id']==2) {
+		$navItems = array(
+			array('Dashboard', 'index.php'),
+			array('Advice', 'users.php'),
+			array('Static', 'pages.php'),
+			array('Posts', 'posts.php'),
+			array('Files', 'files.php')
+		);
+	// }
+	// elseif($_SESSION['User_roles_id']==1) {
+	// 	$navItems = array(
+	// 		array('Dashboard', 'index.php'),
+	// 		array('Advice', 'users.php'),
+	// 		// array('Static', 'pages.php'),
+	// 		array('Posts', 'posts.php'),
+	// 		array('Files', 'files.php')
+	// 	);
+	// }
+
+
+
 	$userNav2 = array(
 		array('Take test', 'landingpage.php'),
 		array('advice', 'advice.php'),
@@ -82,14 +97,16 @@ function createNavigation($nav) {
 
 		$navArr = $GLOBALS['navItems'];
 		$className = 'main';
+		$bootstrapClass = '';
 
 	} elseif($nav == 'userNav') {
 
 		$navArr = $GLOBALS['userNavItems'];
 		$className = 'user';
+		$bootstrapClass = 'navbar-nav m-t-2';
 	}
 
-	echo '<ul class="'.$className.'nav navbar-nav m-t-2">';
+	echo '<ul class="'.$className.'nav '.$bootstrapClass.'">';
 	foreach($navArr as $key => $value) {
 
 		if($value[1] == 'Dashboard') {
@@ -98,7 +115,7 @@ function createNavigation($nav) {
 		} else {
 			$active = '';
 		}
-		echo '<li class="nav-item nav-link"><a href="'.$value[1].'" class="'.$active.'">'. $value[0] .'</a></li>';
+		echo '<li class="nav-item nav-link '.$nav.'-item"><a href="'.$value[1].'" class="'.$active.'">'. $value[0] .'</a></li>';
 	}
 	echo '</ul>';
 }

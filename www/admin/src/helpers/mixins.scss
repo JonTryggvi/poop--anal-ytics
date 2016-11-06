@@ -10,15 +10,65 @@
   color: $dark-grey;
 	}
 
-	@if $text == heading-text {
+	@elseif $text == heading-text {
 	/* Headings */
 		font-family: $stack-headings;
 		font-size: 1.5em;
     color: $dark-grey;
     text-transform: uppercase;
 	}
+	@elseif $text == mainNav {
+		font-familiy: $stack-open-sans;
+		font-size: 1.5rem;
+		color:#fff;
+		text-transform: uppercase;
+		transition: color 3ms ease-in-out;
+		&:hover {
+			color: $main-blue;
+		}
+	}
 }
 
+/* mixin frá root möppu*/
+
+@mixin font-open-sans($text) {
+
+	@if $text == main-body-text {
+	/* body text */
+  font-family: 'OpenSans', sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  color: $dark-grey;
+	}
+
+	@elseif $text == heading {
+	/* Headings */
+		font-family: $stack-headings;
+		font-size: 1.5em;
+    color: $dark-grey;
+	}
+
+	@elseif $text == h2 {
+		font-family: $stack-open-sans;
+		font-size: 1rem;
+		color: $dark-grey;
+	}
+
+	@elseif $text == heading-nav {
+	/* Headings */
+		font-family: $stack-headings;
+		font-size: 3em;
+		color: $white;
+		text-transform: uppercase;
+	}
+
+	@elseif $text == copy {
+		font-family: $stack-open-sans;
+		font-size: 0.875rem;
+		color: #FFF;
+
+	}
+}
 /* Buttons */
 
 
