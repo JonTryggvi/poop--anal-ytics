@@ -580,6 +580,83 @@ label {
       align-self: center;
 }
 
+.header .wrap .user-icon div.modal-dialog {
+  max-width: 320px;
+}
+
+.header .wrap .user-icon .modal-content {
+  border: 2px solid #FFC021;
+  border-radius: 2px;
+}
+
+.header .wrap .user-icon .modal-content .modal-header {
+  padding: 0;
+}
+
+.header .wrap .user-icon .modal-content .modal-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.header .wrap .user-icon .modal-content .user-image img {
+  width: 46px;
+  height: 46px;
+  margin: 15px;
+}
+
+.header .wrap .user-icon .modal-content .modal-body {
+  padding: 15 0;
+  position: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+}
+
+.header .wrap .user-icon .modal-content .fa-camera,
+.header .wrap .user-icon .modal-content .fa-cog {
+  color: #24A5A5;
+}
+
+.header .wrap .user-icon .modal-content .fa-camera i,
+.header .wrap .user-icon .modal-content .fa-cog i {
+  /* body text */
+  font-family: 'OpenSans', sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  color: #4A4A4A;
+}
+
+.header .wrap .user-icon .modal-content .change-photo,
+.header .wrap .user-icon .modal-content .settings,
+.header .wrap .user-icon .modal-content .user-image,
+.header .wrap .user-icon .modal-content .user-name-email {
+  margin: auto;
+}
+
+.header .wrap .user-icon .modal-content .modal-footer {
+  text-align: center;
+  padding: 0;
+}
+
+.header .wrap .user-icon .modal-content button.btn.modal-button {
+  width: 100%;
+  background: #FFC021;
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  color: #fff;
+  border-radius: 0;
+}
+
 .overlay {
   position: fixed;
   background: #FFC021;

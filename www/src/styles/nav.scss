@@ -78,11 +78,32 @@
       // margin: 0 auto;
       color: $white;
       align-self: center;
+      cursor: pointer;
     }
 
-    /* User and user modal */
-    .user-icon {
+    /* User  */
+    .user-login-signup {
+      width: auto;
+      height: auto;
       align-self: center;
+      z-index: 10000;
+
+      position: relative;
+
+      .user-icon {
+        cursor: pointer;
+        // z-index: 100;
+        // transition: opacity .25s ease;
+        // z-index: 10000;
+
+        &:hover {
+          opacity: .7;
+        }
+
+        &:active {
+          color: blue;
+        }
+      }
     }
   }
 }

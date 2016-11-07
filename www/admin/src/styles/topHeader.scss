@@ -84,6 +84,65 @@
     /* User and user modal */
     .user-icon {
       align-self: center;
+
+      div.modal-dialog {
+        max-width: 320px;
+      }
+      .modal-content {
+        border: 2px solid $main-yellow;
+        border-radius: 2px;
+
+        .modal-header {
+          padding: 0;
+        }
+
+        .modal-user {
+          display: flex;
+          justify-content: left;
+        }
+
+        .user-image img {
+          width: 46px;
+          height: 46px;
+          margin: 15px;
+        }
+
+        .modal-body {
+          padding: 15 0;
+          position: none;
+          display: flex;
+          justify-content: center;
+          text-align: left;
+        }
+
+        .fa-camera,
+        .fa-cog {
+          color: $main-blue;
+
+          i {
+            @include font-open-sans(main-body-text);
+          }
+        }
+
+        .change-photo,
+        .settings,
+        .user-image,
+        .user-name-email {
+          margin: auto;
+        }
+
+        .modal-footer {
+          text-align: center;
+          padding: 0;
+        }
+        button.btn.modal-button {
+          width: 100%;
+          background: $main-yellow;
+          @include font-open-sans(heading);
+          color: $white;
+          border-radius: 0;
+        }
+      }
     }
   }
 }
