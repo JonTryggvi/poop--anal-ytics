@@ -23,6 +23,7 @@
 	define('LOGINERROR', 'Username or Password is wrong!', false);
 	define('LOGINEMPTY', 'Username or Password is empty!', false);
 
+
 	// var_dump($_SESSION['User_roles_id']);
 // if($_SESSION['User_roles_id']==2) {
 		$navItems = array(
@@ -45,6 +46,15 @@
 	// }
 
 
+
+
+	$navItems = array(
+		array('Dashboard', 'index.php'),
+		array('Advice', 'users.php'),
+		array('Static', 'pages.php'),
+		array('Your Posts', 'posts.php'),
+		array('Stories', 'stories.php')
+	);
 
 	$userNav2 = array(
 		array('Take test', 'landingpage.php'),

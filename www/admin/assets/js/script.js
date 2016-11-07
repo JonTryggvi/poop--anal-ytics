@@ -18,10 +18,9 @@ $('document').ready(function(){
    });
 
 
-
      $('.radio-texture-container').click(function(){
           $(this).addClass('not-checked');
-        
+
      });
 
      $('.radio-shade-container').click(function(){
@@ -29,6 +28,11 @@ $('document').ready(function(){
          //  $(this).siblings('.bidbutton');
          $('#formSubmit').click();
      });
+
+
+   function showDiv() {
+   document.getElementById('userInfo').style.display = "block";
+}
 
 
 });

@@ -10,7 +10,6 @@
 		<div class="col-md-6 p-a-3">
 			<div class="row">
 
-
         <form action="posts.php" method="POST" role="tabpanel" >
           <div class="form-group" role="tabpanel">
             <label for="title">Title</label>

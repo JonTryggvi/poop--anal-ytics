@@ -5,7 +5,11 @@
 
 	include('user.class.php');
 	include('post.class.php');
+
 	include('userTest.class.php');
+
+	include('stories.class.php');
+
 
 	// include('test.class.php');
 ?>

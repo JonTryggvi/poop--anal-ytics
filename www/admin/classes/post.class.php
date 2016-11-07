@@ -10,8 +10,8 @@ class Post {
     $mysqli = $db->getConnection();
 
    	// prepare and bind
-   	$stmt = $mysqli->prepare("INSERT INTO post(title, content, author, date, User_id, User_roles_id, User_gender_id, User_apps_countries_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-   	$stmt->bind_param("ssssiiii", $title, $content, $author, $date_post, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
+   	$stmt = $mysqli->prepare("INSERT INTO post(title, content, author,) VALUES (?, ?, ?)");
+   	$stmt->bind_param("sss", $title, $content, $author);
 
    	$stmt->execute();
 
@@ -38,8 +38,6 @@ class Post {
       echo '</div>';
 
     }
-
-
     // var_dump($title);
 
    $stmt->close();
@@ -62,7 +60,6 @@ class Post {
    //header('Location: ./users.php?updated=true');
    var_dump($id);
  }
-
 
 }
 ?>
