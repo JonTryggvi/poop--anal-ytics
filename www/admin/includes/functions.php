@@ -85,19 +85,26 @@ if(isset($_POST['submit']) and !empty($_POST['submit'])){
 		// Shade
 		$shade =  $_POST['shade'];
 		$textureTest = new userTest();
-		$textureTest->anonTextures($texture, $shade);
+		$textureTest->userTextures($texture, $shade);
+
+		$diaryTitle = $_POST['diary-title'];
+		$diaryContent = $_POST['diary-content'];
+
+		$diary = new userTest();
+		$diary->insertDiary($diaryTitle, $diaryContent);
+
 		function showResultIcons($t, $s) {
 			$iconResult = new userTest();
 			$iconResult->resultsIcons($t, $s);
-		};
+		}
 
 		function showTextureResult($t, $s){
 			$textureResult = new userTest();
 			$textureResult->textureResult($t, $s);
-		};
+		}
 	}
-}
 
+}
 
 function textureRadios(){
 	$test = new userTest();
@@ -108,6 +115,10 @@ function shadeRadios(){
 	$test = new userTest();
 	$test-> getShades();
 }
+
+
+
+
 
 
 // function getStories(){

@@ -1,6 +1,6 @@
 
 <div class="container-fluid row">
-	<form id="test-form" class="texture-form row row-no-gutter" action="" method="post">
+	<form id="test-diary-form" class="texture-form row row-no-gutter" action="" method="post">
 		<section class="texture col-md-6">
 			<h1>How Shitty is your day?</h1>
 			<h2>Take the poop test to find out...</h2>
@@ -15,7 +15,12 @@
 
 
 	 	</section>
-		<input id="formSubmit" type="submit" name="submit" value="submit">
+		<section>
+			<input type="text" name="diary-title" value="">
+			<input type="text" name="diary-content" value="">
+			<input id="formSubmitD" type="submit" name="submit" value="submit">
+		</section>
+
 
 		<section class="col-md-12 row test-results ">
 			<div class="col-md-8 centerme row">
