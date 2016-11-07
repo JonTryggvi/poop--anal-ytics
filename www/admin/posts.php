@@ -17,7 +17,7 @@
 			<div class="row">
 				<nav class="breadcrumb">
 				  <a class="breadcrumb-item" href="#">Home</a>
-				  <span class="breadcrumb-item active" href="#">Stories</span>
+				  <span class="breadcrumb-item active" href="#">Posts</span>
 				</nav>
 
         <form action="posts.php" method="POST" role="tabpanel" >

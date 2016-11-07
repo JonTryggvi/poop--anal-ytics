@@ -21,7 +21,7 @@ class Stories {
     while(mysqli_stmt_fetch($stmt)) {
 
       echo '<div class="allStories">';
-      echo '<div class="title"><h1>' .$title. '</h1><h6>'.$date_post. '</h6><a>Read more</a></a></div><div id="content"><p>' .substr($content, 0, 100). '</p></div><h3>' .$author. '</h3>';
+      echo '<div class="title"><h1>' .$title. '</h1><h6>'.$date_post. '</h6></div><div id="content"><p>' .substr($content, 0, 100). '</p></div><a href="././admin/login.php">Read more</a><h3>' .$author. '</h3>';
       echo '</div>';
 
     }

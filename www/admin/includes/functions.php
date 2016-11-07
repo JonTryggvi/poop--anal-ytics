@@ -69,6 +69,7 @@ function getPost() {
 
 }
 
+
 //Check if parameter exists and is set to true
 if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
 	$id = $_GET['postid'];
@@ -76,6 +77,43 @@ if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
 	$DeletePost= new Post();
 	$DeletePost->deletePost($id);
 }
+
+
+	function getStories(){
+
+		$stories = new Stories();
+		$stories-> getAllStories();
+	}
+
+	if(isset($_POST['commentSubmit'])){
+
+		$content = $_POST['content'];
+		$author = $_SESSION['UsrNm'];
+		$comment_time = date("Y-m-d H:i:s");
+		$post_id = $_POST['post_id'];
+		$User_id = $_SESSION['User_id'];
+		$User_roles_id = $_SESSION['User_roles_id'];
+		$User_gender_id =  $_SESSION['User_gender_id'];
+		$User_apps_countries_id = $_SESSION['User_apps_countries_id'];
+
+		$createcomments = new Stories();
+		$createcomments->setComments($content, $author, $comment_time, $post_id, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
+		echo $submitComment = "Your comment has been submited!";
+	}
+
+	function getAllComments(){
+
+		$content = $_POST['content'];
+		$author ='jlaksdj';
+		$comment_time = date("Y-m-d H:i:s");
+		$User_id = '101';
+		$User_roles_id = '2';
+		$User_gender_id = '1';
+		$User_apps_countries_id = '99';
+
+		$allcomments = new Stories();
+		$allcomments->getComments($content, $author, $comment_time, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
+	}
 
 
 

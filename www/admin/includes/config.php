@@ -27,8 +27,8 @@
 		array('Dashboard', 'index.php'),
 		array('Advice', 'users.php'),
 		array('Static', 'pages.php'),
-		array('Posts', 'posts.php'),
-		array('Files', 'files.php')
+		array('Your Posts', 'posts.php'),
+		array('Stories', 'stories.php')
 	);
 	$userNav2 = array(
 		array('Take test', 'landingpage.php'),

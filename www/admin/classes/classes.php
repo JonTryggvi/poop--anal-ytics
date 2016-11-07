@@ -5,6 +5,7 @@
 
 	include('user.class.php');
 	include('post.class.php');
+	include('stories.class.php');
 
 	// include('test.class.php');
 ?>

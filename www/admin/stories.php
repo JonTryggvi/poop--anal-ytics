@@ -3,30 +3,38 @@
 	loginCheck();
 	include('includes/header.php');
 ?>
+
 <div class="container-fluid">
 	<div class="row">
-
 		<nav class="navbar navbar-light bg-faded">
 		<?php createNavigation('mainNav'); ?>
 			<?php createNavigation('userNav'); ?>
-			<a onclick="showDiv()"><?php echo $_SESSION['UsrNm']?></a>
-			<p id="userInfo">
-				sdfkljdsflkjsd
-			</p>
-
+			<?php echo $_SESSION['UsrNm']  ?>
 		</nav>
 	</div>
-	<div class="row">
-		<div class="col-md-3 p-a-3">
 
-		</div>
-		<div class="col-md-9 p-a-3">
+	<div class="row"  id="story">
+		<div class="col-md-6 p-a-3">
 			<div class="row">
 				<nav class="breadcrumb">
 				  <a class="breadcrumb-item" href="#">Home</a>
-				  <span class="breadcrumb-item active" href="#">Dashboard</span>
+				  <span class="breadcrumb-item active" href="#">Everyone stories</span>
 				</nav>
+
+        <section class="wrap test-results">
+
+          <?php getStories(); ?>
+
+        
+
+          <?php getAllComments(); ?>
+
+        </section>
+
+
+
 			</div>
+
 		</div>
 
 	</div>

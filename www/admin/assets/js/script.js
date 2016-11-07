@@ -17,4 +17,8 @@ $('document').ready(function(){
        return confirm('Are you sure you want to delete your story?');
    });
 
+   function showDiv() {
+   document.getElementById('userInfo').style.display = "block";
+}
+
 });
