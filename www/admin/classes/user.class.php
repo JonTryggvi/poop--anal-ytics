@@ -20,7 +20,6 @@ class User {
   // $hash = crypt($pass, $salt);
 
  	$stmt->execute();
-
  	$stmt->close();
  // 	$mysqli->close();
   // header('Location: ../dashboard.php');

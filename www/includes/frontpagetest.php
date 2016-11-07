@@ -1,16 +1,17 @@
 
 <div class="container-fluid row">
-	<form id="test-form" class="texture-form row row-no-gutter" action="" method="post">
+	<form id="test-form" class="texture-form row row-no-gutter borderParent" action="" method="post">
+		<span class="borderTest"></span>
 		<section class="texture col-md-6">
 			<h1>How Shitty is your day?</h1>
 			<h2>Take the poop test to find out...</h2>
-			<h1>texture</h1>
+			<h1 class="testText">texture</h1>
 			<?php textureRadios(); ?>
 		</section>
 		<section class="shade col-md-4 pull-right">
 			<h1>Carry on...</h1>
 			<h2>Choose your color...</h2>
-			<h1>shade</h1>
+			<h1 class="testText">shade</h1>
 			<?php shadeRadios(); ?>
 
 

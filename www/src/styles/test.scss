@@ -11,6 +11,11 @@
   h2 {
     @include font-open-sans(h2);
   }
+  .testText{
+    @include font-open-sans(heading);
+    text-transform: uppercase;
+    margin-top: 21px;
+  }
   .texture-radio {
     margin: 5px;
   }
@@ -22,6 +27,11 @@
   }
   h2 {
     @include font-open-sans(h2);
+  }
+  .testText{
+    @include font-open-sans(heading);
+    text-transform: uppercase;
+    margin-top: 21px;
   }
   .shade-radio {
     margin: 5px;
@@ -35,6 +45,7 @@
   justify-content: space-between;
   width: 348px;
   height: auto;
+  margin-top: 15px;
 
   .radio-texture-container, .radio-shade-container {
     display: inline-flex;
@@ -67,7 +78,7 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      border: 2px solid $main-blue;
+      border: 2px solid $light-blue;
       transition: border .3s ease-in-out;
       &:hover {
         border: 2px solid $light-grey;
@@ -88,11 +99,18 @@
     }
   }
 }
-
+.texture {
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
 .shade-container {
   width: 227px;
-}
 
+}
+.shade {
+  opacity: 0.2;
+  transition: opacity .3s ease-in-out;
+}
 
 .not-checked {
     input[type=radio]:checked ~ .check {
@@ -145,9 +163,6 @@
 }
 
 
-
-
-
 .shadeIcon, .textureIcon {
   display: inline-flex;
   width: 60px;
@@ -184,5 +199,21 @@
     margin-top: -3.5px;
     background-color: $main-yellow;
   }
-
+}
+// .opac {
+//   opacity: 1;
+// }
+.borderParent {
+  position: relative;
+  .borderTest {
+    position: absolute;
+    // content: '';
+    height: 5px;
+    width: 130px;
+    background-color: $light-blue;
+    top: 98px;
+    left: 0;
+    opacity: 1 !important;
+    transition: left .6s ease-in-out;
+  }
 }
