@@ -3,7 +3,7 @@
 	loginCheck();
 	include('includes/header.php');
 ?>
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
 
 <?php
 	include('includes/nav.php');

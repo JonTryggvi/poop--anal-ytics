@@ -407,9 +407,14 @@ div.modal-dialog {
   height: 64px;
   width: 100%;
   margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header .wrap {
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,17 +430,13 @@ div.modal-dialog {
   height: 27px;
   display: inline-block;
   position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.header .wrap .logo {
-  width: auto;
-  text-align: center;
-  color: #fff;
-  padding-top: 1%;
-}
-
-.button_container {
-  position: fixed;
+.header .wrap .bergur .button_container {
+  position: absolute;
   top: 3%;
   left: 4%;
   height: 27px;
@@ -447,28 +448,28 @@ div.modal-dialog {
   z-index: 10000;
 }
 
-.button_container:hover {
+.header .wrap .bergur .button_container:hover {
   opacity: .7;
 }
 
-.button_container.active .top {
+.header .wrap .bergur .button_container.active .top {
   -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
           transform: translateY(11px) translateX(0) rotate(45deg);
   background: #FFF;
 }
 
-.button_container.active .middle {
+.header .wrap .bergur .button_container.active .middle {
   opacity: 0;
   background: #FFF;
 }
 
-.button_container.active .bottom {
+.header .wrap .bergur .button_container.active .bottom {
   -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
           transform: translateY(-11px) translateX(0) rotate(-45deg);
   background: #FFF;
 }
 
-.button_container span {
+.header .wrap .bergur .button_container span {
   background: #fff;
   border: none;
   height: 5px;
@@ -481,12 +482,26 @@ div.modal-dialog {
   cursor: pointer;
 }
 
-.button_container span:nth-of-type(2) {
+.header .wrap .bergur .button_container span:nth-of-type(2) {
   top: 11px;
 }
 
-.button_container span:nth-of-type(3) {
+.header .wrap .bergur .button_container span:nth-of-type(3) {
   top: 22px;
+}
+
+.header .wrap .logo {
+  width: auto;
+  color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header .wrap .user-icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .overlay {

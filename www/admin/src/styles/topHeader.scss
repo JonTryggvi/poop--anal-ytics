@@ -3,10 +3,14 @@
   height: 64px;
   width: 100%;
   margin-bottom: 40px;
+  display: flex;
 
   .wrap {
+    width: $designWidth;
+    align-self: center;
     display: flex;
     justify-content: space-between;
+
     margin: 0 auto;
 
     .bergur {
@@ -14,75 +18,77 @@
       height: 27px;
       display: inline-block;
       position: relative;
+      align-self: center;
+
+      .button_container {
+        position: absolute;
+        top: 3%;
+        left: 4%;
+        height: $button-height;
+        width: $button-width;
+        cursor: pointer;
+        z-index: 100;
+        transition: opacity .25s ease;
+        z-index: 10000;
+
+        &:hover {
+          opacity: .7;
+        }
+
+        &.active {
+          .top {
+            transform: translateY(11px) translateX(0) rotate(45deg);
+            background: $color-active;
+          }
+          .middle {
+            opacity: 0;
+            background: $color-active;
+          }
+
+          .bottom {
+            transform: translateY(-11px) translateX(0) rotate(-45deg);
+            background: $color-active;
+          }
+        }
+
+        span {
+        background: $white;
+        border: none;
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition:  all .35s ease;
+        cursor: pointer;
+
+          &:nth-of-type(2) {
+            top: 11px;
+          }
+
+          &:nth-of-type(3) {
+            top: 22px;
+          }
+        }
+
+      }
     }
 
     .logo {
       width: auto;
-      text-align: center;
       // margin: 0 auto;
       color: $white;
-      padding-top: 1%;
-
+      align-self: center;
     }
 
     /* User and user modal */
     .user-icon {
-
+      align-self: center;
     }
   }
 }
 
-.button_container {
-  position: fixed;
-  top: 3%;
-  left: 4%;
-  height: $button-height;
-  width: $button-width;
-  cursor: pointer;
-  z-index: 100;
-  transition: opacity .25s ease;
-  z-index: 10000;
 
-  &:hover {
-    opacity: .7;
-  }
-
-  &.active {
-    .top {
-      transform: translateY(11px) translateX(0) rotate(45deg);
-      background: $color-active;
-    }
-    .middle {
-      opacity: 0;
-      background: $color-active;
-    }
-
-    .bottom {
-      transform: translateY(-11px) translateX(0) rotate(-45deg);
-      background: $color-active;
-    }
-  }
-
-  span {
-  background: $white;
-  border: none;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition:  all .35s ease;
-  cursor: pointer;
-
-    &:nth-of-type(2) {
-      top: 11px;
-    }
-
-    &:nth-of-type(3) {
-      top: 22px;
-    }
-  }
-}
 
 .overlay {
   position: fixed;
