@@ -78,7 +78,7 @@
       position: absolute;
       height: 100%;
       width: 100%;
-      border: 2px solid $light-blue;
+      border: 2px solid $main-blue;
       transition: border .3s ease-in-out;
       &:hover {
         border: 2px solid $light-grey;
@@ -210,7 +210,7 @@
     // content: '';
     height: 5px;
     width: 130px;
-    background-color: $light-blue;
+    background-color: $main-blue;
     top: 98px;
     left: 0;
     opacity: 1 !important;

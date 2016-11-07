@@ -1,8 +1,9 @@
 <div class="row">
 
+  <?php include('topHeader.php'); ?>
   <nav class="navbar navbar-light bg-faded">
 
-    <?php createNavigation('userNav'); ?>
+
     <?php echo $_SESSION['UsrNm']  ?>
   </nav>
   <nav class="mainNavContainer">

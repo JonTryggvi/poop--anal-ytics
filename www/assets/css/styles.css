@@ -231,7 +231,7 @@ div.modal-dialog {
   position: absolute;
   height: 100%;
   width: 100%;
-  border: 2px solid #72CEC9;
+  border: 2px solid #24A5A5;
   -webkit-transition: border .3s ease-in-out;
   transition: border .3s ease-in-out;
 }
@@ -394,7 +394,7 @@ div.modal-dialog {
   position: absolute;
   height: 5px;
   width: 130px;
-  background-color: #72CEC9;
+  background-color: #24A5A5;
   top: 98px;
   left: 0;
   opacity: 1 !important;
