@@ -17,6 +17,6 @@ $(document).ready(function(){
   });
 
 
-
+console.log ("Bjána drasl");
 
 });
