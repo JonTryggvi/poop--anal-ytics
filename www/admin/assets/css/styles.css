@@ -101,11 +101,6 @@ hr {
 
 /* Disclaimer Modal */
 /* Buttons */
-body {
-  background-color: red;
-  z-index: 100000;
-}
-
 .btn {
   /* Headings */
   font-family: "Oswald-Medium", sans-serif;
@@ -189,6 +184,10 @@ body {
 label {
   float: left;
   clear: left;
+}
+
+#userInfo {
+  display: none;
 }
 
 .mainNavContainer {
@@ -574,26 +573,28 @@ label {
       align-self: center;
 }
 
-.header .wrap .user-icon {
+.header .wrap .default-user {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  border: 1px solid #fff;
+  border-radius: 2px;
 }
 
-.header .wrap .user-icon div.modal-dialog {
+.header .wrap .default-user div.modal-dialog {
   max-width: 320px;
 }
 
-.header .wrap .user-icon .modal-content {
+.header .wrap .default-user .modal-content {
   border: 2px solid #FFC021;
   border-radius: 2px;
 }
 
-.header .wrap .user-icon .modal-content .modal-header {
+.header .wrap .default-user .modal-content .modal-header {
   padding: 0;
 }
 
-.header .wrap .user-icon .modal-content .modal-user {
+.header .wrap .default-user .modal-content .modal-user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,13 +603,13 @@ label {
           justify-content: left;
 }
 
-.header .wrap .user-icon .modal-content .user-image img {
+.header .wrap .default-user .modal-content .user-image img {
   width: 46px;
   height: 46px;
   margin: 15px;
 }
 
-.header .wrap .user-icon .modal-content .modal-body {
+.header .wrap .default-user .modal-content .modal-body {
   padding: 15 0;
   position: none;
   display: -webkit-box;
@@ -620,13 +621,13 @@ label {
   text-align: left;
 }
 
-.header .wrap .user-icon .modal-content .fa-camera,
-.header .wrap .user-icon .modal-content .fa-cog {
+.header .wrap .default-user .modal-content .fa-camera,
+.header .wrap .default-user .modal-content .fa-cog {
   color: #24A5A5;
 }
 
-.header .wrap .user-icon .modal-content .fa-camera i,
-.header .wrap .user-icon .modal-content .fa-cog i {
+.header .wrap .default-user .modal-content .fa-camera i,
+.header .wrap .default-user .modal-content .fa-cog i {
   /* body text */
   font-family: 'OpenSans', sans-serif;
   font-size: 1em;
@@ -634,19 +635,19 @@ label {
   color: #4A4A4A;
 }
 
-.header .wrap .user-icon .modal-content .change-photo,
-.header .wrap .user-icon .modal-content .settings,
-.header .wrap .user-icon .modal-content .user-image,
-.header .wrap .user-icon .modal-content .user-name-email {
+.header .wrap .default-user .modal-content .change-photo,
+.header .wrap .default-user .modal-content .settings,
+.header .wrap .default-user .modal-content .user-image,
+.header .wrap .default-user .modal-content .user-name-email {
   margin: auto;
 }
 
-.header .wrap .user-icon .modal-content .modal-footer {
+.header .wrap .default-user .modal-content .modal-footer {
   text-align: center;
   padding: 0;
 }
 
-.header .wrap .user-icon .modal-content button.btn.modal-button {
+.header .wrap .default-user .modal-content button.btn.modal-button {
   width: 100%;
   background: #FFC021;
   /* Headings */
@@ -787,7 +788,7 @@ body {
   font-size: 1em;
   line-height: 1.6em;
   color: #4A4A4A;
-  background-color: #FFC021;
+  background-color: #fff;
 }
 
 .nav {

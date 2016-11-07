@@ -22,7 +22,7 @@
 
     <h1 class="logo">GoPoop</h1>
     <!-- Image trigger modal -->
-    <img class="user-icon" src="img/icons/user.svg" alt="" data-toggle="modal" data-target="#myModal">
+    <img class="default-user" src="img/trump-orange.jpg" alt="" data-toggle="modal" data-target="#myModal">
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -33,7 +33,7 @@
 
             <div class="modal-user">
               <div class="user-image">
-                <img src="img/poops/GoPoop_icon-02.png" alt="" />
+                <img src="img/trump-orange.jpg" alt="" />
               </div>
               <div class="user-name-email">
                 <p class="modal-title" id="myModalLabel">Name of User</p>
