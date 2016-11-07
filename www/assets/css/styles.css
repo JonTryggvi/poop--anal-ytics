@@ -34,6 +34,84 @@ section.shade.col-md-5 {
   margin: 0 auto;
 }
 
+div.modal-dialog {
+  max-width: 280px;
+}
+
+.modal-content {
+  border: 2px solid #FFC021;
+  border-radius: 2px;
+}
+
+.modal-content .modal-header {
+  padding: 0;
+}
+
+.modal-content .modal-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-content .user-image img {
+  width: 46px;
+  height: 46px;
+  margin: 15px;
+}
+
+.modal-content .modal-body {
+  padding: 15 0;
+  position: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+}
+
+.modal-content .fa-camera,
+.modal-content .fa-cog {
+  color: #24A5A5;
+}
+
+.modal-content .fa-camera i,
+.modal-content .fa-cog i {
+  /* body text */
+  font-family: 'OpenSans', sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  color: #4A4A4A;
+}
+
+.modal-content .change-photo,
+.modal-content .settings,
+.modal-content .user-image,
+.modal-content .user-name-email {
+  margin: auto;
+}
+
+.modal-content .modal-footer {
+  text-align: center;
+  padding: 0;
+}
+
+.modal-content button.btn.modal-button {
+  width: 100%;
+  background: #FFC021;
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0;
+}
+
 .texture-form {
   width: 700px;
   min-height: 800px;
@@ -46,6 +124,7 @@ section.shade.col-md-5 {
   font-family: "Oswald-Medium", sans-serif;
   font-size: 1.5em;
   color: #4A4A4A;
+  text-transform: uppercase;
 }
 
 .texture h2 {
@@ -60,6 +139,7 @@ section.shade.col-md-5 {
   font-size: 1.5em;
   color: #4A4A4A;
   text-transform: uppercase;
+  text-transform: uppercase;
   margin-top: 21px;
 }
 
@@ -72,6 +152,7 @@ section.shade.col-md-5 {
   font-family: "Oswald-Medium", sans-serif;
   font-size: 1.5em;
   color: #4A4A4A;
+  text-transform: uppercase;
 }
 
 .shade h2 {
@@ -85,6 +166,7 @@ section.shade.col-md-5 {
   font-family: "Oswald-Medium", sans-serif;
   font-size: 1.5em;
   color: #4A4A4A;
+  text-transform: uppercase;
   text-transform: uppercase;
   margin-top: 21px;
 }
@@ -225,6 +307,7 @@ section.shade.col-md-5 {
   font-family: "Oswald-Medium", sans-serif;
   font-size: 1.5em;
   color: #4A4A4A;
+  text-transform: uppercase;
 }
 
 .test-results h2 {
@@ -527,6 +610,93 @@ section.shade.col-md-5 {
     opacity: 1;
     left: 0;
   }
+}
+
+.txt-wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.txt-wrap .inner-txt-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+.txt-wrap .inner-txt-wrap .advice {
+  width: 33%;
+  padding: 0 20px;
+  margin: auto;
+  margin-top: 0;
+}
+
+.txt-wrap .inner-txt-wrap .advice .heading {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  padding: 20px 0 20px 0;
+}
+
+/* Facts */
+.yellow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #FFC021;
+  padding: 2%;
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+.yellow-container .heading {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  padding: 20px 0 0 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.yellow-container .heading,
+.yellow-container .main-text,
+.yellow-container .main-text-yellow {
+  color: #fff;
+}
+
+.yellow-container .main-text-yellow {
+  width: 33%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
 }
 
 footer {

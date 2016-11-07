@@ -3,7 +3,7 @@
 	include('includes/header.php');
 ?>
 
-<?php include('includes/nav-frontpage.php') ?>
 <?php include('includes/frontpagetest.php') ?>
+
 
 <?php include('includes/footer.php')  ?>
