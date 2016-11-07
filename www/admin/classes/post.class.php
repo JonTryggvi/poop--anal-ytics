@@ -4,22 +4,21 @@ class Post {
  public function __construct() {
 
  }
-   public function createPost($title, $content, $author, $date_post, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id) {
-   	// Connecting to Database
-    $db = $GLOBALS['gdb'];
-    $mysqli = $db->getConnection();
+ public function createPost($title, $content, $author, $date_post, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id) {
+ // Connecting to Database
+ $db = $GLOBALS['gdb'];
+ $mysqli = $db->getConnection();
 
-   	// prepare and bind
-   	$stmt = $mysqli->prepare("INSERT INTO post(title, content, author,) VALUES (?, ?, ?)");
-   	$stmt->bind_param("sss", $title, $content, $author);
+ // prepare and bind
+ $stmt = $mysqli->prepare("INSERT INTO post(title, content, author, date, User_id, User_roles_id, User_gender_id, User_apps_countries_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+ $stmt->bind_param("ssssiiii", $title, $content, $author, $date_post, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
 
-   	$stmt->execute();
+ $stmt->execute();
+ $stmt->close();
+ $mysqli->close();
 
-   	$stmt->close();
-   	$mysqli->close();
-
-    // header('Location: ../dashboard.php');
-   }
+ // header('Location: ../dashboard.php');
+}
 
   function showAllPost($id) {
    // Connecting to Database
@@ -27,7 +26,7 @@ class Post {
    $mysqli = $db->getConnection();
 
   	// prepare and bind
-  	$stmt = $mysqli->prepare("SELECT id, title, content, author, date FROM post WHERE User_id= $id ");
+  	$stmt = $mysqli->prepare("SELECT id, title, content, author, date FROM post WHERE User_id= $id");
     $stmt->bind_result($postid, $title, $content, $author, $date_post);
     $stmt->execute();
 
@@ -58,7 +57,6 @@ class Post {
    $stmt->close();
   //  $mysqli->close();
    //header('Location: ./users.php?updated=true');
-   var_dump($id);
  }
 
 }

@@ -112,10 +112,10 @@ function shadeRadios(){
 }
 
 
-function getStories(){
-	$stories = new userTest();
-	$stories-> getAllStories();
-}
+// function getStories(){
+// 	$stories = new userTest();
+// 	$stories-> getAllStories();
+// }
 
 	function getStories(){
 
@@ -139,22 +139,25 @@ function getStories(){
 		echo $submitComment = "Your comment has been submited!";
 	}
 
-	function getAllComments(){
+	function getPosts() {
+      $allPosts = new Stories();
+      return $allPosts->getAllStories($_SESSION['User_id']);
+    }
 
-		$content = $_POST['content'];
-		$author ='jlaksdj';
-		$comment_time = date("Y-m-d H:i:s");
-		$User_id = '101';
-		$User_roles_id = '2';
-		$User_gender_id = '1';
-		$User_apps_countries_id = '99';
+    function getPostComments($post_id) {
 
-		$allcomments = new Stories();
-		$allcomments->getComments($content, $author, $comment_time, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
-	}
-
->>>>>>> Herdis
+      $allComments = new Stories();
+      return $allComments->getPostComments($post_id);
+    }
 
 
+	function check($id){
+		if($_SESSION['User_roles_id'] == 2){
+			echo '<a class="btn btn-danger btn-sm" href="stories.php?delete=true&postid='.$postid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+		}else {
+			echo "bye";
+		}
+
+}
 
 ?>
