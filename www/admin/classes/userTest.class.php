@@ -52,6 +52,16 @@ public function getShades(){
    //  $mysqli->close();
   }
 
+
+public function insertDiary($d_title, $d_content) {
+  $db = $GLOBALS['gdb'];
+  $mysqli = $db->getConnection();
+
+  $stmt = $mysqli->prepare("INSERT INTO diary (title, content) VALUES (?, ?)");
+    $stmt->bind_param("ss", $d_title, $d_content);
+  $stmt->execute();
+}
+
 public function resultsIcons($t, $s){
   $db = $GLOBALS['gdb'];
   $mysqli = $db->getConnection();
@@ -119,7 +129,7 @@ public function textureResult($t, $s){
 
 
 //hér setjum við inn í test töfluna niðurstöður úr prófi þegar notandi er óþekktur. Það kom á daginn að taflan userAnon var óþörf eða nýtist ekki vel þannig að ég brá á það ráð að búa til notanda sem gegnir því hlutverki að vera óþekktur.
- public function anonTextures($texture_id, $shade_id) {
+ public function userTextures($texture_id, $shade_id) {
  	// Connecting to Database
   $db = $GLOBALS['gdb'];
   $mysqli = $db->getConnection();

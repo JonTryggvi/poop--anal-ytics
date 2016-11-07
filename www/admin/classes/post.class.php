@@ -13,12 +13,14 @@ class Post {
  $stmt = $mysqli->prepare("INSERT INTO post(title, content, author, date, User_id, User_roles_id, User_gender_id, User_apps_countries_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
  $stmt->bind_param("ssssiiii", $title, $content, $author, $date_post, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
 
+
  $stmt->execute();
  $stmt->close();
  $mysqli->close();
 
  // header('Location: ../dashboard.php');
 }
+
 
   function showAllPost($id) {
    // Connecting to Database
