@@ -72,7 +72,6 @@ function getPost() {
 //Check if parameter exists and is set to true
 if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
 	$id = $_GET['postid'];
-
 	$DeletePost= new Post();
 	$DeletePost->deletePost($id);
 }
@@ -111,10 +110,10 @@ function shadeRadios(){
 }
 
 
-function getStories(){
-	$stories = new userTest();
-	$stories-> getAllStories();
-}
+// function getStories(){
+// 	$stories = new userTest();
+// 	$stories-> getAllStories();
+// }
 
 
 

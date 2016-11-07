@@ -21,13 +21,16 @@ class User {
 
  	$stmt->execute();
 
+  $stmt = $mysqli->prepare("SELECT id FROM User ORDER BY id DESC LIMIT 1");
+  $stmt->execute();
+
   $stmt->bind_result($id);
   while ($stmt->fetch()){
     $diary_id = $id;
   }
 
-  $stmt = $mysqli->prepare("INSERT INTO diary (title, content, date, User_id) VALUES ('newUser', 'this is the first diary record', now(), $diary_id )");
-
+  $stmt = $mysqli->prepare("INSERT INTO diary (title, content, date, User_id) VALUES ('New user', 'This is your first diary record! Feel free to delete it ', now(), $diary_id )");
+  $stmt->execute();
  	$stmt->close();
  // 	$mysqli->close();
   // header('Location: ../dashboard.php');

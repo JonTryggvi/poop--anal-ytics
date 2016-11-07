@@ -14,7 +14,6 @@ class Post {
    	$stmt->bind_param("ssssiiii", $title, $content, $author, $date_post, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
 
    	$stmt->execute();
-
    	$stmt->close();
    	$mysqli->close();
 
