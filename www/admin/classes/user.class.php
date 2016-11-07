@@ -20,6 +20,14 @@ class User {
   // $hash = crypt($pass, $salt);
 
  	$stmt->execute();
+
+  $stmt->bind_result($id);
+  while ($stmt->fetch()){
+    $diary_id = $id;
+  }
+
+  $stmt = $mysqli->prepare("INSERT INTO diary (title, content, date, User_id) VALUES ('newUser', 'this is the first diary record', now(), $diary_id )");
+
  	$stmt->close();
  // 	$mysqli->close();
   // header('Location: ../dashboard.php');
