@@ -144,43 +144,9 @@
 							</select>
 						</div>
 
-						<!-- Image trigger modal -->
 						<div class="checkbox">
-								<input class="" type="checkbox"><a class="terms" href="#" data-toggle="modal2" data-target="#myModal2"> I have read and understand the terms and conditions</a></input>
+								<input class="" type="checkbox"><a class="terms" href="#"> I have read and understand the terms and conditions</a></input>
 						</div>
-
-			      <!-- Modal -->
-			      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			        <div class="modal-dialog" role="document">
-			          <div class="modal-content">
-			            <div class="modal-header">
-			              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-			              <div class="modal-user">
-			                <div class="user-image">
-			                  <img src="img/poops/GoPoop_icon-02.png" alt="" />
-			                </div>
-			                <div class="user-name-email">
-			                  <p class="modal-title" id="myModalLabel">Name of User</p>
-			                  <p vlass="modal-user-email">email of user</p>
-			                </div>
-			              </div>
-
-			            </div>
-			            <div class="modal-body">
-			              <span class="change-photo"><i class="fa fa-camera" aria-hidden="true" data-dismiss="modal"></i> Change Photo</span>
-			              <span class="settings"><i class="fa fa-cog" aria-hidden="true"></i> Settings</span>
-			            </div>
-			            <div class="modal-footer">
-			              <button type="button" class="btn modal-button">Log out</button>
-			            </div>
-			          </div>
-			        </div>
-			      </div><!-- /.modal -->
-
-
-
-
 
 
 						<input name="btn-signup ormSubmit" type="submit" class="btn btn-block btn-blue" value="Sign me up for this shit!">

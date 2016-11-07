@@ -1,4 +1,3 @@
-
 <div class="container-fluid row">
 	<form id="test-form" class="texture-form row row-no-gutter" action="" method="post">
 		<section class="texture col-md-6">

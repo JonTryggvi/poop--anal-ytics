@@ -6,6 +6,7 @@
   display: flex;
 
   .wrap {
+    width: $designWidth;
     align-self: center;
     display: flex;
     justify-content: space-between;
@@ -78,30 +79,68 @@
       // margin: 0 auto;
       color: $white;
       align-self: center;
-      cursor: pointer;
     }
 
-    /* User  */
-    .user-login-signup {
-      width: auto;
-      height: auto;
+    /* User and user modal */
+    .user-icon {
       align-self: center;
-      z-index: 10000;
 
-      position: relative;
+      div.modal-dialog {
+        max-width: 320px;
+      }
+      .modal-content {
+        border: 2px solid $main-yellow;
+        border-radius: 2px;
 
-      .user-icon {
-        cursor: pointer;
-        // z-index: 100;
-        // transition: opacity .25s ease;
-        // z-index: 10000;
-
-        &:hover {
-          opacity: .7;
+        .modal-header {
+          padding: 0;
         }
 
-        &:active {
-          color: blue;
+        .modal-user {
+          display: flex;
+          justify-content: left;
+        }
+
+        .user-image img {
+          width: 46px;
+          height: 46px;
+          margin: 15px;
+        }
+
+        .modal-body {
+          padding: 15 0;
+          position: none;
+          display: flex;
+          justify-content: center;
+          text-align: left;
+        }
+
+        .fa-camera,
+        .fa-cog {
+          color: $main-blue;
+
+          i {
+            @include font-open-sans(main-body-text);
+          }
+        }
+
+        .change-photo,
+        .settings,
+        .user-image,
+        .user-name-email {
+          margin: auto;
+        }
+
+        .modal-footer {
+          text-align: center;
+          padding: 0;
+        }
+        button.btn.modal-button {
+          width: 100%;
+          background: $main-yellow;
+          @include font-open-sans(heading);
+          color: $white;
+          border-radius: 0;
         }
       }
     }
