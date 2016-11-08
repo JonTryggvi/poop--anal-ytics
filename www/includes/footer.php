@@ -1,6 +1,20 @@
 
 
-<footer><p>Copyright &copy; <?php echo date('Y'); ?> goPoop </p><a href="#">Read disclamer</a></footer>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Read Disclaimer</span>
+
+<div id="disclaimer-overlay" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <h2 class="disclaimer-header">disclaimer</h2>
+    <p class="disclaimer-content">The contents within this website is for general and fun information only. In no way should the information here substitute the advice of a certified medical professional. Always consult your doctor if you have concerns regarding your health.</p>
+  </div>
+</div>
+<footer>
+  <div class="footer-content">
+    <p class="copyright">Copyright &copy; <?php echo date('Y'); ?> GoPoop </p>
+  </div>
+
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
