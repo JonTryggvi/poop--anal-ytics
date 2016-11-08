@@ -33,3 +33,9 @@ $designWidth: 1024px;
   width: $designWidth;
   margin: 0 auto;
 }
+
+$innerDesignWidth: 700px;
+ .inner-wrap {
+   width: $innerDesignWidth;
+   margin: 0 auto;
+ }

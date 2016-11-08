@@ -37,8 +37,10 @@
     overflow-x: hidden;
     transition: 0.5s;
     z-index: 999999;
+    display: flex;
+    justify-content: center;
 
-  a {
+  .closebtn {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
@@ -46,17 +48,37 @@
     display: block;
     transition: 0.3s;
   }
+
 }
 
 .overlay-content {
     position: relative;
     top: 25%;
-    width: 100%;
-    text-align: center;
+    max-width: $innerDesignWidth;
+    text-align: left;
     margin-top: 30px;
+
+  .disclaimer-header {
+    @include font-open-sans(heading);
+    color: $white;
+  }
+
+  .checkbox {
+    margin-right: 10px;
+  }
+
+  .btn-yellow {
+    @include button-bg($main-yellow, 100%, auto, $white);
+    @include font-open-sans(heading);
+
+    text-align: center !important;
+    color: $white;
+    display: flex;
+    align-self: center;
+    margin: 20px auto;
+    width: 100%;
+  }
 }
-
-
 
 .overlay-footer a:hover, .overlay-footer a:focus {
     color: $white;
