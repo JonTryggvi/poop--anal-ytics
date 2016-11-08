@@ -2,8 +2,9 @@
 	include('includes/config.php');
 	// signUpCheck();
 	include('includes/header.php');
-
+		include('includes/topHeader.php');
 ?>
+
 	<div class="container ">
 		<div class="row tab-content">
 			<div class="login-form center-block tab-pane active in" >

@@ -78,21 +78,23 @@ if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
 }
 
 
-// test functions
-if(isset($_POST['submit']) and !empty($_POST['submit'])){
-	if (isset($_POST['texture']) && isset($_POST['shade']) ) {
+// dashboard test functions
+
+
+if(isset($_POST['submit-dash']) and !empty($_POST['submit-dash'])){
+	if (isset($_POST['texture-dash']) && isset($_POST['shade-dash']) ) {
 		// textures
-		$texture =  $_POST['texture'];
+		$texture =  $_POST['texture-dash'];
 		// Shade
-		$shade =  $_POST['shade'];
+		$shade =  $_POST['shade-dash'];
 		$textureTest = new userTest();
 		$textureTest->userTextures($texture, $shade);
 
-		$diaryTitle = $_POST['diary-title'];
-		$diaryContent = $_POST['diary-content'];
-
-		$diary = new userTest();
-		$diary->insertDiary($diaryTitle, $diaryContent);
+		// $diaryTitle = $_POST['diary-title'];
+		// $diaryContent = $_POST['diary-content'];
+		// var_dump($diaryTitle);
+		// $diary = new userTest();
+		// $diary->insertDiary($diaryTitle, $diaryContent);
 
 		function showResultIcons($t, $s) {
 			$iconResult = new userTest();
@@ -118,10 +120,60 @@ function shadeRadios(){
 }
 
 
+// diary test functions
+
+
+if(isset($_POST['submit-diary']) and !empty($_POST['submit-diary'])){
+	if (isset($_POST['texture-diary']) && isset($_POST['shade-diary']) ) {
+		// textures
+		$texture =  $_POST['texture-diary'];
+		// Shade
+		$shade =  $_POST['shade-diary'];
+
+		$diaryTitle = $_POST['diary-title'];
+		$diaryContent = $_POST['diary-content'];
+	
+		$textureTest = new diaryTest();
+		$textureTest->diaryTextures($texture, $shade, $diaryTitle, $diaryContent);
+
+		// $diaryTitle = $_POST['diary-title'];
+		// $diaryContent = $_POST['diary-content'];
+		// var_dump($diaryTitle);
+		// $diary = new diaryTest();
+		// $diary->insertDiary($diaryTitle, $diaryContent);
+
+		function showResultIconsDiary($t, $s) {
+			$iconResult = new diaryTest();
+			$iconResult->resultsIcons($t, $s);
+		}
+
+		function showTextureResultDiary($t, $s){
+			$textureResult = new diaryTest();
+			$textureResult->textureResult($t, $s);
+		}
+	}
+
+}
+
+function textureRadiosDiary(){
+	$test = new diaryTest();
+	$test->getTextures();
+}
+
+function shadeRadiosDiary(){
+	$test = new diaryTest();
+	$test->getShades();
+}
+
+
+
+
+
+
+
 
 
 	function getStories(){
-
 		$stories = new Stories();
 		$stories-> getAllStories();
 	}

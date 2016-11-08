@@ -26,10 +26,11 @@
   .shade-radio {
     margin: 5px;
   }
+
 }
 
 
-.texture-container, .shade-container {
+.texture-container, .shade-container, .shade-container-diary {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -89,7 +90,7 @@
   }
 }
 
-.shade-container {
+.shade-container, .shade-container-diary {
   width: 227px;
 }
 
@@ -185,4 +186,24 @@
     background-color: $main-yellow;
   }
 
+}
+
+.diary {
+  width: 100%;
+  height: auto;
+
+  .diary-title {
+    width: 100%;
+    height: 32px;
+    margin-top: 44px;
+  }
+  .diary-content {
+    width: 100%;
+    height: 100px;
+    margin-top: 21px;
+
+  }
+  .diary-submit {
+    @include button-bg($main-yellow);
+  }
 }
