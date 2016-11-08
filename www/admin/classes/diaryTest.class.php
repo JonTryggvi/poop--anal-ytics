@@ -36,7 +36,7 @@ public function getShades(){
   $stmt = $mysqli->prepare('SELECT id, name, description, iconUrl FROM shade');
   $stmt->execute();
   $stmt->bind_result($id, $name, $description, $iconUrl);
-  echo "<div class='shade-container-diary'>";
+  echo "<div id='shadeID' class='shade-container-diary'>";
    while ($row = $stmt->fetch()) {
      echo "<div class='radio-shade-container'>";
       echo "<input id='".$id."' class='shade-radio ".$name."' type='radio' name='shade-diary' value='".$id."'/>";
