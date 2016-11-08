@@ -191,6 +191,10 @@ label {
   clear: left;
 }
 
+#userInfo {
+  display: none;
+}
+
 .mainNavContainer {
   position: absolute;
   width: 208px;
