@@ -7,6 +7,7 @@
 	include('post.class.php');
 
 	include('userTest.class.php');
+	include('diaryTest.class.php');
 
 	include('stories.class.php');
 

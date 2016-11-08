@@ -14,18 +14,18 @@
 
 
 	 	</section>
-		<input id="formSubmit" type="submit" name="submit" value="submit">
+		<input id="formSubmit" type="submit" name="submit-dash" value="submit">
 
 		<section class="col-md-12 row test-results ">
 			<div class="col-md-8 centerme row">
 				<?php
-					if (isset($_POST['texture']) && isset($_POST['shade']) ) {
+					if (isset($_POST['texture-dash']) && isset($_POST['shade-dash']) ) {
 						showResultIcons($texture, $shade);
 					}
 				?>
 
 			<?php
-				if (isset($_POST['texture']) && isset($_POST['shade']) ) {
+				if (isset($_POST['texture-dash']) && isset($_POST['shade-dash']) ) {
 					showTextureResult($texture, $shade);
 				}
 			?>
