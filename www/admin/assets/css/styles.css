@@ -191,6 +191,19 @@ label {
   clear: left;
 }
 
+#userInfo {
+  display: none;
+}
+
+.commentbox {
+  background-color: green;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
 .mainNavContainer {
   position: absolute;
   width: 208px;

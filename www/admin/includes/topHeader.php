@@ -43,9 +43,20 @@
 
           </div>
           <div class="modal-body">
-            <span class="change-photo"><i class="fa fa-camera" aria-hidden="true" data-dismiss="modal"></i> Change Photo</span>
-            <span class="settings"><i class="fa fa-cog" aria-hidden="true"></i> Settings</span>
+            <span class="change-photo"><i class="fa fa-camera" aria-hidden="true" data-dismiss="modal"></i>Change Photo</span>
+            <span class="settings"><i class="fa fa-cog" aria-hidden="true"></i>Settings</span>
+          <!-- <form action="dashboard.php" method="post" enctype="multipart/form-data">
+              Select image to upload:
+              <input type="file" name="profile_img" id="fileToUpload">
+              <input type="submit" value="Upload Image" name="submit">
+          </form> -->
+          <form action="upload.php" method="post" enctype="multipart/form-data">
+              Select image to upload:
+              <input type="file" name="fileToUpload" id="fileToUpload">
+              <input type="submit" value="Upload Image" name="submitImage">
+          </form>
           </div>
+
           <div class="modal-footer">
             <button type="button" class="btn modal-button">Log out</button>
           </div>

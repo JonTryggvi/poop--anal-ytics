@@ -43,11 +43,11 @@ if(isset($_POST['create_username']) && !empty($_POST['create_username']) && isse
 
 }
 
-if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['author']) && !empty($_POST['author']) && isset($_POST['content']) && !empty($_POST['content'])) {
+if(isset($_POST['title']) && !empty($_POST['title']) && isset($_POST['content']) && !empty($_POST['content'])) {
 
 	$title =  $_POST['title'];
 	$content =$_POST['content'];
-	$author = $_POST['author'];
+	$author = $_SESSION['UsrNm'];
 	$date_post = date("Y-m-d H:i:s");
 	$User_id = $_SESSION['User_id'];
 	$User_roles_id = $_SESSION['User_roles_id'];
@@ -71,11 +71,12 @@ function getPost() {
 
 
 //Check if parameter exists and is set to true
-if(isset($_GET['delete']) && $_GET['delete'] == 'true') {
+if(isset($_GET['delete']) && $_GET['delete'] == true) {
 	$id = $_GET['postid'];
 	$DeletePost= new Post();
 	$DeletePost->deletePost($id);
 }
+
 
 
 // test functions
@@ -107,18 +108,15 @@ if(isset($_POST['submit']) and !empty($_POST['submit'])){
 
 }
 
-function textureRadios(){
-	$test = new userTest();
-	$test->getTextures();
-}
+	function textureRadios(){
+		$test = new userTest();
+		$test->getTextures();
+	}
 
-function shadeRadios(){
-	$test = new userTest();
-	$test-> getShades();
-}
-
-
-
+	function shadeRadios(){
+		$test = new userTest();
+		$test-> getShades();
+	}
 
 	function getStories(){
 
@@ -126,8 +124,8 @@ function shadeRadios(){
 		$stories-> getAllStories();
 	}
 
-	if(isset($_POST['commentSubmit'])){
 
+	if(isset($_POST['commentSubmit'])){
 
 		$content = $_POST['content'];
 		$author = $_SESSION['UsrNm'];
@@ -141,7 +139,10 @@ function shadeRadios(){
 		$createcomments = new Stories();
 		$createcomments->setComments($content, $author, $comment_time, $post_id, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
 		echo $submitComment = "Your comment has been submited!";
+
 	}
+
+
 
 	function getPosts() {
       $allPosts = new Stories();
@@ -155,13 +156,39 @@ function shadeRadios(){
     }
 
 
-	function check($id){
-		if($_SESSION['User_roles_id'] == 2){
-			echo '<a class="btn btn-danger btn-sm" href="stories.php?delete=true&postid='.$postid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
-		}else {
-			echo "bye";
-		}
+		if(isset($_GET['deletecomment']) && $_GET['deletecomments'] == 'true') {
+			$commentsid = $_GET['userid'];
 
+			$user = new Stories();
+			$user->deleteComments($commentsid);
+
+			}
+
+	function check($commentsid){
+
+		// if($_SESSION['User_roles_id'] == 2){
+			echo '<a class="btn btn-danger btn-sm" href="stories.php?deletecomments=true&postid='.$commentsid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+
+		// }else {
+		//
+		// }
+	}
+
+
+
+function showAllUsers() {
+	$alluser = new User();
+	$alluser->showAllUsers();
 }
+
+//Check if parameter exists and is set to true
+if(isset($_GET['deleteuser']) && $_GET['deleteuser'] == 'true') {
+	$userid = $_GET['userid'];
+
+	$user = new User();
+	$user->deleteUser($userid);
+}
+
+
 
 ?>

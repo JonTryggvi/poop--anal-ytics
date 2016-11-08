@@ -21,7 +21,7 @@
 }
 .title{
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
 }
 label {
   float: left;
@@ -29,4 +29,19 @@ label {
 }
 #userInfo{
   display: none;
+}
+// HERDIS COMMENT BOX
+.commentbox{
+  background-color: green;
+}
+// .commentboxinfo{
+//   display: block;
+//   background-color: red;
+// }
+// .commentboxinfo2{
+//   display: none;
+// }
+textarea{
+  width: 100%;
+  min-height: 100px;
 }
