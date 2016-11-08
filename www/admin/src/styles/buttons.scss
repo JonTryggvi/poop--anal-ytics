@@ -1,9 +1,4 @@
 /* Buttons */
-body {
-  background-color: red;
-  z-index: 100000;
-}
-
 .btn {
   @include fonts(heading-text);
   color: white;

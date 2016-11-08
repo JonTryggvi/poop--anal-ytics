@@ -82,8 +82,10 @@
     }
 
     /* User and user modal */
-    .user-icon {
+    .default-user {
       align-self: center;
+      border: 1px solid $white;
+      border-radius: 2px;
 
       div.modal-dialog {
         max-width: 320px;
