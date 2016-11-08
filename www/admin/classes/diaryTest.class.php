@@ -1,5 +1,5 @@
 <?php
-class userTest {
+class diaryTest {
  private $_db;
  private $_mysqli;
 
@@ -17,7 +17,7 @@ class userTest {
   echo "<div class='texture-container'>";
     while ($row = $stmt->fetch()) {
       echo "<div class='radio-texture-container'>";
-        echo "<input id='".$title."' class='texture-radio ".$title."' type='radio' name='texture-dash' value='".$id."'/>";
+        echo "<input id='".$title."' class='texture-radio ".$title."' type='radio' name='texture-diary' value='".$id."'/>";
         echo "<label for='".$title."'></label>";
         echo "<div class='check'><img src='../".$iconUrl."'/></div>";
       echo "</div>";
@@ -36,10 +36,10 @@ public function getShades(){
   $stmt = $mysqli->prepare('SELECT id, name, description, iconUrl FROM shade');
   $stmt->execute();
   $stmt->bind_result($id, $name, $description, $iconUrl);
-  echo "<div class='shade-container'>";
+  echo "<div class='shade-container-diary'>";
    while ($row = $stmt->fetch()) {
      echo "<div class='radio-shade-container'>";
-      echo "<input id='".$id."' class='shade-radio ".$name."' type='radio' name='shade-dash' value='".$id."'/>";
+      echo "<input id='".$id."' class='shade-radio ".$name."' type='radio' name='shade-diary' value='".$id."'/>";
 
       echo "<label for='".$id."'></label>";
       echo "<div class='check'><img src='../".$iconUrl."'/></div>";
@@ -52,14 +52,7 @@ public function getShades(){
   }
 
 
-public function insertDiary($d_title, $d_content) {
-  $db = $GLOBALS['gdb'];
-  $mysqli = $db->getConnection();
 
-  $stmt = $mysqli->prepare("INSERT INTO diary (title, content) VALUES (?, ?)");
-    $stmt->bind_param("ss", $d_title, $d_content);
-  $stmt->execute();
-}
 
 public function resultsIcons($t, $s){
   $db = $GLOBALS['gdb'];
@@ -126,9 +119,16 @@ public function textureResult($t, $s){
 
 }
 
+// public function insertDiary($d_title, $d_content) {
+//   $db = $GLOBALS['gdb'];
+//   $mysqli = $db->getConnection();
+//
+//   $stmt = $mysqli->prepare("INSERT INTO diary (title, content) VALUES (?, ?)");
+//     $stmt->bind_param("ss", $d_title, $d_content);
+//   $stmt->execute();
+// }
 
-//hér setjum við inn í test töfluna niðurstöður úr prófi þegar notandi er óþekktur. Það kom á daginn að taflan userAnon var óþörf eða nýtist ekki vel þannig að ég brá á það ráð að búa til notanda sem gegnir því hlutverki að vera óþekktur.
- public function userTextures($texture_id, $shade_id) {
+ public function diaryTextures($texture_id, $shade_id, $diaryTitle, $diaryContent) {
  	// Connecting to Database
   $db = $GLOBALS['gdb'];
   $mysqli = $db->getConnection();
@@ -136,7 +136,8 @@ public function textureResult($t, $s){
   $userRole = $_SESSION['User_roles_id'];
   $userName = $_SESSION['UsrNm'];
 
-  $stmt = $mysqli->prepare("INSERT INTO diary (title, content, date, User_id) VALUES ('".$userName."', 'Test from dashboard ', now(), $userId )");
+  $stmt = $mysqli->prepare("INSERT INTO diary (title, content, date, User_id) VALUES (?, ?, now(), $userId )");
+  $stmt->bind_param('ss', $diaryTitle, $diaryContent);
   $stmt->execute();
 
   $stmt = $mysqli->prepare("SELECT id FROM diary WHERE User_id=$userId");
