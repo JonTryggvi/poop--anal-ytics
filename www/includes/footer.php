@@ -1,8 +1,7 @@
 
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Read Disclaimer</span>
 
-<div id="disclaimer-overlay" class="overlay">
+<div id="disclaimer-overlay" class="overlay-footer">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
     <h2 class="disclaimer-header">disclaimer</h2>
@@ -12,6 +11,7 @@
 <footer>
   <div class="footer-content">
     <p class="copyright">Copyright &copy; <?php echo date('Y'); ?> GoPoop </p>
+    <span class="disclaimer-open" onclick="openNav()">&#9776; Read Disclaimer</span>
   </div>
 
 </footer>
