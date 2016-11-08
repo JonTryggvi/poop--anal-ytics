@@ -191,6 +191,10 @@ label {
   clear: left;
 }
 
+#userInfo {
+  display: none;
+}
+
 .mainNavContainer {
   position: absolute;
   width: 208px;
@@ -280,7 +284,7 @@ label {
   margin: 5px;
 }
 
-.texture-container, .shade-container {
+.texture-container, .shade-container, .shade-container-diary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,7 +297,7 @@ label {
   height: auto;
 }
 
-.texture-container .radio-texture-container, .texture-container .radio-shade-container, .shade-container .radio-texture-container, .shade-container .radio-shade-container {
+.texture-container .radio-texture-container, .texture-container .radio-shade-container, .shade-container .radio-texture-container, .shade-container .radio-shade-container, .shade-container-diary .radio-texture-container, .shade-container-diary .radio-shade-container {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -304,17 +308,17 @@ label {
   margin-bottom: 8px;
 }
 
-.texture-container .radio-texture-container input[type=radio], .texture-container .radio-shade-container input[type=radio], .shade-container .radio-texture-container input[type=radio], .shade-container .radio-shade-container input[type=radio] {
+.texture-container .radio-texture-container input[type=radio], .texture-container .radio-shade-container input[type=radio], .shade-container .radio-texture-container input[type=radio], .shade-container .radio-shade-container input[type=radio], .shade-container-diary .radio-texture-container input[type=radio], .shade-container-diary .radio-shade-container input[type=radio] {
   position: absolute;
   visibility: hidden;
 }
 
-.texture-container .radio-texture-container input[type=submit], .texture-container .radio-shade-container input[type=submit], .shade-container .radio-texture-container input[type=submit], .shade-container .radio-shade-container input[type=submit] {
+.texture-container .radio-texture-container input[type=submit], .texture-container .radio-shade-container input[type=submit], .shade-container .radio-texture-container input[type=submit], .shade-container .radio-shade-container input[type=submit], .shade-container-diary .radio-texture-container input[type=submit], .shade-container-diary .radio-shade-container input[type=submit] {
   position: absolute;
   visibility: hidden;
 }
 
-.texture-container .radio-texture-container label, .texture-container .radio-shade-container label, .shade-container .radio-texture-container label, .shade-container .radio-shade-container label {
+.texture-container .radio-texture-container label, .texture-container .radio-shade-container label, .shade-container .radio-texture-container label, .shade-container .radio-shade-container label, .shade-container-diary .radio-texture-container label, .shade-container-diary .radio-shade-container label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -325,7 +329,7 @@ label {
   cursor: pointer;
 }
 
-.texture-container .radio-texture-container .check, .texture-container .radio-shade-container .check, .shade-container .radio-texture-container .check, .shade-container .radio-shade-container .check {
+.texture-container .radio-texture-container .check, .texture-container .radio-shade-container .check, .shade-container .radio-texture-container .check, .shade-container .radio-shade-container .check, .shade-container-diary .radio-texture-container .check, .shade-container-diary .radio-shade-container .check {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -340,11 +344,11 @@ label {
   transition: border .3s ease-in-out;
 }
 
-.texture-container .radio-texture-container .check:hover, .texture-container .radio-shade-container .check:hover, .shade-container .radio-texture-container .check:hover, .shade-container .radio-shade-container .check:hover {
+.texture-container .radio-texture-container .check:hover, .texture-container .radio-shade-container .check:hover, .shade-container .radio-texture-container .check:hover, .shade-container .radio-shade-container .check:hover, .shade-container-diary .radio-texture-container .check:hover, .shade-container-diary .radio-shade-container .check:hover {
   border: 2px solid #ccc;
 }
 
-.texture-container .radio-texture-container .check img, .texture-container .radio-shade-container .check img, .shade-container .radio-texture-container .check img, .shade-container .radio-shade-container .check img {
+.texture-container .radio-texture-container .check img, .texture-container .radio-shade-container .check img, .shade-container .radio-texture-container .check img, .shade-container .radio-shade-container .check img, .shade-container-diary .radio-texture-container .check img, .shade-container-diary .radio-shade-container .check img {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -354,7 +358,7 @@ label {
   height: 60%;
 }
 
-.texture-container .radio-texture-container .check::before, .texture-container .radio-shade-container .check::before, .shade-container .radio-texture-container .check::before, .shade-container .radio-shade-container .check::before {
+.texture-container .radio-texture-container .check::before, .texture-container .radio-shade-container .check::before, .shade-container .radio-texture-container .check::before, .shade-container .radio-shade-container .check::before, .shade-container-diary .radio-texture-container .check::before, .shade-container-diary .radio-shade-container .check::before {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -364,7 +368,7 @@ label {
   height: 100%;
 }
 
-.shade-container {
+.shade-container, .shade-container-diary {
   width: 227px;
 }
 
@@ -475,6 +479,37 @@ label {
   left: 25%;
   margin-top: -3.5px;
   background-color: #FFC021;
+}
+
+.diary {
+  width: 100%;
+  height: auto;
+}
+
+.diary .diary-title {
+  width: 100%;
+  height: 32px;
+  margin-top: 44px;
+}
+
+.diary .diary-content {
+  width: 100%;
+  height: 100px;
+  margin-top: 21px;
+}
+
+.diary .diary-submit {
+  background: #FFC021;
+}
+
+.diary .diary-submit:hover {
+  background: #f7b100;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.diary .diary-submit:active {
+  background: #a17300;
 }
 
 .header {

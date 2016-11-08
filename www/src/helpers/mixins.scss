@@ -41,7 +41,9 @@
 /* Buttons */
 
 
-@mixin button-bg($bg) {
+@mixin button-bg($bg, $width, $height) {
+	width: $width;
+	height: $height;
   background: $bg;
   &:hover {
     background:darken($bg,8%);
