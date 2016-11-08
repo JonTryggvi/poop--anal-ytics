@@ -6,6 +6,8 @@ $light-blue: #72CEC9;
 $white: #fff;
 $dark-grey: #4A4A4A;
 $light-grey: #ccc;
+$brown: #A77433;
+
 
 $color-background: #F5F5F5;
 $color-main: #FF5252;
@@ -31,3 +33,9 @@ $designWidth: 1024px;
   width: $designWidth;
   margin: 0 auto;
 }
+
+$innerDesignWidth: 700px;
+ .inner-wrap {
+   width: $innerDesignWidth;
+   margin: 0 auto;
+ }

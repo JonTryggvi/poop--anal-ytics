@@ -13,56 +13,78 @@
     @include font-open-sans(copy);
     width: auto;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
   }
 
-  .disclaimer {
+  .disclaimer-open {
     @include font-open-sans(copy);
     display: block;
     width: 100%;
     text-align: center;
     cursor: pointer;
+    margin: 0 auto;
   }
 }
 
-.overlay {
-    height: 100%;
-    width: 0;
+.overlay-footer {
+    height: 0;
+    width: 100%;
     position: fixed;
-    z-index: 1;
-    top: 0;
+    bottom: 0;
     left: 0;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba($brown, 0.95);
     overflow-x: hidden;
     transition: 0.5s;
-    border: 1px solid red;
-    background-color: yellow;
-    z-index: 200000;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+
+  .closebtn {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: $white;
+    display: block;
+    transition: 0.3s;
+  }
+
 }
 
 .overlay-content {
     position: relative;
     top: 25%;
-    width: 100%;
-    text-align: center;
+    max-width: $innerDesignWidth;
+    text-align: left;
     margin-top: 30px;
+
+  .disclaimer-header {
+    @include font-open-sans(heading);
+    color: $white;
+  }
+
+  .checkbox {
+    margin-right: 10px;
+  }
+
+  .btn-yellow {
+    @include button-bg($main-yellow, 100%, auto, $white);
+    @include font-open-sans(heading);
+
+    text-align: center !important;
+    color: $white;
+    display: flex;
+    align-self: center;
+    margin: 20px auto;
+    width: 100%;
+  }
 }
 
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+.overlay-footer a:hover, .overlay-footer a:focus {
+    color: $white;
 }
 
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
-.overlay .closebtn {
+.overlay-footer .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;

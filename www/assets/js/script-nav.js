@@ -16,9 +16,9 @@ $(document).ready(function() {
 // });
 
 function openNav() {
-    document.getElementById("disclaimer-overlay").style.width = "100%";
+    document.getElementById("disclaimer-overlay").style.height = "100%";
 }
 
 function closeNav() {
-    document.getElementById("disclaimer-overlay").style.width = "0%";
+    document.getElementById("disclaimer-overlay").style.height = "0%";
 }

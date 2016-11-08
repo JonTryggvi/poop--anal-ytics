@@ -34,6 +34,11 @@ section.shade.col-md-5 {
   margin: 0 auto;
 }
 
+.inner-wrap {
+  width: 700px;
+  margin: 0 auto;
+}
+
 /* Buttons */
 .texture-form {
   width: 700px;
@@ -682,10 +687,10 @@ section.shade.col-md-5 {
   color: #FFF;
   width: auto;
   text-align: center;
-  margin: auto;
+  margin: 0 auto;
 }
 
-.footer-content .disclaimer {
+.footer-content .disclaimer-open {
   font-family: "OpenSans", sans-serif;
   font-size: 0.875rem;
   color: #FFF;
@@ -693,48 +698,98 @@ section.shade.col-md-5 {
   width: 100%;
   text-align: center;
   cursor: pointer;
+  margin: 0 auto;
 }
 
-.overlay {
-  height: 100%;
-  width: 0;
+.overlay-footer {
+  height: 0;
+  width: 100%;
   position: fixed;
-  z-index: 1;
-  top: 0;
+  bottom: 0;
   left: 0;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(167, 116, 51, 0.95);
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border: 1px solid red;
-  background-color: yellow;
-  z-index: 200000;
+  z-index: 999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.overlay a {
+.overlay-footer .closebtn {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: #fff;
   display: block;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+.overlay-content {
+  position: relative;
+  top: 25%;
+  max-width: 700px;
+  text-align: left;
+  margin-top: 30px;
 }
 
-.overlay .closebtn {
+.overlay-content .disclaimer-header {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.overlay-content .checkbox {
+  margin-right: 10px;
+}
+
+.overlay-content .btn-yellow {
+  width: 100%;
+  height: auto;
+  color: #fff;
+  background: #FFC021;
+  border-radius: 2px;
+  border: none;
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  text-align: center !important;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.overlay-content .btn-yellow:hover {
+  background: #f7b100;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.overlay-content .btn-yellow:active {
+  background: #a17300;
+}
+
+.overlay-footer a:hover, .overlay-footer a:focus {
+  color: #fff;
+}
+
+.overlay-footer .closebtn {
   position: absolute;
   top: 20px;
   right: 45px;

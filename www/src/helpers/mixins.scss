@@ -41,10 +41,13 @@
 /* Buttons */
 
 
-@mixin button-bg($bg, $width, $height) {
+@mixin button-bg($bg, $width, $height, $fontColor) {
 	width: $width;
 	height: $height;
+	color: $fontColor;
   background: $bg;
+	border-radius: 2px;
+	border: none;
   &:hover {
     background:darken($bg,8%);
     transition: all 0.3s ease;
