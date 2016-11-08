@@ -36,6 +36,25 @@ class User {
   // header('Location: ../dashboard.php');
  }
 
+ public function updateUserProfile($target_file){
+
+   $db = $GLOBALS['gdb'];
+   $mysqli = $db->getConnection();
+
+   $userid = '100';
+   $profile_img = 'hello.jpg';
+
+
+   // prepare and bind
+   $stmt = $mysqli->prepare("UPDATE User SET profile_img=? WHERE id=?");
+   error_log("gawd");
+   $stmt->bind_param("si", $target_file, $userid);
+   $stmt->execute();
+
+   $stmt->close();
+
+ }
+
 public function countries(){
 
    $db = $GLOBALS['gdb'];
@@ -101,6 +120,91 @@ public function countries(){
     //$mysqli->close();
 
   }
+
+  public function showAllUsers(){
+
+     $db = $GLOBALS['gdb'];
+     $mysqli = $db->getConnection();
+
+    //  // prepare and bind
+     $stmt = $mysqli->prepare("SELECT id, email, firstName, lastName, userName FROM User");
+     $stmt->execute();
+     $stmt->bind_result($userid, $email, $firstName, $lastName, $userName);
+
+      while (mysqli_stmt_fetch($stmt)) {
+
+        echo '<tr>';
+        echo '<th scope="row">' .$email. '<td>' .$lastName. '</td> <td>' . $firstName.'</td><td>' .$lastName.'</td><td>' .$email.'</td><td>' .$userName.'</td><td><a class="btn btn-primary btn-sm m-r-1" href="edituser.php?edit=true&userid='.$userid.'"><i class="fa fa-pencil" aria-hidden="true"></i></a><a class="btn btn-danger btn-sm" href="users.php?deleteuser=true&userid='.$userid.'"><i class="fa fa-trash" aria-hidden="true"></i></a></td>';
+      echo '</tr>';
+          }
+
+     //echo "New records created successfully";
+
+     $stmt->close();
+     //$mysqli->close();
+
+   }
+
+  public function updateUser($userid, $firstName, $lastName, $userName, $email, $pass, $roles_id) {
+  // Connecting to Database
+  $db = $GLOBALS['gdb'];
+  $mysqli = $db->getConnection();
+
+
+
+  // prepare and bind
+  $stmt = $mysqli->prepare("UPDATE User SET firstName=?, lastName=?, userName=?, email=?, pass=?, roles_id=? WHERE id=?");
+  $stmt->bind_param("sssssii", $firstName, $lastName, $userName, $email, $pass, $roles_id, $userid);
+  $stmt->execute();
+
+
+  $stmt->close();
+  //$mysqli->close();
+  //header('Location: ./users.php?updated=true');
+ }
+
+ public function getUserById($userid) {
+  // Connecting to Database
+  $db = $GLOBALS['gdb'];
+  $mysqli = $db->getConnection();
+
+   // prepare and bind
+   $stmt = $mysqli->prepare("SELECT firstName, lastName, userName, email, roles_id FROM User WHERE id = ?");
+   $stmt->bind_param('i', $userid);
+   $stmt->execute();
+   $stmt->bind_result($firstName, $lastName, $userName, $emails, $roles_id);
+
+   // Only returning info from 1 user so I will create an array that I can easily work with on my page.
+   $userArr;
+   while ($stmt->fetch()) {
+     $userArr['firstName'] = $firstName;
+     $userArr['lastName'] = $lastName;
+     $userArr['userName'] = $userName;
+     $userArr['email'] = $email;
+     $userArr['roles_id'] = $roles_id;
+   }
+
+  // Close connection
+  $stmt->close();
+  $mysqli->close();
+  return $userArr;
+}
+
+public function deleteUser($userid) {
+  // Connecting to Database
+  $db = $GLOBALS['gdb'];
+  $mysqli = $db->getConnection();
+
+  // prepare and bind
+  $stmt = $mysqli->prepare("DELETE FROM User WHERE id=? LIMIT 1");
+  $stmt->bind_param("i", $userid);
+  $stmt->execute();
+
+
+  $stmt->close();
+  //$mysqli->close();
+  //header('Location: ./users.php?updated=true');
+ }
 
 
 }

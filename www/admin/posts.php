@@ -17,13 +17,9 @@
           </div>
           <div class="form-group">
             <label for="content">Content</label>
-            <!-- <input type="text" class="form-control" name="content" value=""> -->
 							<textarea name="content" type="text"></textarea>
           </div>
-          <div class="form-group" role="tabpanel">
-            <label for="author">Author</label>
-            <input type="text" class="form-control" name="author" value="">
-          </div>
+          <input type="hidden" class="form-control" name="author" value="">
           <div class="form-group">
             <input type="submit" class="btn btn-primary btn-lg btn-block">
           </div>

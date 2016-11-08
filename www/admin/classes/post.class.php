@@ -52,8 +52,8 @@ class Post {
    $mysqli = $db->getConnection();
 
    // prepare and bind
-   $stmt = $mysqli->prepare("DELETE FROM post WHERE id=? LIMIT 1");
-   $stmt->bind_param("i", $id);
+   $stmt = $mysqli->prepare("DELETE FROM post WHERE id=".$id." LIMIT 1");
+  //  $stmt->bind_param("i", $id);
    $stmt->execute();
 
    $stmt->close();

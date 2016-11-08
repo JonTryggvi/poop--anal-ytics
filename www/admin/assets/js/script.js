@@ -4,12 +4,10 @@ $('document').ready(function(){
     $("#content").hide();
 });
 
-  // $("#hide").click(function(){
-  //     $("p").hide();
-  // });
-  // $("#show").click(function(){
-  //     $("#story").toggle();
-  // });
+$("#demo").click(function(){
+  $(".commentboxinfo").show();
+});
+
 
     $(".countries").chosen({disable_search_threshold: 10});
 
@@ -45,6 +43,12 @@ $('document').ready(function(){
    function showDiv() {
    document.getElementById('userInfo').style.display = "block";
 }
+
+    // $('.demo').click(function(){
+    //      $(this).find('commentboxinfo2');
+    //      $('.commentboxinfo2').css('height','100px');
+    //
+    // });
 
 
 });
