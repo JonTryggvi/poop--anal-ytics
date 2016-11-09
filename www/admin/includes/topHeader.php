@@ -1,6 +1,6 @@
 <div class="header">
   <div class="wrap">
-<?php $updateUserIconProfile2  = new User(); ?>
+<?php $updateUserIconProfile2  = new User();?>
     <!-- Modal Nav -->
     <div class="bergur">
       <div class="button_container" id="toggle">
