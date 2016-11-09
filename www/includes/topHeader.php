@@ -24,7 +24,7 @@
       <h1 class="logo">GoPoop</h1>
     </div>
     <div class="user-login-signup">
-      <a class="nav-link" href="admin/login.php"><img class="user-icon" src="img/icons/user.svg" alt=""></a>
+      <a class="nav-link" href="login.php"><img class="user-icon" src="img/icons/user.svg" alt=""></a>
     </div>
   </div>
 </div><!-- / .header -->

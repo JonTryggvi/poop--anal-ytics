@@ -1,8 +1,7 @@
 <?php
-	include('includes/config.php');
+	include('admin/includes/config.php');
 	// signUpCheck();
 	include('includes/header.php');
-		include('includes/topHeader.php');
 ?>
 
 	<div class="container ">
@@ -48,7 +47,7 @@
 
 			<div class="tab-content">
 				<div class="tab-pane" id="signin" role="tabpanel">
-					<form action="includes/authentication.php" method="POST" role="tabpanel">
+					<form action="admin/includes/authentication.php" method="POST" role="tabpanel">
 						<div class="form-group" role="tabpanel">
 							<label for="username">Username</label>
 							<input type="text" class="form-control" name="username" value="">
@@ -80,7 +79,7 @@
 
 				<div class="tab-content">
 					<div class="tab-pane active" id="signin" role="tabpanel">
-						<form action="includes/authentication.php" method="POST" role="tabpanel">
+						<form action="admin/includes/authentication.php" method="POST" role="tabpanel">
 							<div class="form-group body-text" role="tabpanel">
 								<label for="username"></label>
 								<input type="text" class="form-control" name="username" placeholder="Username or Email" value="">
