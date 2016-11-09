@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald");
 body, html {
   margin: 0;
   padding: 0;
@@ -103,7 +104,7 @@ hr {
 /* Buttons */
 .btn {
   /* Headings */
-  font-family: "Oswald-Medium", sans-serif;
+  font-family: "Oswald-Medium", sans-serif !important;
   font-size: 1.5em;
   color: #4A4A4A;
   text-transform: uppercase;
@@ -303,7 +304,11 @@ textarea {
 .mainNavContainer {
   position: absolute;
   display: inline-block;
+  background-color: #24A5A5;
   width: 208px;
+  height: 100%;
+  top: 64px;
+  left: 0;
   z-index: 10;
 }
 
@@ -313,12 +318,11 @@ textarea {
   display: flex;
   -ms-flex-flow: column;
       flex-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #24A5A5;
   width: 208px;
-  height: 100%;
+  height: 50%;
 }
 
 .mainNavContainer .mainnav .mainNav-item {
@@ -336,7 +340,7 @@ textarea {
 }
 
 .mainNavContainer .mainnav .mainNav-item a {
-  font-familiy: "OpenSans", sans-serif;
+  font-family: "Oswald-Medium", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   text-transform: uppercase;
@@ -626,6 +630,7 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* closing wrap class */
 }
 
 .header .wrap {
@@ -640,6 +645,9 @@ textarea {
           justify-content: space-between;
   margin: 0 auto;
   /* User and user modal */
+  /* closing default user */
+  /* MODAL CONTENT */
+  /* closing modal dialog */
 }
 
 .header .wrap .bergur {
@@ -724,35 +732,78 @@ textarea {
   height: 50px;
 }
 
-.header .wrap .default-user div.modal-dialog {
-  max-width: 320px;
+.header .wrap .modal-dialog {
+  max-width: 400px;
+  /* closing modal content */
 }
 
-.header .wrap .default-user .modal-content {
-  border: 2px solid #FFC021;
-  border-radius: 2px;
-}
-
-.header .wrap .default-user .modal-content .modal-header {
-  padding: 0;
-}
-
-.header .wrap .default-user .modal-content .modal-user {
+.header .wrap .modal-dialog .modal-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  border: 2px solid #FFC021;
+  border-radius: 2px;
+  /* closing modal-user */
+  /* closing modal footer */
 }
 
-.header .wrap .default-user .modal-content .user-image img {
+.header .wrap .modal-dialog .modal-content .modal-header {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  width: 100%;
+}
+
+.header .wrap .modal-dialog .modal-content .modal-header .close {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.header .wrap .modal-dialog .modal-content .modal-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  /* closing user-name-email */
+}
+
+.header .wrap .modal-dialog .modal-content .modal-user .user-image img {
   width: 46px;
   height: 46px;
   margin: 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
 }
 
-.header .wrap .default-user .modal-content .modal-body {
+.header .wrap .modal-dialog .modal-content .modal-user .user-name-email {
+  margin: 15px;
+}
+
+.header .wrap .modal-dialog .modal-content .modal-user .modal-title {
+  font-weight: bold;
+}
+
+.header .wrap .modal-dialog .modal-content .modal-body {
   padding: 15 0;
   position: none;
   display: -webkit-box;
@@ -764,13 +815,15 @@ textarea {
   text-align: left;
 }
 
-.header .wrap .default-user .modal-content .fa-camera,
-.header .wrap .default-user .modal-content .fa-cog {
+.header .wrap .modal-dialog .modal-content .modal-body .fa-camera,
+.header .wrap .modal-dialog .modal-content .modal-body .fa-cog {
   color: #24A5A5;
+  width: 35px;
+  height: auto;
 }
 
-.header .wrap .default-user .modal-content .fa-camera i,
-.header .wrap .default-user .modal-content .fa-cog i {
+.header .wrap .modal-dialog .modal-content .modal-body .fa-camera i,
+.header .wrap .modal-dialog .modal-content .modal-body .fa-cog i {
   /* body text */
   font-family: 'OpenSans', sans-serif;
   font-size: 1em;
@@ -778,19 +831,21 @@ textarea {
   color: #4A4A4A;
 }
 
-.header .wrap .default-user .modal-content .change-photo,
-.header .wrap .default-user .modal-content .settings,
-.header .wrap .default-user .modal-content .user-image,
-.header .wrap .default-user .modal-content .user-name-email {
-  margin: auto;
-}
-
-.header .wrap .default-user .modal-content .modal-footer {
+.header .wrap .modal-dialog .modal-content .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   text-align: center;
   padding: 0;
+  width: 100%;
+  border: none;
 }
 
-.header .wrap .default-user .modal-content button.btn.modal-button {
+.header .wrap .modal-dialog .modal-content .modal-footer .modal-button {
   width: 100%;
   background: #FFC021;
   /* Headings */
@@ -801,6 +856,7 @@ textarea {
   border-radius: 0;
 }
 
+/* closing header */
 .overlay {
   position: fixed;
   background: #FFC021;
@@ -843,18 +899,13 @@ textarea {
           animation-delay: .50s;
 }
 
-.overlay nav {
+.overlay .overlay-menu {
   position: relative;
   height: 70%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-size: 50px;
-  /* Headings */
-  font-family: "Oswald-Medium", sans-serif;
-  font-size: 3em;
-  color: #fff;
-  text-transform: uppercase;
   left: 4%;
 }
 
@@ -874,14 +925,21 @@ textarea {
   min-height: 50px;
   position: relative;
   opacity: 0;
+  line-height: 4.6rem;
 }
 
 .overlay .ul-nav .li-nav .nav-link {
   display: block;
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
   position: relative;
   color: #fff;
   text-decoration: none;
   overflow: hidden;
+  height: 70px;
 }
 
 .overlay .ul-nav .li-nav .nav-link:hover:after, .overlay .ul-nav .li-nav .nav-link:focus:after, .overlay .ul-nav .li-nav .nav-link:active:after {
@@ -902,6 +960,7 @@ textarea {
   transition: .35s;
 }
 
+/* closing overlay nav */
 @-webkit-keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -912,7 +971,6 @@ textarea {
     left: 0;
   }
 }
-
 @keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -957,7 +1015,7 @@ textarea {
 }
 
 .stats-wraper .stats-container {
-  width: 70vw;
+  width: 50vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -967,8 +1025,9 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: auto;
 }
 
@@ -976,14 +1035,14 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 
@@ -996,10 +1055,17 @@ textarea {
   text-align: center;
 }
 
+.stats-wraper .stats-container .stats-shade h2 {
+  font-family: "OpenSans", sans-serif;
+  font-size: 1rem;
+  color: #4A4A4A;
+  margin: 22px 0 11px;
+}
+
 .stats-wraper .stats-container .stats-shade .brown, .stats-wraper .stats-container .stats-shade .green, .stats-wraper .stats-container .stats-shade .yellow, .stats-wraper .stats-container .stats-shade .black, .stats-wraper .stats-container .stats-shade .white, .stats-wraper .stats-container .stats-shade .red {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1056,6 +1122,10 @@ textarea {
   color: white;
 }
 
+.stats-wraper .stats-container .stats-texture {
+  width: 40%;
+}
+
 .stats-wraper .stats-container .stats-texture h1 {
   /* Headings */
   font-family: "Oswald-Medium", sans-serif;
@@ -1063,6 +1133,13 @@ textarea {
   color: #4A4A4A;
   text-transform: uppercase;
   text-align: center;
+}
+
+.stats-wraper .stats-container .stats-texture h2 {
+  font-family: "OpenSans", sans-serif;
+  font-size: 1rem;
+  color: #4A4A4A;
+  margin: 22px 0 11px;
 }
 
 .stats-wraper .stats-container .stats-texture .texture {
@@ -1153,6 +1230,146 @@ textarea {
   background-color: rgba(204, 204, 204, 0.3);
 }
 
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 64px;
+  background-color: #24A5A5;
+}
+
+.footer-content .copyright {
+  display: inline-block;
+  font-family: "OpenSans", sans-serif;
+  font-size: 0.875rem;
+  color: #FFF;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer-content .disclaimer-open {
+  font-family: "OpenSans", sans-serif;
+  font-size: 0.875rem;
+  color: #FFF;
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.overlay-footer {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(167, 116, 51, 0.95);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.overlay-footer .closebtn {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #fff;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  max-width: 700px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.overlay-content .disclaimer-header {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  color: #fff;
+}
+
+.overlay-content .checkbox {
+  margin-right: 10px;
+}
+
+.overlay-content .btn-yellow {
+  width: 100%;
+  height: auto;
+  color: #fff;
+  background: #FFC021;
+  border-radius: 2px;
+  border: none;
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-align: center !important;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.overlay-content .btn-yellow:hover {
+  background: #f7b100;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.overlay-content .btn-yellow:active {
+  background: #a17300;
+}
+
+.overlay-footer a:hover, .overlay-footer a:focus {
+  color: #fff;
+}
+
+.overlay-footer .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  width: auto;
+}
+
+footer {
+  margin-top: 44px;
+}
+
 /* Body */
 body {
   /* body text */
@@ -1165,7 +1382,7 @@ body {
 
 .nav {
   /* Headings */
-  font-family: "Oswald-Medium", sans-serif;
+  font-family: "Oswald-Medium", sans-serif !important;
   font-size: 1.5em;
   color: #4A4A4A;
   text-transform: uppercase;

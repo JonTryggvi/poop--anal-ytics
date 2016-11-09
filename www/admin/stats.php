@@ -17,7 +17,7 @@
 
 	  <section class="stats-shade">
 	    <h1>poop-shade</h1>
-			<br>
+
 				<h2>Brown Poop</h2>
 				<div class="brown" style='width:<?php echo showStats($mainUserId, 1); ?>'>
 					<p><?php echo showStats($mainUserId, 1); ?></p>
@@ -45,7 +45,7 @@
 	  </section>
 		<section class="stats-texture">
 			<h1>poop-texture</h1>
-			<br>
+
 				<h2>Separated hard</h2>
 				<div class="texture" style='width:<?php echo showTextureStats($mainUserId, 1); ?>'>
 					<p><?php echo showTextureStats($mainUserId, 1); ?></p>
@@ -75,8 +75,8 @@
 					<p><?php echo showTextureStats($mainUserId, 10); ?></p>
 				</div>
 				<h2>Soft sticks </h2>
-				<div class="texture" style='width:<?php echo showTextureStats($mainUserId, 10); ?>'>
-					<p><?php echo showTextureStats($mainUserId, 10); ?></p>
+				<div class="texture" style='width:<?php echo showTextureStats($mainUserId, 11); ?>'>
+					<p><?php echo showTextureStats($mainUserId, 11); ?></p>
 				</div>
 		</section>
 	</div>

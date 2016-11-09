@@ -10,6 +10,7 @@ $(document).ready(function(){
 
   });
 
+
   $('.radio-shade-container').click(function(){
        $(this).siblings('not-checked');
       //  $(this).siblings('.bidbutton');

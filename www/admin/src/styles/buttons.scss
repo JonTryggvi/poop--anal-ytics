@@ -8,9 +8,9 @@
 }
 
 .btn-blue {
-   @include button-bg($main-blue);
+   @include button-bgg($main-blue);
 }
 
 .btn-yellow {
-   @include button-bg($main-yellow);
+   @include button-bgg($main-yellow);
 }
