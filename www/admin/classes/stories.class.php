@@ -7,18 +7,31 @@ class Stories {
 
  public function getAllStories($id){
 
+
    // Connecting to Database
    $db = $GLOBALS['gdb'];
    $mysqli = $db->getConnection();
 
    if(isset($_GET['query'])) {
      $query = $_GET['query'];
+     // changes characters used in html to their equivalents, for example: < to &gt;
+     $query = htmlspecialchars($query);
 
-   $query = htmlspecialchars($query);
-
+   }
     // prepare and bind
-    $post_query = mysqli_query($mysqli, "SELECT id, title, content, author, date FROM post  WHERE title LIKE '%.$query.%' AND ORDER BY id DESC");
-}
+    $post_query = mysqli_query($mysqli, "SELECT id, title, content, author, date FROM post ORDER BY id DESC");
+
+    if(isset($_GET['query'])) {
+      $query = $_GET['query'];
+      // changes characters used in html to their equivalents, for example: < to &gt;
+      $query = htmlspecialchars($query);
+      // makes sure nobody uses SQL injection
+    //  $query = $mysqli -> mysql_real_escape_string($query);
+
+      $sql_select = "SELECT id, title, content, author, date FROM post WHERE title LIKE '%.$query.%'";
+    }
+
+
     $postInfo = array();
      while($row = mysqli_fetch_assoc($post_query)) {
        $postInfo[] = $row;
@@ -28,26 +41,6 @@ class Stories {
    $stmt->close();
   //  $mysqli->close();
  }
-
- public function getAllPost() {
-    // Connecting to Database
-    $db = $GLOBALS['gdb'];
-    $mysqli = $db->getConnection();
-
-       // prepare and bind (default without a search query)
-    $sql_select = "SELECT * FROM post";
-
-    // prepate with a search query
-    if(isset($_GET['query'])) {
-      $query = $_GET['query'];
-      // changes characters used in html to their equivalents, for example: < to &gt;
-      $query = htmlspecialchars($query);
-      // makes sure nobody uses SQL injection
-    //  $query = $mysqli -> mysql_real_escape_string($query);
-
-      $sql_select = "SELECT id, title, content, author, date FROM post WHERE title LIKE '%".$query."%'";
-    }
-  }
 
 
  public function setComments($content, $author, $comment_time, $post_id, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id){
@@ -85,7 +78,7 @@ class Stories {
     // Connecting to Database
     $db = $GLOBALS['gdb'];
     $mysqli = $db->getConnection();
-    // error_log($postid);
+    error_log($postid);
 
     // prepare and bind
     $stmt = $mysqli->prepare("DELETE FROM comments WHERE post_id=?");
@@ -105,7 +98,7 @@ class Stories {
      // Connecting to Database
      $db = $GLOBALS['gdb'];
      $mysqli = $db->getConnection();
-    //  error_log($commentid);
+     error_log($commentid);
 
      // prepare and bind
      $stmt = $mysqli->prepare("DELETE FROM comments WHERE id=?");

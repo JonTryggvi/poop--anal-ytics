@@ -53,7 +53,7 @@
 		array('Dashboard', 'index.php'),
 		array('Diarya', 'diarya.php'),
 
-		array('Advice', 'users.php'),
+		array('All Users', 'users.php'),
 		array('Stats', 'stats.php'),
 
 		array('Your Posts', 'posts.php'),
