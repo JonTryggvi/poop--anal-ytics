@@ -60,7 +60,7 @@ class Stories {
     // Connecting to Database
     $db = $GLOBALS['gdb'];
     $mysqli = $db->getConnection();
-    error_log($postid);
+    // error_log($postid);
 
     // prepare and bind
     $stmt = $mysqli->prepare("DELETE FROM comments WHERE post_id=?");
@@ -82,7 +82,7 @@ class Stories {
      // Connecting to Database
      $db = $GLOBALS['gdb'];
      $mysqli = $db->getConnection();
-     error_log($commentid);
+    //  error_log($commentid);
 
      // prepare and bind
      $stmt = $mysqli->prepare("DELETE FROM comments WHERE id=?");
