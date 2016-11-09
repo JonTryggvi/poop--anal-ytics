@@ -1,6 +1,6 @@
 <?php
 	include($_SERVER['DOCUMENT_ROOT'].'/admin/classes/classes.php');
-
+ $mainUserId = $_SESSION['User_id'];
 /*isset checks if var exists */
 
 if(isset($_POST['create_username']) && !empty($_POST['create_username']) && isset($_POST['create_password']) && !empty($_POST['create_password']) && isset($_POST['email']) && !empty($_POST['email'])) {
@@ -89,7 +89,6 @@ if(isset($_POST['submit-dash']) and !empty($_POST['submit-dash'])){
 		$textureTest->userTextures($texture, $shade);
 
 
-
 		function showResultIcons($t, $s) {
 			$iconResult = new userTest();
 			$iconResult->resultsIcons($t, $s);
@@ -113,9 +112,6 @@ function shadeRadios(){
 	$test = new userTest();
 	$test->getShades();
 }
-
-
-
 
 if(isset($_POST['submit-diary']) and !empty($_POST['submit-diary'])){
 	if (isset($_POST['texture-diary']) && isset($_POST['shade-diary']) ) {
@@ -244,6 +240,18 @@ if(isset($_GET['deleteuser']) && $_GET['deleteuser'] == 'true') {
 	$user = new User();
 	$user->deleteUser($userid);
 }
+
+function showEachDiary($id){
+	$diaryTable = new diaryTest();
+	$diaryTable -> getDiaries($id);
+}
+
+if(isset($_GET['deletediary']) && $_GET['deletediary'] == 'true') {
+	$diaryId = $_GET['diaryId'];
+	$delDiary = new diaryTest();
+	$delDiary->deleteDiary($diaryId);
+
+		}
 
 
 

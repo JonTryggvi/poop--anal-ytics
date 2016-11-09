@@ -867,6 +867,68 @@ textarea {
   text-align: center;
 }
 
+.diary-entries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  min-height: 300px;
+  border: solid 3px #24A5A5;
+  border-radius: 2px;
+}
+
+.diary-entries .title {
+  width: 80%;
+  margin: 21px 0 21px;
+}
+
+.diary-entries .content {
+  width: 80%;
+}
+
+.diary-entries .content p {
+  background-color: transparent;
+}
+
+.diary-entries .content #content {
+  background-color: transparent !important;
+}
+
+.diary-entries .btn-del-poop {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 10%;
+  max-width: 50px;
+  height: 50px;
+  border-radius: 2px;
+}
+
+.diary-entries .btn-del-poop i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.diary-entries:nth-child(odd) {
+  background-color: rgba(204, 204, 204, 0.3);
+}
+
 /* Body */
 body {
   /* body text */

@@ -1,0 +1,44 @@
+
+.diary-entries{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  min-height: 300px;
+  border: solid 3px $main-blue;
+  border-radius: 2px;
+  .title {
+    width: 80%;
+    margin: 21px 0 21px;
+  }
+  .content {
+    width: 80%;
+    p{
+      background-color: transparent;
+    }
+    #content{
+      background-color: transparent !important;
+    }
+
+  }
+
+  .btn-del-poop {
+    display: inline-flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 10%;
+    max-width: 50px;
+    height: 50px;
+    border-radius: 2px;
+    i {
+      display: inline-flex;
+      align-self: center;
+    }
+  }
+
+}
+
+.diary-entries:nth-child(odd) {
+  background-color: rgba(#ccc,0.3);
+}
