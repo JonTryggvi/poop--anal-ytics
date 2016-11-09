@@ -1,0 +1,18 @@
+.stats-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  .stats {
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+    height: auto;
+
+    h1 {
+      @include font-open-sans(heading);
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}

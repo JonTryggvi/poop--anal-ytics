@@ -190,6 +190,15 @@ label {
   display: none;
 }
 
+.commentbox {
+  background-color: green;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
 .mainNavContainer {
   position: absolute;
   width: 208px;
@@ -810,6 +819,36 @@ label {
     opacity: 1;
     left: 0;
   }
+}
+
+.stats-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: auto;
+}
+
+.stats-container .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70vw;
+  height: auto;
+}
+
+.stats-container .stats h1 {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /* Body */

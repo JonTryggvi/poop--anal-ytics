@@ -34,17 +34,23 @@
 		font-family: $stack-open-sans;
 		font-size: 0.875rem;
 		color: #FFF;
-
+	}
+	@elseif $text == btn {
+		font-family: $stack-open-sans;
+		font-size: 24px
 	}
 }
 
 /* Buttons */
 
 
-@mixin button-bg($bg, $width, $height) {
+@mixin button-bg($bg, $width, $height, $fontColor) {
 	width: $width;
 	height: $height;
+	color: $fontColor;
   background: $bg;
+	border-radius: 2px;
+	border: none;
   &:hover {
     background:darken($bg,8%);
     transition: all 0.3s ease;

@@ -78,18 +78,11 @@ if(isset($_GET['delete']) && $_GET['delete'] == true) {
 }
 
 
-<<<<<<< HEAD
-// dashboard test functions
-
-
-if(isset($_POST['submit-dash']) and !empty($_POST['submit-dash'])){
-	if (isset($_POST['texture-dash']) && isset($_POST['shade-dash']) ) {
-=======
 
 // test functions
 if(isset($_POST['submit']) and !empty($_POST['submit'])){
 	if (isset($_POST['texture']) && isset($_POST['shade']) ) {
->>>>>>> Herdis
+
 		// textures
 		$texture =  $_POST['texture-dash'];
 		// Shade
@@ -97,11 +90,7 @@ if(isset($_POST['submit']) and !empty($_POST['submit'])){
 		$textureTest = new userTest();
 		$textureTest->userTextures($texture, $shade);
 
-		// $diaryTitle = $_POST['diary-title'];
-		// $diaryContent = $_POST['diary-content'];
-		// var_dump($diaryTitle);
-		// $diary = new userTest();
-		// $diary->insertDiary($diaryTitle, $diaryContent);
+
 
 		function showResultIcons($t, $s) {
 			$iconResult = new userTest();
@@ -116,25 +105,17 @@ if(isset($_POST['submit']) and !empty($_POST['submit'])){
 
 }
 
-<<<<<<< HEAD
-function textureRadios(){
-	$test = new userTest();
-	$test->getTextures();
-}
 
-function shadeRadios(){
-	$test = new userTest();
-	$test-> getShades();
-}
+
 
 
 // diary test functions
-=======
+
 	function textureRadios(){
 		$test = new userTest();
 		$test->getTextures();
 	}
->>>>>>> Herdis
+
 
 	function shadeRadios(){
 		$test = new userTest();
@@ -150,15 +131,11 @@ if(isset($_POST['submit-diary']) and !empty($_POST['submit-diary'])){
 
 		$diaryTitle = $_POST['diary-title'];
 		$diaryContent = $_POST['diary-content'];
-	
+
 		$textureTest = new diaryTest();
 		$textureTest->diaryTextures($texture, $shade, $diaryTitle, $diaryContent);
 
-		// $diaryTitle = $_POST['diary-title'];
-		// $diaryContent = $_POST['diary-content'];
-		// var_dump($diaryTitle);
-		// $diary = new diaryTest();
-		// $diary->insertDiary($diaryTitle, $diaryContent);
+
 
 		function showResultIconsDiary($t, $s) {
 			$iconResult = new diaryTest();
