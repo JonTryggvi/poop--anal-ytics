@@ -10,14 +10,16 @@ class User {
   $db = $GLOBALS['gdb'];
   $mysqli = $db->getConnection();
 
+  $cost = 10;
+  $salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
+  $salt = sprintf("$2a$%02d$", $cost) . $salt;
+  $hash = crypt($pass, $salt);
+
  	// prepare and bind
  	$stmt = $mysqli->prepare("INSERT INTO User(email, password, userName, firstName, lastName, user_date, age, roles_id, gender_id, apps_countries_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
  	$stmt->bind_param("ssssssiiii", $email, $pass, $userName, $firstName, $lastName, $user_date, $age, $roles_id, $gender_id, $apps_countries_id);
 
-  // $cost = 10;
-  // $salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
-  // $salt = sprintf("$2a$%02d$", $cost) . $salt;
-  // $hash = crypt($pass, $salt);
+
 
  	$stmt->execute();
 
@@ -41,19 +43,59 @@ class User {
    $db = $GLOBALS['gdb'];
    $mysqli = $db->getConnection();
 
-   $userid = '100';
-   $profile_img = 'hello.jpg';
-
+   $userid = 	$_SESSION['User_id'];
 
    // prepare and bind
    $stmt = $mysqli->prepare("UPDATE User SET profile_img=? WHERE id=?");
-   error_log("gawd");
+
    $stmt->bind_param("si", $target_file, $userid);
    $stmt->execute();
 
    $stmt->close();
 
  }
+
+ public function updateUserIconProfile(){
+
+   $db = $GLOBALS['gdb'];
+   $mysqli = $db->getConnection();
+
+   $userid = 	$_SESSION['User_id'];
+
+   // prepare and bind
+   $stmt = $mysqli->prepare("SELECT profile_img FROM User WHERE id=?");
+   $stmt->bind_param('i', $userid);
+   $stmt->bind_result($profile_img);
+   $stmt->execute();
+   error_log("gawd");
+
+   while (mysqli_stmt_fetch($stmt)) {
+
+     echo '<div><img class="default-user" data-toggle="modal" data-target="#myModal" src="'.$profile_img.'"/></div>';
+   }
+
+    // var_dump($updateUserIconProfile);
+
+   $stmt->close();
+
+ }
+
+ // public function deleteUserImage() {
+ //   // Connecting to Database
+ //   $db = $GLOBALS['gdb'];
+ //   $mysqli = $db->getConnection();
+ //
+ //   // prepare and bind
+ //   $stmt = $mysqli->prepare("DELETE FROM User WHERE profile_img WHERE id=?");
+ //   $stmt->bind_param("i", $userid);
+ //   $stmt->bind_result($profile_img);
+ //   $stmt->execute();
+ //
+ //
+ //   $stmt->close();
+ //   //$mysqli->close();
+ //   //header('Location: ./users.php?updated=true');
+ //  }
 
 public function countries(){
 

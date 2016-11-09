@@ -52,8 +52,12 @@
 
 		array('Dashboard', 'index.php'),
 		array('Diarya', 'diarya.php'),
+<<<<<<< HEAD
 		array('Advice', 'users.php'),
 		array('Stats', 'stats.php'),
+=======
+		array('Static', 'pages.php'),
+>>>>>>> Herdis
 		array('Your Posts', 'posts.php'),
 		array('Stories', 'stories.php')
 	);

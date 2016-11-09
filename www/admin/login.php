@@ -148,8 +148,6 @@
 						<div class="checkbox">
 								<input class="" type="checkbox"><a class="terms" href="#"> I have read and understand the terms and conditions</a></input>
 						</div>
-
-
 						<input name="btn-signup ormSubmit" type="submit" class="btn btn-block btn-blue" value="Sign me up for this shit!">
 					</form>
 			</div>

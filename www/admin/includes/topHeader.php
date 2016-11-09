@@ -1,6 +1,6 @@
 <div class="header">
   <div class="wrap">
-
+<?php $updateUserIconProfile2  = new User(); ?>
     <!-- Modal Nav -->
     <div class="bergur">
       <div class="button_container" id="toggle">
@@ -22,7 +22,10 @@
 
     <h1 class="logo">GoPoop</h1>
     <!-- Image trigger modal -->
-    <img class="default-user" src="img/trump-orange.jpg" alt="" data-toggle="modal" data-target="#myModal">
+    <!-- <img class="default-user" src="img/trump-orange.jpg" alt="" data-toggle="modal" data-target="#myModal"> -->
+    <!-- <img class="default-user" src="../upload.php/php?id=100" alt="" data-toggle="modal" data-target="#myModal"> -->
+
+      <?php $updateUserIconProfile2->updateUserIconProfile();?>
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -33,28 +36,24 @@
 
             <div class="modal-user">
               <div class="user-image">
-                <img src="img/trump-orange.jpg" alt="" />
+                <?php $updateUserIconProfile2->updateUserIconProfile();?>
               </div>
               <div class="user-name-email">
-                <p class="modal-title" id="myModalLabel">Name of User</p>
-                <p vlass="modal-user-email">email of user</p>
+                <p class="modal-title" id="myModalLabel">Name: <?php echo $_SESSION['UsrNm']  ?></p>
+                <p vlass="modal-user-email">Email: <?php echo $_SESSION['User_email'] ?> </p>
               </div>
             </div>
 
+
           </div>
           <div class="modal-body">
-            <span class="change-photo"><i class="fa fa-camera" aria-hidden="true" data-dismiss="modal"></i>Change Photo</span>
-            <span class="settings"><i class="fa fa-cog" aria-hidden="true"></i>Settings</span>
-          <!-- <form action="dashboard.php" method="post" enctype="multipart/form-data">
-              Select image to upload:
-              <input type="file" name="profile_img" id="fileToUpload">
-              <input type="submit" value="Upload Image" name="submit">
-          </form> -->
-          <form action="upload.php" method="post" enctype="multipart/form-data">
-              Select image to upload:
-              <input type="file" name="fileToUpload" id="fileToUpload">
-              <input type="submit" value="Upload Image" name="submitImage">
-          </form>
+            <!-- <span class="change-photo"><i class="fa fa-camera" aria-hidden="true" data-dismiss="modal"></i>Change Photo</span>
+            <span class="settings"><i class="fa fa-cog" aria-hidden="true"></i>Settings</span> -->
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                Select image to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload Image" name="submitImage">
+            </form>
           </div>
 
           <div class="modal-footer">

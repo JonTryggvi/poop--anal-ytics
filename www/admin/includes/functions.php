@@ -106,21 +106,13 @@ if(isset($_POST['submit']) and !empty($_POST['submit'])){
 }
 
 
+function textureRadios(){
+	$test = new userTest();
+	$test->getTextures();
+}
 
 
 
-// diary test functions
-
-	function textureRadios(){
-		$test = new userTest();
-		$test->getTextures();
-	}
-
-
-	function shadeRadios(){
-		$test = new userTest();
-		$test-> getShades();
-	}
 
 if(isset($_POST['submit-diary']) and !empty($_POST['submit-diary'])){
 	if (isset($_POST['texture-diary']) && isset($_POST['shade-diary']) ) {
@@ -159,14 +151,6 @@ function shadeRadiosDiary(){
 	$test = new diaryTest();
 	$test->getShades();
 }
-
-
-
-
-
-
-
-
 
 	function getStories(){
 		$stories = new Stories();
