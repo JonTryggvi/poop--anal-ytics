@@ -1,0 +1,105 @@
+.footer-content {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 64px;
+  background-color: $main-blue;
+
+  .copyright {
+    display: inline-block;
+    @include font-open-sans(copy);
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .disclaimer-open {
+    @include font-open-sans(copy);
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+}
+
+.overlay-footer {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba($brown, 0.95);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+
+  .closebtn {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: $white;
+    display: block;
+    transition: 0.3s;
+  }
+
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    max-width: $innerDesignWidth;
+    text-align: left;
+    margin-top: 30px;
+
+  .disclaimer-header {
+    @include font-open-sans(heading);
+    color: $white;
+  }
+
+  .checkbox {
+    margin-right: 10px;
+  }
+
+  .btn-yellow {
+    @include button-bg($main-yellow, 100%, auto, $white);
+    @include font-open-sans(heading);
+
+    text-align: center !important;
+    color: $white;
+    display: flex;
+    align-self: center;
+    margin: 20px auto;
+    width: 100%;
+  }
+}
+
+.overlay-footer a:hover, .overlay-footer a:focus {
+    color: $white;
+}
+
+.overlay-footer .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    width: auto;
+}
+
+footer {
+  margin-top: 44px;
+}
+// @media screen and (max-height: 450px) {
+//   .overlay a {font-size: 20px}
+//   .overlay .closebtn {
+//     font-size: 40px;
+//     top: 15px;
+//     right: 35px;
+//   }
+// }

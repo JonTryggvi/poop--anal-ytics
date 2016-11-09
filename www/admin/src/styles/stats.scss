@@ -10,17 +10,17 @@
   display: flex;
   justify-content: center;
   .stats-container {
-    width: 70vw;
+    width: 50vw;
     display: flex;
     align-self: center;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     height: auto;
     .stats-shade {
       display: flex;
+      order: 2;
       flex-direction: column;
-      justify-content: center;
-      width: 50%;
+      width: 40%;
       height: auto;
 
       h1 {
@@ -28,8 +28,12 @@
         text-transform: uppercase;
         text-align: center;
       }
+      h2 {
+        @include font-open-sans(h2);
+        margin: 22px 0 11px;
+      }
       .brown, .green, .yellow, .black, .white, .red {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         height: 30px;
@@ -70,10 +74,15 @@
       }
     }
     .stats-texture {
+      width: 40%;
       h1 {
           @include font-open-sans(heading);
           text-transform: uppercase;
           text-align: center;
+      }
+      h2 {
+        @include font-open-sans(h2);
+        margin: 22px 0 11px;
       }
       .texture {
         display: flex;

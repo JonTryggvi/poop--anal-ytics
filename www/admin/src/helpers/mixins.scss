@@ -12,13 +12,13 @@
 
 	@elseif $text == heading-text {
 	/* Headings */
-		font-family: $stack-headings;
+		font-family: $stack-headings !important;
 		font-size: 1.5em;
     color: $dark-grey;
     text-transform: uppercase;
 	}
 	@elseif $text == mainNav {
-		font-familiy: $stack-open-sans;
+		font-family: $stack-headings;
 		font-size: 1.5rem;
 		color:#fff;
 		text-transform: uppercase;
@@ -68,12 +68,28 @@
 		color: #FFF;
 
 	}
+
 }
 /* Buttons */
 
 
-@mixin button-bg($bg) {
+@mixin button-bgg($bg) {
   background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  }
+}
+@mixin button-bg($bg, $width, $height, $fontColor) {
+	width: $width;
+	height: $height;
+	color: $fontColor;
+  background: $bg;
+	border-radius: 2px;
+	border: none;
   &:hover {
     background:darken($bg,8%);
     transition: all 0.3s ease;

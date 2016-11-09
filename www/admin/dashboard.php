@@ -6,5 +6,5 @@
 	include('includes/nav.php');
 	include('includes/test.php');
 
+	include('includes/footer.php');
 ?>
-<?php include('includes/footer.php'); ?>
