@@ -67,7 +67,7 @@ class User {
    $stmt->bind_param('i', $userid);
    $stmt->bind_result($profile_img);
    $stmt->execute();
-   error_log("gawd");
+  //  error_log("gawd");
 
    while (mysqli_stmt_fetch($stmt)) {
 
