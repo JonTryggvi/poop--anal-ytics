@@ -67,14 +67,12 @@ class User {
    $stmt->bind_param('i', $userid);
    $stmt->bind_result($profile_img);
    $stmt->execute();
-   error_log("gawd");
+
 
    while (mysqli_stmt_fetch($stmt)) {
 
      echo '<div><img class="default-user" data-toggle="modal" data-target="#myModal" src="'.$profile_img.'"/></div>';
    }
-
-    // var_dump($updateUserIconProfile);
 
    $stmt->close();
 
@@ -195,7 +193,7 @@ public function countries(){
 
 
   // prepare and bind
-  $stmt = $mysqli->prepare("UPDATE User SET firstName=?, lastName=?, userName=?, email=?, pass=?, roles_id=? WHERE id=?");
+  $stmt = $mysqli->prepare("UPDATE User SET firstName=?, lastName=?, userName=?, email=?, password=?, roles_id=? WHERE id=?");
   $stmt->bind_param("sssssii", $firstName, $lastName, $userName, $email, $pass, $roles_id, $userid);
   $stmt->execute();
 
@@ -225,6 +223,7 @@ public function countries(){
      $userArr['email'] = $email;
      $userArr['roles_id'] = $roles_id;
    }
+
 
   // Close connection
   $stmt->close();
