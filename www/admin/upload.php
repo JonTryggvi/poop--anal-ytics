@@ -2,7 +2,7 @@
   include('includes/config.php');
   loginCheck();
   include('includes/header.php');
-  
+
 	$target_dir = "uploads/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
@@ -22,6 +22,7 @@
 	if (file_exists($target_file)) {
 	    echo "Sorry, file already exists.";
 	    $uploadOk = 0;
+      
 
 	}
 	// Check file size
@@ -42,9 +43,10 @@
 	} else {
 	    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 	        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-          header('Location: ../dashboard.php');
+          header('Location: dashboard.php');
 	    } else {
 	        echo "Sorry, there was an error uploading your file.";
+
 	    }
 	}
   // var_dump($target_file);

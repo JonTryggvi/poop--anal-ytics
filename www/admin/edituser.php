@@ -41,7 +41,7 @@
 					</div>
 					<div class="form-group">
 						<label for="update_password">Password</label>
-						<input type="email" class="form-control" name="update_password" value="<?php echo $userInfo['password']; ?>">
+						<input type="password" class="form-control" name="update_password" value="<?php echo $userInfo['password']; ?>">
 					</div>
 					<div class="form-group">
 						<label for="update_firstname">First name</label>

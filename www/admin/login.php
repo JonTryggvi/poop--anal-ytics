@@ -1,6 +1,6 @@
 <?php
 	include('includes/config.php');
-	// signUpCheck();
+
 	include('includes/header.php');
 		include('includes/topHeader.php');
 ?>

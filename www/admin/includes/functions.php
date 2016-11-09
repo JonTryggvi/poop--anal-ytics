@@ -69,14 +69,12 @@ function getPost() {
 
 }
 
-
 //Check if parameter exists and is set to true
 if(isset($_GET['delete']) && $_GET['delete'] == true) {
 	$id = $_GET['postid'];
 	$DeletePost= new Post();
 	$DeletePost->deletePost($id);
 }
-
 
 
 // test functions
@@ -178,6 +176,7 @@ function shadeRadiosDiary(){
 
 
 	function getPosts() {
+
       $allPosts = new Stories();
       return $allPosts->getAllStories($_SESSION['User_id']);
     }
@@ -188,19 +187,38 @@ function shadeRadiosDiary(){
       return $allComments->getPostComments($post_id);
     }
 
-
-		if(isset($_GET['deletecomment']) && $_GET['deletecomments'] == 'true') {
-			$commentsid = $_GET['userid'];
+		// delete post + comments
+		if(isset($_GET['deletepost']) ) {
+			$postid = $_GET['postid'];
 
 			$user = new Stories();
-			$user->deleteComments($commentsid);
+			$user->deletePost($postid);
 
 			}
 
-	function check($commentsid){
+	function check($postid){
 
 		// if($_SESSION['User_roles_id'] == 2){
-			echo '<a class="btn btn-danger btn-sm" href="stories.php?deletecomments=true&postid='.$commentsid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+			echo '<a class="btn btn-danger btn-sm" href="stories.php?deletepost=true&postid='.$postid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+
+		// }else {
+		//
+		// }
+	}
+	// delete comments
+
+		if(isset($_GET['deletecomment']) ) {
+			$commentid = $_GET['postid'];
+
+			$user = new Stories();
+			$user->deletePostComments($commentid);
+
+			}
+
+	function checkComment($commentid){
+
+		// if($_SESSION['User_roles_id'] == 2){
+			echo '<a class="btn btn-danger btn-sm" href="stories.php?deletecomment=true&postid='.$commentid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
 
 		// }else {
 		//
