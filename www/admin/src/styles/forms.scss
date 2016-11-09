@@ -11,6 +11,16 @@
   display: flex;
   justify-content: center;
 }
+#stories{
+  background-color: #F5F5F5;
+
+}
+.demo{
+  margin: 0px;
+  background-color: #24A5A5;
+  padding: 10px;
+  color: white;
+}
 .btn-delete-post{
   width: 10%;
 }
@@ -35,6 +45,7 @@
       }
     }
     #content{
+      background-color: white;
       p{
         color: black;
       }
@@ -47,9 +58,13 @@
       }
     }
 }
-#content{
-  background-color: white;
+
+////// Stories //
+.delete_user_post, .delete_user_comment{
+  display: flex;
+    justify-content: flex-end;
 }
+
 label {
   float: left;
   clear: left;
@@ -58,17 +73,21 @@ label {
   display: none;
 }
 // HERDIS COMMENT BOX
-.users_comments{
-  // background-color: green;
-  border: 1px solid blue;
+.user_comment{
+  // background-color: #24A5A5;
+  // border: 1px solid blue;
+  border-bottom: 1px solid black;
 }
-// .commentboxinfo{
-//   display: block;
-//   background-color: red;
-// }
-// .commentboxinfo2{
-//   display: none;
-// }
+.user_post_title{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: #24A5A5;
+  padding: 15px;
+}
+.user_post_content{
+  padding: 30px 15px;
+}
 textarea{
   width: 100%;
   min-height: 100px;

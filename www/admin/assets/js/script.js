@@ -50,5 +50,17 @@ $("#demo").click(function(){
     //
     // });
 
+//     $('#search').bind('keyup', function() {
+//     $('#form').delay(100000).submit();
+// });
 
 });
+$(document).ready(function() {
+
+            $('input.title').typeahead({
+                name: 'title',
+                remote: 'title.php?query=%QUERY'
+
+            });
+
+        })

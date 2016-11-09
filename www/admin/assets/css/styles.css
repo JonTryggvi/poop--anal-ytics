@@ -162,6 +162,17 @@ hr {
           justify-content: center;
 }
 
+#stories {
+  background-color: #F5F5F5;
+}
+
+.demo {
+  margin: 0px;
+  background-color: #24A5A5;
+  padding: 10px;
+  color: white;
+}
+
 .btn-delete-post {
   width: 10%;
 }
@@ -203,6 +214,10 @@ hr {
       align-self: flex-end;
 }
 
+.allStories #content {
+  background-color: white;
+}
+
 .allStories #content p {
   color: black;
 }
@@ -220,8 +235,13 @@ hr {
   margin: 10px;
 }
 
-#content {
-  background-color: white;
+.delete_user_post, .delete_user_comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 label {
@@ -233,8 +253,24 @@ label {
   display: none;
 }
 
-.users_comments {
-  border: 1px solid blue;
+.user_comment {
+  border-bottom: 1px solid black;
+}
+
+.user_post_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  background-color: #24A5A5;
+  padding: 15px;
+}
+
+.user_post_content {
+  padding: 30px 15px;
 }
 
 textarea {
