@@ -10,6 +10,7 @@
 	include('diaryTest.class.php');
 
 	include('stories.class.php');
+	include('stats.class.php');
 
 
 

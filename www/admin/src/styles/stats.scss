@@ -1,18 +1,98 @@
-.stats-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  height: auto;
-  .stats {
-    display: flex;
-    justify-content: center;
-    width: 70vw;
-    height: auto;
+.stats-heading {
+  text-align: center;
+}
+.stats-subheading {
+  text-align: center;
+  margin: 0 0 44px;
+}
 
-    h1 {
-      @include font-open-sans(heading);
-      text-transform: uppercase;
-      text-align: center;
+.stats-wraper {
+  display: flex;
+  justify-content: center;
+  .stats-container {
+    width: 70vw;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    .stats-shade {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      height: auto;
+
+      h1 {
+        @include font-open-sans(heading);
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .brown, .green, .yellow, .black, .white, .red {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 0;
+        transition: width 1s 3s ease-in-out;
+        p {
+          align-self: center;
+          color: $dark-grey;
+          margin: 0;
+        }
+      }
+      .brown {
+        background-color: $brown;
+        p {
+          color: white;
+        }
+      }
+      .green {
+        background-color: $poop-green;
+      }
+      .yellow {
+        background-color: $main-yellow;
+      }
+      .black{
+        background-color: $dark-grey;
+        p {
+          color: white;
+        }
+      }
+      .white {
+        background-color: $light-grey;
+      }
+      .red {
+        background-color: $poop-red;
+        p {
+          color: white;
+        }
+      }
+    }
+    .stats-texture {
+      h1 {
+          @include font-open-sans(heading);
+          text-transform: uppercase;
+          text-align: center;
+      }
+      .texture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 0;
+        transition: width 1s 3s ease-in-out;
+        p {
+          margin: 0;
+          padding: 0;
+          color: white;
+
+        }
+      }
+      .texture {
+        background-color: $main-blue;
+
+      }
     }
   }
 }

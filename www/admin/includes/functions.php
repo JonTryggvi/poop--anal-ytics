@@ -1,6 +1,6 @@
 <?php
 	include($_SERVER['DOCUMENT_ROOT'].'/admin/classes/classes.php');
- $mainUserId = $_SESSION['User_id'];
+ 	$mainUserId = $_SESSION['User_id'];
 /*isset checks if var exists */
 
 if(isset($_POST['create_username']) && !empty($_POST['create_username']) && isset($_POST['create_password']) && !empty($_POST['create_password']) && isset($_POST['email']) && !empty($_POST['email'])) {
@@ -251,7 +251,25 @@ if(isset($_GET['deletediary']) && $_GET['deletediary'] == 'true') {
 	$delDiary = new diaryTest();
 	$delDiary->deleteDiary($diaryId);
 
-		}
+	}
+
+
+ // 	var_dump($statColor);
+
+
+		function showStats($id, $col) {
+				$stats = new stats();
+				$stats->getStats($id, $col);
+			}
+
+			function showTextureStats($id, $col) {
+				$stats = new stats();
+				$stats->getStatsTexture($id, $col);
+			}
+
+
+
+
 
 
 

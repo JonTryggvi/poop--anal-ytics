@@ -880,34 +880,157 @@ textarea {
           transform: scale(1.1);
 }
 
-.stats-container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: auto;
+.stats-heading {
+  text-align: center;
 }
 
-.stats-container .stats {
+.stats-subheading {
+  text-align: center;
+  margin: 0 0 44px;
+}
+
+.stats-wraper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.stats-wraper .stats-container {
   width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: auto;
 }
 
-.stats-container .stats h1 {
+.stats-wraper .stats-container .stats-shade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: auto;
+}
+
+.stats-wraper .stats-container .stats-shade h1 {
   /* Headings */
   font-family: "Oswald-Medium", sans-serif;
   font-size: 1.5em;
   color: #4A4A4A;
   text-transform: uppercase;
   text-align: center;
+}
+
+.stats-wraper .stats-container .stats-shade .brown, .stats-wraper .stats-container .stats-shade .green, .stats-wraper .stats-container .stats-shade .yellow, .stats-wraper .stats-container .stats-shade .black, .stats-wraper .stats-container .stats-shade .white, .stats-wraper .stats-container .stats-shade .red {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30px;
+  width: 0;
+  -webkit-transition: width 1s 3s ease-in-out;
+  transition: width 1s 3s ease-in-out;
+}
+
+.stats-wraper .stats-container .stats-shade .brown p, .stats-wraper .stats-container .stats-shade .green p, .stats-wraper .stats-container .stats-shade .yellow p, .stats-wraper .stats-container .stats-shade .black p, .stats-wraper .stats-container .stats-shade .white p, .stats-wraper .stats-container .stats-shade .red p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #4A4A4A;
+  margin: 0;
+}
+
+.stats-wraper .stats-container .stats-shade .brown {
+  background-color: #A77433;
+}
+
+.stats-wraper .stats-container .stats-shade .brown p {
+  color: white;
+}
+
+.stats-wraper .stats-container .stats-shade .green {
+  background-color: #BBCE72;
+}
+
+.stats-wraper .stats-container .stats-shade .yellow {
+  background-color: #FFC021;
+}
+
+.stats-wraper .stats-container .stats-shade .black {
+  background-color: #4A4A4A;
+}
+
+.stats-wraper .stats-container .stats-shade .black p {
+  color: white;
+}
+
+.stats-wraper .stats-container .stats-shade .white {
+  background-color: #ccc;
+}
+
+.stats-wraper .stats-container .stats-shade .red {
+  background-color: #EF5F21;
+}
+
+.stats-wraper .stats-container .stats-shade .red p {
+  color: white;
+}
+
+.stats-wraper .stats-container .stats-texture h1 {
+  /* Headings */
+  font-family: "Oswald-Medium", sans-serif;
+  font-size: 1.5em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.stats-wraper .stats-container .stats-texture .texture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30px;
+  width: 0;
+  -webkit-transition: width 1s 3s ease-in-out;
+  transition: width 1s 3s ease-in-out;
+}
+
+.stats-wraper .stats-container .stats-texture .texture p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.stats-wraper .stats-container .stats-texture .texture {
+  background-color: #24A5A5;
 }
 
 .diary-entries {
