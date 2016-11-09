@@ -51,11 +51,11 @@
 					<form action="includes/authentication.php" method="POST" role="tabpanel">
 						<div class="form-group" role="tabpanel">
 							<label for="username">Username</label>
-							<input type="text" class="form-control" name="username" value="disa">
+							<input type="text" class="form-control" name="username" value="">
 						</div>
 						<div class="form-group">
 							<label for="password">Password</label>
-							<input type="password" class="form-control" name="password" value="kuka">
+							<input type="password" class="form-control" name="password" value="">
 						</div>
 						<div class="form-group">
 							<input type="submit" class="btn btn-primary btn-lg btn-block" value="Login">
@@ -83,11 +83,11 @@
 						<form action="includes/authentication.php" method="POST" role="tabpanel">
 							<div class="form-group body-text" role="tabpanel">
 								<label for="username"></label>
-								<input type="text" class="form-control" name="username" placeholder="Username or Email" value="disa">
+								<input type="text" class="form-control" name="username" placeholder="Username or Email" value="">
 							</div>
 							<div class="form-group">
 								<label for="password"></label>
-								<input type="password" class="form-control" name="password" placeholder="Password" value="kuka">
+								<input type="password" class="form-control" name="password" placeholder="Password" value="">
 							</div>
 							<div class="form-group">
 								<input type="submit" class="btn btn-block btn-blue" value="Log me into this shit!">
