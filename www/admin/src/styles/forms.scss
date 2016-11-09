@@ -11,9 +11,13 @@
   display: flex;
   justify-content: center;
 }
+#Allstory{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 #stories{
   background-color: #F5F5F5;
-
 }
 .demo{
   margin: 0px;
@@ -91,4 +95,8 @@ label {
 textarea{
   width: 100%;
   min-height: 100px;
+}
+.user_post_likes{
+  display: flex;
+  justify-content: flex-end;
 }

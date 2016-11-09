@@ -4,7 +4,4 @@
     <?php createNavigation('mainNav'); ?>
   </nav>
 
-
-
-
 </div>

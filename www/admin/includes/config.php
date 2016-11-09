@@ -74,40 +74,6 @@
 	);
 
 // Create Navigation
-// function createNavigation($nav) {
-//
-// 	if($nav == 'mainNav') {
-//
-// 		$navArr = $GLOBALS['navItems'];
-// 		$className = 'main';
-//
-// 	} elseif($nav == 'userNav') {
-//
-// 		$navArr = $GLOBALS['userNavItems'];
-// 		$className = 'user';
-//
-// 	} elseif($nav == 'userNav2') {
-//
-// 		$navArr = $GLOBALS['userNav2'];
-// 		$className = 'user2';
-//
-// 	}
-//
-// 	echo '<ul class="'.$className.'-nav nav nav-pills nav-stacked m-t-2">';
-// 	foreach($navArr as $key => $value) {
-//
-// 		if($value[1] == 'Dashboard') {
-// 			$active = 'active';
-//
-// 		} else {
-// 			$active = '';
-// 		}
-// 		echo '<li class="nav-item nav-link"><a href="'.$value[1].'" class="'.$active.'">'. $value[0] .'</a></li>';
-// 	}
-// 	echo '</ul>';
-// }
-//
-// Create Navigation
 function createNavigation($nav) {
 
 	if($nav == 'mainNav') {

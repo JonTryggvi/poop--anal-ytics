@@ -162,6 +162,19 @@ hr {
           justify-content: center;
 }
 
+#Allstory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 #stories {
   background-color: #F5F5F5;
 }
@@ -276,6 +289,15 @@ label {
 textarea {
   width: 100%;
   min-height: 100px;
+}
+
+.user_post_likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .mainNavContainer {
