@@ -52,16 +52,10 @@
 
 		array('Dashboard', 'index.php'),
 		array('Diarya', 'diarya.php'),
-<<<<<<< HEAD
 
 		array('Advice', 'users.php'),
 		array('Stats', 'stats.php'),
 
-=======
-		array('Advice', 'users.php'),
-		array('Stats', 'stats.php'),
-		array('Static', 'pages.php'),
->>>>>>> 769af33a08c5680c31f943e8a81aeed31749a4f1
 		array('Your Posts', 'posts.php'),
 		array('Stories', 'stories.php'),
 		array('Log out', 'login.php?logout=true')

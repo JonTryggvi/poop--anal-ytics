@@ -1,11 +1,6 @@
 <?php
-<<<<<<< HEAD:www/login.php
-	include('admin/includes/config.php');
-	// signUpCheck();
-=======
 	include('includes/config.php');
 
->>>>>>> 769af33a08c5680c31f943e8a81aeed31749a4f1:www/admin/login.php
 	include('includes/header.php');
 ?>
 
@@ -52,7 +47,7 @@
 
 			<div class="tab-content">
 				<div class="tab-pane" id="signin" role="tabpanel">
-					<form action="admin/includes/authentication.php" method="POST" role="tabpanel">
+					<form action="includes/authentication.php" method="POST" role="tabpanel">
 						<div class="form-group" role="tabpanel">
 							<label for="username">Username</label>
 							<input type="text" class="form-control" name="username" value="">
@@ -84,7 +79,7 @@
 
 				<div class="tab-content">
 					<div class="tab-pane active" id="signin" role="tabpanel">
-						<form action="admin/includes/authentication.php" method="POST" role="tabpanel">
+						<form action="includes/authentication.php" method="POST" role="tabpanel">
 							<div class="form-group body-text" role="tabpanel">
 								<label for="username"></label>
 								<input type="text" class="form-control" name="username" placeholder="Username or Email" value="">
