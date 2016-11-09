@@ -11,19 +11,44 @@ class Stories {
    $db = $GLOBALS['gdb'];
    $mysqli = $db->getConnection();
 
-    // prepare and bind
-    $post_query = mysqli_query($mysqli, "SELECT id, title, content, author, date FROM post ORDER BY id DESC");
+   if(isset($_GET['query'])) {
+     $query = $_GET['query'];
 
+   $query = htmlspecialchars($query);
+
+    // prepare and bind
+    $post_query = mysqli_query($mysqli, "SELECT id, title, content, author, date FROM post  WHERE title LIKE '%.$query.%' AND ORDER BY id DESC");
+}
     $postInfo = array();
      while($row = mysqli_fetch_assoc($post_query)) {
        $postInfo[] = $row;
      }
      return $postInfo;
 
-
-  //  $stmt->close();
+   $stmt->close();
   //  $mysqli->close();
  }
+
+ public function getAllPost() {
+    // Connecting to Database
+    $db = $GLOBALS['gdb'];
+    $mysqli = $db->getConnection();
+
+       // prepare and bind (default without a search query)
+    $sql_select = "SELECT * FROM post";
+
+    // prepate with a search query
+    if(isset($_GET['query'])) {
+      $query = $_GET['query'];
+      // changes characters used in html to their equivalents, for example: < to &gt;
+      $query = htmlspecialchars($query);
+      // makes sure nobody uses SQL injection
+    //  $query = $mysqli -> mysql_real_escape_string($query);
+
+      $sql_select = "SELECT id, title, content, author, date FROM post WHERE title LIKE '%".$query."%'";
+    }
+  }
+
 
  public function setComments($content, $author, $comment_time, $post_id, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id){
 
@@ -71,8 +96,6 @@ class Stories {
     $stmt->bind_param("i", $postid);
     $stmt->execute();
 
-
-
     $stmt->close();
     //$mysqli->close();
     //header('Location: ./users.php?updated=true');
@@ -88,9 +111,6 @@ class Stories {
      $stmt = $mysqli->prepare("DELETE FROM comments WHERE id=?");
      $stmt->bind_param("i", $commentid);
      $stmt->execute();
-
-
-
 
      $stmt->close();
      //$mysqli->close();

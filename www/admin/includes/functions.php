@@ -156,7 +156,7 @@ function shadeRadiosDiary(){
 		$stories-> getAllStories();
 	}
 
-
+	// INSERT COMMMENT //
 	if(isset($_POST['commentSubmit'])){
 
 		$content = $_POST['content'];
@@ -173,7 +173,6 @@ function shadeRadiosDiary(){
 		echo $submitComment = "Your comment has been submited!";
 
 	}
-
 
 
 	function getPosts() {
@@ -199,12 +198,13 @@ function shadeRadiosDiary(){
 
 	function check($postid){
 
-		// if($_SESSION['User_roles_id'] == 2){
+		if($_SESSION['User_roles_id'] == 2){
+			echo'<div class="delete_user_post">';
 			echo '<a class="btn btn-danger btn-sm btn-delete-post" href="stories.php?deletepost=true&postid='.$postid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+				echo'</div>';
+		}else {
 
-		// }else {
-		//
-		// }
+		}
 	}
 	// delete comments
 
@@ -218,12 +218,13 @@ function shadeRadiosDiary(){
 
 	function checkComment($commentid){
 
-		// if($_SESSION['User_roles_id'] == 2){
+		if($_SESSION['User_roles_id'] == 2){
+			echo'<div class="delete_user_comment">';
 			echo '<a class="btn btn-danger btn-sm btn-delete-post" href="stories.php?deletecomment=true&postid='.$commentid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+			echo'</div>';
+		}else {
 
-		// }else {
-		//
-		// }
+		}
 	}
 
 

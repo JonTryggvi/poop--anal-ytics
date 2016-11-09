@@ -23,10 +23,6 @@
 ?>
 <div class="container-fluid">
 
-		<div class="col-md-3 p-a-3">
-
-
-		</div>
 		<div class="col-md-9 p-a-3">
 			<div class="row">
 				<div class="">

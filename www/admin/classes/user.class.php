@@ -61,7 +61,6 @@ class User {
    $mysqli = $db->getConnection();
    if(isset($_SESSION['User_id'])){
    $userid = 	$_SESSION['User_id'];
-   error_log($userid);
 
    // prepare and bind
    $stmt = $mysqli->prepare("SELECT profile_img FROM User WHERE id= $userid");
