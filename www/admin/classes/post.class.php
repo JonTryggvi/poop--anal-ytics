@@ -12,7 +12,7 @@ class Post {
  // prepare and bind
  $stmt = $mysqli->prepare("INSERT INTO post(title, content, author, date, User_id, User_roles_id, User_gender_id, User_apps_countries_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
  $stmt->bind_param("ssssiiii", $title, $content, $author, $date_post, $User_id, $User_roles_id, $User_gender_id, $User_apps_countries_id);
- error_log("sdl");
+ // error_log("sdl");
 
  $stmt->execute();
  $stmt->close();
