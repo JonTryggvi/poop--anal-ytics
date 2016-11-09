@@ -2,13 +2,14 @@
 	include('includes/config.php');
 	loginCheck();
 	include('includes/header.php');
+	include('includes/nav.php');
 ?>
 <div class="container-fluid">
-<?php include('includes/nav.php'); ?>
+
 
 	<div class="row"  id="story">
-		<div class="col-md-6 p-a-3">
-			<div class="row">
+		<div class="col-md-7 p-a-3">
+
 
         <form action="posts.php" method="POST" role="tabpanel" >
           <div class="form-group" role="tabpanel">
@@ -35,7 +36,7 @@
           <?php getPost(); ?>
 				</div>
 
-			</div>
+
 		</div>
 
 	</div>
