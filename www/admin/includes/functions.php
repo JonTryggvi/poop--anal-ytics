@@ -181,6 +181,7 @@ function shadeRadiosDiary(){
       return $allPosts->getAllStories($_SESSION['User_id']);
     }
 
+
     function getPostComments($post_id) {
 
       $allComments = new Stories();

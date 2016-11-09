@@ -55,12 +55,3 @@ $("#demo").click(function(){
 // });
 
 });
-$(document).ready(function() {
-
-            $('input.title').typeahead({
-                name: 'title',
-                remote: 'title.php?query=%QUERY'
-
-            });
-
-        })

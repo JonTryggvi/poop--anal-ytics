@@ -1,4 +1,5 @@
 <!doctype html>
+<?php include('topHeader'); ?>
 <html lang="en">
 <head>
   <meta charset="utf-8">

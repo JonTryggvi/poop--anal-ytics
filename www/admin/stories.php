@@ -23,13 +23,6 @@
 				   <input type="submit" value="Leita" />
 				</form>
 
-				<tr>
-					<td>
-						<?php echo $comment['title'] ?>
-					</td>
-				</tr>
-
-
 			<div class="row" >
 
 				<?php
