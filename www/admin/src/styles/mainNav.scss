@@ -1,16 +1,21 @@
 
+
 .mainNavContainer {
   position: absolute;
   display: inline-block;
+  background-color: $main-blue;
   width: 208px;
+  height: 100%;
+  top:64px;
+  left: 0;
   z-index: 10;
   .mainnav {
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: $main-blue;
     width: 208px;
-    height: 100%;
+    height: 50%;
     .mainNav-item {
       display: flex;
       background-color: $main-blue;

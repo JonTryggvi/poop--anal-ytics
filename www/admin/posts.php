@@ -2,10 +2,11 @@
 	include('includes/config.php');
 	loginCheck();
 	include('includes/header.php');
+	include('includes/nav.php');
 ?>
-<div class="container-fluid">
-<?php include('includes/nav.php'); ?>
 
+
+<div class="container-fluid">
 	<div class="row"  id="story">
 		<div class="col-md-6 p-a-3">
 			<div class="row">

@@ -192,7 +192,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-    @include font-open-sans(heading-nav);
+    // @include font-open-sans(heading-nav);
     left: 4%;
   }
   .ul-nav {
@@ -213,10 +213,12 @@
 
       .nav-link {
         display: block;
+        @include font-open-sans(heading-nav);
         position: relative;
         color: $white;
         text-decoration: none;
         overflow: hidden;
+        height: 70px;
 
         &:hover:after,
          &:focus:after,
