@@ -162,23 +162,66 @@ hr {
           justify-content: center;
 }
 
+.btn-delete-post {
+  width: 10%;
+}
+
 .allStories {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #3F51B5;
   margin: 10px;
   padding: 10px;
+  border-radius: 7px;
 }
 
-#content {
-  background-color: white;
+.allStories .btn-delete-post {
+  width: 10%;
+  float: right;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.title {
+.allStories .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.allStories .title h6 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.allStories #content p {
+  color: black;
+}
+
+.allStories .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.allStories .author h3 {
+  margin: 10px;
+}
+
+#content {
+  background-color: white;
 }
 
 label {
@@ -190,8 +233,8 @@ label {
   display: none;
 }
 
-.commentbox {
-  background-color: green;
+.users_comments {
+  border: 1px solid blue;
 }
 
 textarea {

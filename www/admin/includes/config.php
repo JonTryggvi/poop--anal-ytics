@@ -54,7 +54,6 @@
 		array('Diarya', 'diarya.php'),
 		array('Advice', 'users.php'),
 		array('Stats', 'stats.php'),
-		array('Static', 'pages.php'),
 		array('Your Posts', 'posts.php'),
 		array('Stories', 'stories.php'),
 		array('Log out', 'login.php?logout=true')

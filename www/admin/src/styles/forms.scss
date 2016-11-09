@@ -11,17 +11,44 @@
   display: flex;
   justify-content: center;
 }
+.btn-delete-post{
+  width: 10%;
+}
 .allStories{
+  color: white;
+  display: flex;
+  flex-direction: column;
   background-color: #3F51B5;
   margin: 10px;
   padding: 10px;
+  border-radius: 7px;
+    .btn-delete-post{
+      width: 10%;
+      float: right;
+      align-items: flex-start;
+    }
+    .title{
+      display: flex;
+      justify-content: space-between;
+      h6{
+        align-self: flex-end;
+      }
+    }
+    #content{
+      p{
+        color: black;
+      }
+    }
+    .author{
+      display: flex;
+      justify-content: flex-end;
+      h3{
+        margin: 10px;
+      }
+    }
 }
 #content{
   background-color: white;
-}
-.title{
-  display: flex;
-  justify-content: space-between;
 }
 label {
   float: left;
@@ -31,8 +58,9 @@ label {
   display: none;
 }
 // HERDIS COMMENT BOX
-.commentbox{
-  background-color: green;
+.users_comments{
+  // background-color: green;
+  border: 1px solid blue;
 }
 // .commentboxinfo{
 //   display: block;
