@@ -55,3 +55,15 @@ $("#demo").click(function(){
 // });
 
 });
+<<<<<<< HEAD
+=======
+// $(document).ready(function() {
+//
+//             $('input.title').typeahead({
+//                 name: 'title',
+//                 remote: 'title.php?query=%QUERY'
+//
+//             });
+// 
+//         })
+>>>>>>> asa
