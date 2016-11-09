@@ -33,6 +33,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
 
             <div class="modal-user">
               <div class="user-image">
@@ -44,13 +45,10 @@
               </div>
             </div>
 
-
-          </div>
           <div class="modal-body">
             <!-- <span class="change-photo"><i class="fa fa-camera" aria-hidden="true" data-dismiss="modal"></i>Change Photo</span>
             <span class="settings"><i class="fa fa-cog" aria-hidden="true"></i>Settings</span> -->
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                Select image to upload:
+            <form action="upload.php" method="post" enctype="multipart/form-data"><i class="fa fa-camera" aria-hidden="true"></i> Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <input type="submit" value="Upload Image" name="submitImage">
             </form>
