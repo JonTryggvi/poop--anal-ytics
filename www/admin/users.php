@@ -3,6 +3,7 @@
 	loginCheck();
 
 	include('includes/header.php');
+	include('includes/nav.php');
 
 	//Check if parameter exists and is set to true
 	if(isset($_GET['update']) && $_GET['update'] == 'true') {
@@ -21,17 +22,7 @@
 
 ?>
 <div class="container-fluid">
-	<div class="row">
 
-		<nav class="navbar navbar-light bg-faded">
-			<?php createNavigation('userNav'); ?>
-			<?php echo $_SESSION['UsrNm']  ?>
-		</nav>
-		<nav class="mainNavContainer">
-			<?php createNavigation('mainNav'); ?>
-		</nav>
-	</div>
-	<div class="row">
 		<div class="col-md-3 p-a-3">
 
 

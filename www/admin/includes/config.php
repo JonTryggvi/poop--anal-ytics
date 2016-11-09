@@ -49,11 +49,11 @@
 
 
 	$navItems = array(
-		array('Logout', 'login.php?logout=true'),
+
 		array('Dashboard', 'index.php'),
 		array('Diarya', 'diarya.php'),
 		array('Advice', 'users.php'),
-		array('Static', 'pages.php'),
+		array('Stats', 'stats.php'),
 		array('Your Posts', 'posts.php'),
 		array('Stories', 'stories.php')
 	);
@@ -61,7 +61,7 @@
 	$userNav2 = array(
 		array('Take test', 'landingpage.php'),
 		array('advice', 'advice.php'),
-		array('static', 'static.php'),
+		array('stats', 'stats.php'),
 		array('Sign', 'login.php')
 	);
 	$userNavItems = array(
