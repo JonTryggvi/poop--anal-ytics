@@ -52,7 +52,7 @@
 		array('Logout', 'login.php?logout=true'),
 		array('Dashboard', 'index.php'),
 		array('Diarya', 'diarya.php'),
-		array('Advice', 'users.php'),
+		array('All users', 'users.php'),
 		array('Static', 'pages.php'),
 		array('Your Posts', 'posts.php'),
 		array('Stories', 'stories.php')

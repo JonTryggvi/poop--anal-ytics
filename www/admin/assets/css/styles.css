@@ -190,6 +190,15 @@ label {
   display: none;
 }
 
+.commentbox {
+  background-color: green;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
 .mainNavContainer {
   position: absolute;
   width: 208px;
@@ -610,6 +619,7 @@ label {
       align-self: center;
   border: 1px solid #fff;
   border-radius: 2px;
+  height: 90px;
 }
 
 .header .wrap .default-user div.modal-dialog {
