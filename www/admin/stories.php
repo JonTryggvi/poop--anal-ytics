@@ -3,15 +3,7 @@
 	loginCheck();
 	include('includes/header.php');
 ?>
-<?php
-if(isset($_GET['deletecomment']) && $_GET['deletecomments'] == 'true') {
-	$commentsid = $_GET['userid'];
 
-
-
-		}
-
-?>
 
 <div class="container-fluid">
 	<div class="row">
@@ -52,7 +44,7 @@ if(isset($_GET['deletecomment']) && $_GET['deletecomments'] == 'true') {
 	            $comments = getPostComments($post['id']);
 	            if($comments) {
 	              foreach ($comments as $comment) {
-									check($post['id']);
+									checkComment($comment['commentsid']);
 									?>
 			          <div class="user_comment_info"><h4><?php echo $comment['author'] ?></h4></div>
 			          <div class="user_comment_content"><p><?php echo $comment['content']; ?></p></div>

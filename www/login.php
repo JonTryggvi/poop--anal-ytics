@@ -1,6 +1,11 @@
 <?php
+<<<<<<< HEAD:www/login.php
 	include('admin/includes/config.php');
 	// signUpCheck();
+=======
+	include('includes/config.php');
+
+>>>>>>> 769af33a08c5680c31f943e8a81aeed31749a4f1:www/admin/login.php
 	include('includes/header.php');
 ?>
 

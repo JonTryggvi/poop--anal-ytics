@@ -44,7 +44,7 @@ class Stories {
     $db = $GLOBALS['gdb'];
     $mysqli = $db->getConnection();
 
-     $post_query = mysqli_query($mysqli,"SELECT post.id, comments.content, comments.author, time, comments.post_id, comments.User_id, comments.User_roles_id, comments.User_gender_id, comments.User_apps_countries_id from comments left join post on comments.post_id = post.id WHERE post.id = ".$post_id);
+     $post_query = mysqli_query($mysqli,"SELECT comments.id AS commentsid, post.id, comments.content, comments.author, time, comments.post_id, comments.User_id, comments.User_roles_id, comments.User_gender_id, comments.User_apps_countries_id from comments left join post on comments.post_id = post.id WHERE post.id = ".$post_id);
 
         $postInfo = array();
         while($row = mysqli_fetch_assoc($post_query)) {
@@ -56,21 +56,20 @@ class Stories {
   }
 
 
-  public function deleteComments($commentsid) {
+  public function deletePost($postid) {
     // Connecting to Database
     $db = $GLOBALS['gdb'];
     $mysqli = $db->getConnection();
+    error_log($postid);
 
     // prepare and bind
-    // $stmt = $mysqli->prepare("DELETE FROM comments WHERE postid=?");
-    // $stmt->bind_param("i", $commentsid);
-    // $stmt->execute();
-
-    $stmt = $mysqli->prepare("DELETE FROM post WHERE id=?");
-    $stmt->bind_param("i", $commentsid);
+    $stmt = $mysqli->prepare("DELETE FROM comments WHERE post_id=?");
+    $stmt->bind_param("i", $postid);
     $stmt->execute();
 
-    error_log($deleteComments);
+    $stmt = $mysqli->prepare("DELETE FROM post WHERE id=?");
+    $stmt->bind_param("i", $postid);
+    $stmt->execute();
 
 
 
@@ -78,6 +77,25 @@ class Stories {
     //$mysqli->close();
     //header('Location: ./users.php?updated=true');
    }
+
+   public function deletePostComments($commentid) {
+     // Connecting to Database
+     $db = $GLOBALS['gdb'];
+     $mysqli = $db->getConnection();
+     error_log($commentid);
+
+     // prepare and bind
+     $stmt = $mysqli->prepare("DELETE FROM comments WHERE id=?");
+     $stmt->bind_param("i", $commentid);
+     $stmt->execute();
+
+
+
+
+     $stmt->close();
+     //$mysqli->close();
+     //header('Location: ./users.php?updated=true');
+    }
 
 
 }
