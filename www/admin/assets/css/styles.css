@@ -201,6 +201,7 @@ textarea {
 
 .mainNavContainer {
   position: absolute;
+  display: inline-block;
   width: 208px;
   z-index: 10;
 }
@@ -820,6 +821,20 @@ textarea {
     opacity: 1;
     left: 0;
   }
+}
+
+/* User image */
+.default-user {
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  height: 27px;
+  width: auto;
+}
+
+.default-user:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .stats-container {

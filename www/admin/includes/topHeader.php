@@ -57,8 +57,8 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn modal-button">Log out</button>
-          </div>
+            <a class="btn btn-yellow modal-button"  href="login.php?logout=true">Logout</a>
+        </div>
         </div>
       </div>
     </div><!-- /.modal -->

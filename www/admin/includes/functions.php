@@ -78,8 +78,8 @@ if(isset($_GET['delete']) && $_GET['delete'] == true) {
 
 
 // test functions
-if(isset($_POST['submit']) and !empty($_POST['submit'])){
-	if (isset($_POST['texture']) && isset($_POST['shade']) ) {
+if(isset($_POST['submit-dash']) and !empty($_POST['submit-dash'])){
+	if (isset($_POST['texture-dash']) && isset($_POST['shade-dash']) ) {
 
 		// textures
 		$texture =  $_POST['texture-dash'];
@@ -107,6 +107,11 @@ if(isset($_POST['submit']) and !empty($_POST['submit'])){
 function textureRadios(){
 	$test = new userTest();
 	$test->getTextures();
+}
+
+function shadeRadios(){
+	$test = new userTest();
+	$test->getShades();
 }
 
 

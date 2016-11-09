@@ -250,3 +250,17 @@
     left: 0;
   }
 }
+
+
+/* User image */
+
+.default-user {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  height: 27px;
+  width: auto;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

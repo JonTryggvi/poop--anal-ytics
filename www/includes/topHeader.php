@@ -13,7 +13,7 @@
         <nav class="overlay-menu">
           <ul class="ul-nav">
             <li class="li-nav"><a class="nav-link" href="index.php">Poop Test</a></li>
-            <li class="li-nav"><a class="nav-link" href="#">Shitty Stories</a></li>
+            <li class="li-nav"><a class="nav-link" href="stories.php">Shitty Stories</a></li>
             <li class="li-nav"><a class="nav-link" href="advice.php">Good Advice</a></li>
           </ul>
         </nav>
@@ -24,7 +24,7 @@
       <h1 class="logo">GoPoop</h1>
     </div>
     <div class="user-login-signup">
-      <a class="nav-link" href="login.php"><img class="user-icon" src="img/icons/user.svg" alt=""></a>
+      <a class="nav-link" href="admin/login.php"><img class="user-icon" src="img/icons/user.svg" alt=""></a>
     </div>
   </div>
 </div><!-- / .header -->
