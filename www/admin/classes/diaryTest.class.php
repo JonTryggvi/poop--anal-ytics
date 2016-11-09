@@ -127,52 +127,93 @@ public function textureResult($t, $s){
 //     $stmt->bind_param("ss", $d_title, $d_content);
 //   $stmt->execute();
 // }
-
- public function diaryTextures($texture_id, $shade_id, $diaryTitle, $diaryContent) {
- 	// Connecting to Database
+public function getDiaries($id){
   $db = $GLOBALS['gdb'];
   $mysqli = $db->getConnection();
-  $userId = $_SESSION['User_id'];
-  $userRole = $_SESSION['User_roles_id'];
-  $userName = $_SESSION['UsrNm'];
 
-  $stmt = $mysqli->prepare("INSERT INTO diary (title, content, date, User_id) VALUES (?, ?, now(), $userId )");
-  $stmt->bind_param('ss', $diaryTitle, $diaryContent);
+  $stmt = $mysqli->prepare("SELECT id, title, content, date FROM diary WHERE User_id = $id and content != 'Test from dashboard' ORDER BY id DESC");
   $stmt->execute();
+  $stmt->bind_result($diaryId, $diariTitle, $content, $diary_date);
 
-  $stmt = $mysqli->prepare("SELECT id FROM diary WHERE User_id=$userId");
-  $stmt->execute();
-  $stmt->bind_result($id);
+  $dateEdit =  date_format(date_create($diary_date),'Y/m/d');
 
-  while ($stmt->fetch()){
-    $diary_id = $id;
-  }
+   while ($row = $stmt->fetch()) {
+     echo '<div class="diary-entries">';
+     echo '<div class="title"><h1>' .$diariTitle. '</h1><h6>' .$dateEdit. '</h6></div><div id="" class="content"><p>' .$content. '</p></div><a class="btn btn-danger btn-sm btn-del-poop" href="diarya.php?deletediary=true&diaryId='.$diaryId.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
 
- 	// prepare and bind
- 	$stmt = $mysqli->prepare("INSERT INTO test (User_id, diary_id, UserAnon_id, date) VALUES ($userId,$diary_id ,1, now())");
- 	$stmt->execute();
+     echo '</div>';
+   }
 
-  $stmt = $mysqli->prepare("SELECT id FROM test WHERE User_id=$userId");
-  $stmt->execute();
-  $stmt->bind_result($id);
-  while ($stmt->fetch()){
-    $test_id = $id;
-  }
+ //  $stmt-close();
+ //  $mysqli->close();
+}
 
-	$stmt = $mysqli->prepare("INSERT INTO test_has_shade (shade_id,test_id) VALUES (?, ?)");
-  $stmt->bind_param("ii", $shade_id, $test_id);
-  $stmt->execute();
-  $stmt = $mysqli->prepare("INSERT INTO test_has_texture (texture_id,test_id) VALUES (?, ?)");
-  $stmt->bind_param("ii", $texture_id, $test_id);
-  $stmt->execute();
-  // $stmt= $mysqli-prepare("INSERT INTO");
+public function deleteDiary($id) {
+ // Connecting to Database
+ $db = $GLOBALS['gdb'];
+ $mysqli = $db->getConnection();
+var_dump($id);
+ // prepare and bind
+$stmt = $mysqli->prepare("SET foreign_key_checks = 0");
+$stmt->execute();
+ $stmt = $mysqli->prepare("DELETE FROM diary WHERE id=$id  LIMIT 1");
+//  $stmt->bind_param("i", $id);
+ $stmt->execute();
+ $stmt = $mysqli->prepare("SET foreign_key_checks = 1");
+ $stmt->execute();
 
- // 	echo "New records created successfully";
+ // $stmt->close();
+//  $mysqli->close();
+ //header('Location: ./users.php?updated=true');
+}
 
- 	$stmt->close();
- // 	$mysqli->close();
-  // header('Location: ../dashboard.php');
- }
+   public function diaryTextures($texture_id, $shade_id, $diaryTitle, $diaryContent) {
+   	// Connecting to Database
+    $db = $GLOBALS['gdb'];
+    $mysqli = $db->getConnection();
+    $userId = $_SESSION['User_id'];
+    $userRole = $_SESSION['User_roles_id'];
+    $userName = $_SESSION['UsrNm'];
+
+    $stmt = $mysqli->prepare("INSERT INTO diary (title, content, date, User_id) VALUES (?, ?, now(), $userId )");
+    $stmt->bind_param('ss', $diaryTitle, $diaryContent);
+    $stmt->execute();
+
+    $stmt = $mysqli->prepare("SELECT id FROM diary WHERE User_id=$userId");
+    $stmt->execute();
+    $stmt->bind_result($id);
+
+    while ($stmt->fetch()){
+      $diary_id = $id;
+    }
+
+   	// prepare and bind
+   	$stmt = $mysqli->prepare("INSERT INTO test (User_id, diary_id, UserAnon_id, date) VALUES ($userId,$diary_id ,1, now())");
+   	$stmt->execute();
+
+    $stmt = $mysqli->prepare("SELECT id FROM test WHERE User_id=$userId");
+    $stmt->execute();
+    $stmt->bind_result($id);
+    while ($stmt->fetch()){
+      $test_id = $id;
+    }
+
+  	$stmt = $mysqli->prepare("INSERT INTO test_has_shade (shade_id,test_id) VALUES (?, ?)");
+    $stmt->bind_param("ii", $shade_id, $test_id);
+    $stmt->execute();
+    $stmt = $mysqli->prepare("INSERT INTO test_has_texture (texture_id,test_id) VALUES (?, ?)");
+    $stmt->bind_param("ii", $texture_id, $test_id);
+    $stmt->execute();
+    // $stmt= $mysqli-prepare("INSERT INTO");
+
+   // 	echo "New records created successfully";
+
+   	$stmt->close();
+   // 	$mysqli->close();
+    // header('Location: ../dashboard.php');
+   }
+
+
 
 
  }
