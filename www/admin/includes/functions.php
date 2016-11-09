@@ -200,7 +200,7 @@ function shadeRadiosDiary(){
 	function check($postid){
 
 		// if($_SESSION['User_roles_id'] == 2){
-			echo '<a class="btn btn-danger btn-sm" href="stories.php?deletepost=true&postid='.$postid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+			echo '<a class="btn btn-danger btn-sm btn-delete-post" href="stories.php?deletepost=true&postid='.$postid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
 
 		// }else {
 		//
@@ -219,7 +219,7 @@ function shadeRadiosDiary(){
 	function checkComment($commentid){
 
 		// if($_SESSION['User_roles_id'] == 2){
-			echo '<a class="btn btn-danger btn-sm" href="stories.php?deletecomment=true&postid='.$commentid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+			echo '<a class="btn btn-danger btn-sm btn-delete-post" href="stories.php?deletecomment=true&postid='.$commentid.'"><i class="fa fa-trash" aria-hidden="true"></i></a>';
 
 		// }else {
 		//

@@ -35,7 +35,8 @@ class Post {
     while(mysqli_stmt_fetch($stmt)) {
 
       echo '<div class="allStories">';
-      echo '<a class="btn btn-danger btn-sm confirmation" href="posts.php?delete=true&postid='.$postid.'"><i class="fa fa-trash" aria-hidden="true"></i></a><div class="title"><h1>' .$title. '</h1><h6>'.$date_post. '</h6></div><div id="content"><p>' .$content. '</p></div> <h3>' .$author. '</h3>';
+      echo '<div class="deletebutton"><a class="btn btn-danger btn-sm confirmation btn-delete-post" href="posts.php?delete=true&postid='.$postid.'"><i class="fa fa-trash" aria-hidden="true"></i></a></div><div class="title"><h1>' .$title. '</h1><h6>'.$date_post. '</h6></div><div id="content"><p>' .$content. '</p></div><div class="author">
+      <h3>-' .$author. '</h3></div> ';
       echo '</div>';
 
     }

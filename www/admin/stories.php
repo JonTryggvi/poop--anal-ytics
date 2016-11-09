@@ -15,7 +15,7 @@
 	</div>
 
 	<div class="row"  id="story">
-		<div class="col-md-6 p-a-3">
+		<div class="col-lg-12 p-a-3">
 			<div class="row">
 				<nav class="breadcrumb">
 				  <a class="breadcrumb-item" href="#">Home</a>
@@ -31,25 +31,28 @@
                 foreach ($posts as $post) {
            				check($post['id']); ?>
 
-          <div class="user_post post-<?php echo $post['title'] ?>">
-            <div class="user_post_info"><img class="user_post_img" src="" /><h3><?php echo $post['content'] ?></h3></div>
-            <div class="user_post_content"><p><?php echo $post['author'] ?></p></div><div class="user_post_likes"><?php echo $post['title'] ?>
+				<div class="user_post_stories">
+						<div class="user_post_title"><h3><?php echo $post['title'] ?></h3></div>
+            <div class="user_post_info"><img class="user_post_img" src="" /><p><?php echo $post['content'] ?></p></div>
+            <div class="user_post_content"><p>-<?php echo $post['author'] ?></p></div><div class="user_post_likes">
             <div class="user_post_date"><?php echo $post['date'] ?></div>
           </div>
+				</div>
 					<div class="commentbox">
-						<p class="demo" >Comments</p>
-						<div class="">
-	          <?php
+						<h3 class="demo" >Comments</h3>
+						<div class="users_comments">
 
+	          <?php
 	            $comments = getPostComments($post['id']);
 	            if($comments) {
 	              foreach ($comments as $comment) {
 									checkComment($comment['commentsid']);
 									?>
+							<div class="users_comments">
 			          <div class="user_comment_info"><h4><?php echo $comment['author'] ?></h4></div>
 			          <div class="user_comment_content"><p><?php echo $comment['content']; ?></p></div>
 			          <div class="user_comment_date"><?php echo $comment['time'] ?></div>
-
+							</div>
 		          <?php
 		                }
 		              }

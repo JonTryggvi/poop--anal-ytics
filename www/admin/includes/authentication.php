@@ -33,7 +33,7 @@
 			}
 		}
 		if ($_SESSION['isLoggedin'] == false){
-			 header('Location: ../../login.php?login=empty');
+			 header('Location: ../login.php?login=empty');
 		}
 		$stmt->close();
 	}
