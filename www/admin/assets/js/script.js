@@ -54,6 +54,13 @@ $("#demo").click(function(){
 //     $('#form').delay(100000).submit();
 // });
 
+// upload photos in module
+
+$('.fa-camera').click(function(){
+    //  $(this).siblings('.bidbutton');
+    $('#fileToUpload').click();
+});
+
 });
 
 // $(document).ready(function() {
