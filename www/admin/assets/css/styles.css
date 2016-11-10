@@ -812,14 +812,24 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
 }
 
 .header .wrap .modal-dialog .modal-content .modal-body .fa-camera,
 .header .wrap .modal-dialog .modal-content .modal-body .fa-cog {
   color: #24A5A5;
-  width: 35px;
-  height: auto;
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header .wrap .modal-dialog .modal-content .modal-body .fa-camera:hover,
+.header .wrap .modal-dialog .modal-content .modal-body .fa-cog:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .header .wrap .modal-dialog .modal-content .modal-body .fa-camera i,
@@ -829,6 +839,21 @@ textarea {
   font-size: 1em;
   line-height: 1.6em;
   color: #4A4A4A;
+}
+
+.header .wrap .modal-dialog .modal-content .modal-body .choose-file-upload {
+  width: 100%;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header .wrap .modal-dialog .modal-content .modal-body .upload-image {
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #ccc;
 }
 
 .header .wrap .modal-dialog .modal-content .modal-footer {

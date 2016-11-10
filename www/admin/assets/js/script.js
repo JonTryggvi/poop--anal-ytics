@@ -55,8 +55,7 @@ $("#demo").click(function(){
 // });
 
 });
-<<<<<<< HEAD
-=======
+
 // $(document).ready(function() {
 //
 //             $('input.title').typeahead({
@@ -64,6 +63,5 @@ $("#demo").click(function(){
 //                 remote: 'title.php?query=%QUERY'
 //
 //             });
-// 
+//
 //         })
->>>>>>> asa
