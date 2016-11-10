@@ -1,11 +1,15 @@
+body{
+  height: 100%;
+}
 .footer-content {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  height: 64px;
   background-color: $main-blue;
 
   .copyright {

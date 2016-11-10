@@ -265,7 +265,11 @@
 
       .nav-link {
         display: block;
+<<<<<<< HEAD
         @include fonts(heading-nav);
+=======
+        // @include font-open-sans(heading-nav);
+>>>>>>> Herdis
         position: relative;
         color: $white;
         text-decoration: none;

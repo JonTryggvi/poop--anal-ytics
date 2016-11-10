@@ -10,7 +10,7 @@
   	</div>
   </div>
   <footer>
-    <div class="footer-content">
+    <div class="footer-content navbar-fixed-bottom">
       <p class="copyright">Copyright &copy; <?php echo date('Y'); ?> GoPoop </p>
       <span class="disclaimer-open" onclick="openNav()">&#9776; Read Disclaimer</span>
     </div>
