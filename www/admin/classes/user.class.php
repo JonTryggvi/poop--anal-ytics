@@ -179,7 +179,7 @@ public function countries(){
       while (mysqli_stmt_fetch($stmt)) {
 
         echo '<tr>';
-        echo '<th scope="row">' .$email. '<td>' .$lastName. '</td> <td>' . $firstName.'</td><td>' .$lastName.'</td><td>' .$email.'</td><td>' .$userName.'</td><td><a class="btn btn-primary btn-sm m-r-1" href="edituser.php?edit=true&userid='.$userid.'"><i class="fa fa-pencil" aria-hidden="true"></i></a><a class="btn btn-danger btn-sm" href="users.php?deleteuser=true&userid='.$userid.'"><i class="fa fa-trash" aria-hidden="true"></i></a></td>';
+        echo '<td>' .$firstName. '</td> <td>' .$lastName.'</td><td>' .$userName.'</td><td>'.$email.'</td><td><a class="btn btn-primary btn-sm m-r-1" href="edituser.php?edit=true&userid='.$userid.'"><i class="fa fa-pencil" aria-hidden="true"></i></a><a class="btn btn-danger btn-sm" href="users.php?deleteuser=true&userid='.$userid.'"><i class="fa fa-trash" aria-hidden="true"></i></a></td>';
       echo '</tr>';
           }
 

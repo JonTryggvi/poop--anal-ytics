@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald");
 body, html {
   margin: 0;
   padding: 0;
@@ -299,6 +300,22 @@ textarea {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.holdmetight {
+  display: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80vw;
+}
+
+.holdmetight .table-striped {
+  width: 70vw;
 }
 
 .mainNavContainer {
@@ -1195,6 +1212,21 @@ textarea {
   background-color: #24A5A5;
 }
 
+.entry-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .diary-entries {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1209,6 +1241,7 @@ textarea {
   padding: 5px;
   margin-bottom: 5px;
   min-height: 300px;
+  width: 60vw;
   border: solid 3px #24A5A5;
   border-radius: 2px;
 }

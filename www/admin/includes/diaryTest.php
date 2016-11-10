@@ -38,7 +38,7 @@
 			</div>
 		</section>
 	</form>
- <section>
+ <section class="entry-container">
  <?php showEachDiary($mainUserId); ?>
  </section>
 </div>

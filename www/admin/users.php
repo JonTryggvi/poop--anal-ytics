@@ -23,9 +23,9 @@
 ?>
 <div class="container-fluid">
 
-		<div class="col-md-9 p-a-3">
+		<div class="col-md-11 pull-right p-a-3">
 			<div class="row">
-				<div class="">
+				<div class="holdmetight">
 					<?php if(isset($_GET['updated']) && $_GET['updated'] == 'true') : ?>
 						<div class="alert alert-success" role="alert">
   						<strong>Well done!</strong> You successfully update the user.
@@ -37,7 +37,7 @@
 						</div>
 					<?php endif; ?>
 					<table class="table table-striped">
-						<thead> <tr> <th>#</th> <th>First Name</th> <th>Last Name</th> <th>Username</th><th>Email</th><th>Status</th> <th>Action</th> </tr> </thead>
+						<thead> <tr><th>First Name</th> <th>Last Name</th> <th>Username</th><th>Email</th><th>Action</th> </tr> </thead>
 						<tbody>
 						<?php showAllUsers(); ?>
 						</tbody>
