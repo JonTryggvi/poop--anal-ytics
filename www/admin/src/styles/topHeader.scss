@@ -150,6 +150,7 @@
 
               &:hover {
                 transform: scale(1.1);
+                cursor: pointer;
               }
 
               i {
@@ -161,6 +162,7 @@
               width: 100%;
               text-align: center;
               align-self: center;
+              visibility: hidden;
             }
 
             .upload-image {

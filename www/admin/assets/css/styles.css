@@ -830,6 +830,7 @@ textarea {
 .header .wrap .modal-dialog .modal-content .modal-body .fa-cog:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  cursor: pointer;
 }
 
 .header .wrap .modal-dialog .modal-content .modal-body .fa-camera i,
@@ -847,6 +848,7 @@ textarea {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  visibility: hidden;
 }
 
 .header .wrap .modal-dialog .modal-content .modal-body .upload-image {
