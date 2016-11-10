@@ -27,6 +27,13 @@
 			color: $main-blue;
 		}
 	}
+	@elseif $text == heading-nav {
+	/* Headings */
+		font-family: $stack-headings;
+		font-size: 1em;
+		color: $white;
+		text-transform: uppercase;
+	}
 }
 
 /* mixin frá root möppu*/

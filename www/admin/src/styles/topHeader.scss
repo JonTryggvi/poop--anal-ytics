@@ -261,16 +261,17 @@
       min-height: 50px;
       position: relative;
       opacity: 0;
-      line-height: 4.6rem;
+
 
       .nav-link {
         display: block;
-        @include font-open-sans(heading-nav);
+        @include fonts(heading-nav);
         position: relative;
         color: $white;
         text-decoration: none;
         overflow: hidden;
-        height: 70px;
+        min-height: 70px;
+        line-height: 4.6rem;
 
         &:hover:after,
          &:focus:after,

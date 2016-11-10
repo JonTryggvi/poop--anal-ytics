@@ -952,21 +952,21 @@ textarea {
   min-height: 50px;
   position: relative;
   opacity: 0;
-  line-height: 4.6rem;
 }
 
 .overlay .ul-nav .li-nav .nav-link {
   display: block;
   /* Headings */
   font-family: "Oswald-Medium", sans-serif;
-  font-size: 3em;
+  font-size: 1em;
   color: #fff;
   text-transform: uppercase;
   position: relative;
   color: #fff;
   text-decoration: none;
   overflow: hidden;
-  height: 70px;
+  min-height: 70px;
+  line-height: 4.6rem;
 }
 
 .overlay .ul-nav .li-nav .nav-link:hover:after, .overlay .ul-nav .li-nav .nav-link:focus:after, .overlay .ul-nav .li-nav .nav-link:active:after {
