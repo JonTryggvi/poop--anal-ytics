@@ -11,7 +11,6 @@
 	<div class="row" id="Allstory">
 		<div class="col-lg-12 p-a-3 " >
 
-
 				<form action="stories.php" method="GET">
 				   <input type="text" name="query" />
 				   <input type="submit" value="Search" />
