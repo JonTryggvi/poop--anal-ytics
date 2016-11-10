@@ -48,9 +48,9 @@
           <div class="modal-body">
             <!-- <span class="change-photo"><i class="fa fa-camera" aria-hidden="true" data-dismiss="modal"></i>Change Photo</span>
             <span class="settings"><i class="fa fa-cog" aria-hidden="true"></i>Settings</span> -->
-            <form action="upload.php" method="post" enctype="multipart/form-data"><i class="fa fa-camera" aria-hidden="true"></i> Select image to upload:
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="submit" value="Upload Image" name="submitImage">
+            <form action="upload.php" method="post" enctype="multipart/form-data"><i class="fa fa-camera fa-3x" aria-hidden="true"></i> Upload new profile photo
+            <input class="choose-file-upload" type="file" name="fileToUpload" id="fileToUpload">
+            <input class="upload-image" type="submit" value="Upload Image" name="submitImage">
             </form>
           </div>
 

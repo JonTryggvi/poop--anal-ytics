@@ -139,17 +139,35 @@
             position: none;
             display: flex;
             justify-content: center;
-            text-align: left;
+            flex-wrap: wrap;
+            text-align: center;
 
             .fa-camera,
             .fa-cog {
               color: $main-blue;
-              width: 35px;
-              height: auto;
+              width: 100%;
+              align-self: center;
+
+              &:hover {
+                transform: scale(1.1);
+              }
 
               i {
                 @include font-open-sans(main-body-text);
               }
+            }
+
+            .choose-file-upload {
+              width: 100%;
+              text-align: center;
+              align-self: center;
+            }
+
+            .upload-image {
+              width: 100%;
+              background-color: white;
+              border-radius: 2px;
+              border: 1px solid #ccc;
             }
           }
 
