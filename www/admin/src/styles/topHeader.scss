@@ -260,10 +260,10 @@
       position: relative;
       opacity: 0;
       line-height: 4.6rem;
+        // @include font-open-sans(heading-nav);
 
       .nav-link {
         display: block;
-        @include font-open-sans(heading-nav);
         position: relative;
         color: $white;
         text-decoration: none;

@@ -100,3 +100,14 @@ textarea{
   display: flex;
   justify-content: flex-end;
 }
+
+.holdmetight {
+  display: fixed;
+  flex-direction: column;
+  justify-content: center;
+  
+  width: 80vw;
+  .table-striped {
+    width: 70vw;
+  }
+}
