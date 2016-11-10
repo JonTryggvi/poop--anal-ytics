@@ -263,7 +263,7 @@
 
       .nav-link {
         display: block;
-        @include font-open-sans(heading-nav);
+        // @include font-open-sans(heading-nav);
         position: relative;
         color: $white;
         text-decoration: none;
